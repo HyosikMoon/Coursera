@@ -141,4 +141,26 @@
             - 2. Calcuate the significance of attribute in splitting of data
             - 3. Split data based on the value of the best attribute
             - 4. Go to step 1
-         3.3.2 Building Decision Trees
+        3.3.2 Building Decision Trees
+            3.3.2.1 Which attribute is the best?
+                - More Predictiveness is better attribute -> Find Less Impurity, Lower Entropy (High information gain)
+                - Entropy, Measure of randomness or uncertainty -> The lower the Entropy, the less uniform the distribution, the purer the node
+                - Entropy = - p(A)log(p(A)) - p(B)log(p(B))
+                - Information gain, is the information that can increase the level of certainty after spliting
+                - Information Gain = (Entropy before split) - (weighted entropy after split)
+    3.4 Logistic Regression
+        3.4.1 What is logistic regression?
+	- Logistic regression is a classification algorithm for categorical variables (binary or multi classes classification)
+	- It also can be used to predict probabilistic results with mapping the probabilities to 0 or 1
+        3.4.2 When is logistic regression suitable?
+	- If your data is binary (0/1, YES/NO, True/False)
+	- If you need probabilistic results
+	- When you need a linear decision boundary
+	- If you need to understand the impact of a feature
+        3.4.3 Logistic regression applications
+	- Predicting the probability of a person having a heart attack
+	- Predicting the mortality in injured patients
+	- Predicting a customer's propensity to purchase a product or halt a subscription
+	- Predicting the probability of failure of a given process or product
+	- Predicting the likelihood of a homeowner defaulting on a mortgage
+
