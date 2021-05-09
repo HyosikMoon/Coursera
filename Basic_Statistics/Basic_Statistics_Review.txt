@@ -1,0 +1,143 @@
+Descriptive, Inferential statistics
+
+1. Data and visualization
+    1.1 Cases, variables and levels of measurement
+        - Levels of measurement: categorical(nominal, ordinal), quantitative(interval, ratio)
+    1.2 Data matrix, Frequency table
+    1.3 Graphs, Shapes of distributions
+        1.3.1 Categorical (nominal, ordinal)
+            - Pie chart, Bar graph 
+        1.3.2 Quantitative (interval, ratio)
+            - Dotplot, Histogram(bell shaped(symmetric), unimodal or bimodal, skewed distribution
+    1.4 Measures of central tendency and dispersion
+        1.4.1 Graph / Center (mode, median, mean)
+        1.4.2 Mode: Value that occurs most frequently (the most common outcome) - categorical
+        1.4.3 Median: the middle value of your observations when arranged from the smallest to the largest
+        1.4.4 Mean: the sum of all the values divided by the number of obeservations
+    1.5 Range, Interquartile range and box plot (measures of variablity, speration of data)
+        1.5.1 Range: highest value - lowest value
+        1.5.2 Interquartile range: divide range Q1(0-25%), Q2(50%=median), Q3(75-100%), Q4(0-100%) -> IQR(Interqutile range) = Q3 - Q1
+    1.6 Variance and standard deviation (measures of variablity, speration of data)
+        1.6.1 Variance: ∑(x - mean(x))^2 / (n - 1), larger variance -> larger variablity -> the more the values are spread out around the mean
+        1.6.2 Standard deviation: s = Sqrt(Variance) = Sqrt(∑(x - mean(x))^2 / (n - 1)): the average distance of an observation from the mean
+        * The explained variance is the percentage of the variance in the dependent variable that can be explained using the formula of the regression line. You can measure this with r-squared. 
+    1.7 Z-scores and example
+        1.7.1 Z-score: number of standard deviations removed from the mean (Z = (x - mean(x)) / s)
+        1.7.2 Z-score makes it esay to see whether a specific score is relatively common or exceptional
+
+2. Correlation and Regression
+    2.1 Crosstabs(tables), Scatterplots
+        2.1.1 contingency table -> nominal variables, ordinal varibables
+        2.1.2 scatterplot -> quantitative variables (show the relations between data like strong or weak correlation)
+    2.2 Pearson's r
+        2.2.1 Direction(+, -) and strength(-1 to +1) of linear correlation between two variables with one number
+        2.2.2 Compute Pearson's r = ∑ (ZxZy) / (n - 1)
+        2.2.3 Check scatterplot before you calculate Pearson's r. If it's not a linear relation, the Pearson's r just represent if it's a weak or strong linear correlation
+    2.3 Regression analysis
+        2.3.1 How to find a regression line? -> Find the smallest sum of squared residuals
+        2.3.2 Compute regression line: y^ = a + bx, where b = r(Sy/Sx), a = mean(y) - b*mean(x) (Sy: standard deviation of y, Sx: Standard deviation of x)
+					       ( b = ∑(x - mean(x))(y - mean(y)) / ∑(x - mean(x))^2 )
+        2.3.3 How well does the regression line fit the data? -> Accuracy of prediction -> r^2 (conjunction of x and y)
+            2.3.3.1 Pearson's r = direction and strength of relation
+            2.3.3.2 Interpretation1. r^2: How much better a regression line predicts your dependent variable than the mean of that variable
+		   ex. r^2 = 0.69 -> prediction error is 69% smaller than when you use the mean 
+            2.3.3.3 Interpretation2. r^2: How much of the variance in your dependent variable is explained by your independent variable
+		   ex. r^2 = 0.69 -> 69% of the variance in the grades(Y) can be predicted by the previous grades(X)
+    2.4 Caveats and examples
+        2.4.1 Correlation is no causation
+
+3. Probability
+    3.1 Randomness
+        • randomness is the apparent or actual lack of pattern or predictability in events
+        • A random sequence of events, symbols or steps often has no order and does not follow an intelligible pattern or combination
+    3.2 Probability
+        • Probability is a way to quantify randomness
+        • Sample space, event, tree diagram with quantifying probabilities
+    3.3 Basic set-theoretic concepts
+        • Disjoint/mutually exclusive: two or more events in a sample space that do not share any outcomes
+        • Collectively exhaustive: mutiple events which together fill-up the complete sample space
+        • ∑ P(disjoint events) ≤ 1, ∑ P(collectively exhaustive events) = 1
+    3.4 Conditional probability & Independence
+        • Probability:  The probability of an outcome is interpreted as the long-run proportion of the time that the outcome would occur, if the experiment were repeated indefinitely.
+        • That is, probability is long-term relative frequency.
+        3.4.1 Joint and marginal probabilities
+            • Joint probabilities: Probabilities for the intersection of certain outcomes of the variables
+            • Marginal probabilities: Probabilities for an outcome of each individual variable
+        3.4.2 Conditional probabilities
+            • The probability of an event, given that another event occurs , ex. P(A | B) = P(A ⋀ B) / P(B), P(A ⋀ B) = P(A | B) * P(B)
+        3.4.3 Independence between random events
+            • Independence: knowing the outcome of one event does not influence your knowledge about the outcome for the others
+            • P(A | B) = P(A), P(B | A) = P(B), P(A ⋀ B) = P(A) * P(B) -> Implies indepence
+    3.5 Conditional probability, decision trees and Baye's Law
+        • P(A | B) * P(B) = P(B | A) * P(A) ↔ P(A | B) = P(B | A) * P(A) / P(B) = P(B | A) * P(A) / ∑(P(B | A_n) * P(A_n))
+
+4. Probability distributions
+    4.1 Random variables and probability distributions
+        4.1.1 Random variable: Variable whose possible values are numerical outcomes of a random phenomenon
+            4.1.1.1 Discrete random variable: countable number of distinct values
+            4.1.1.2 Continuous random variable: infinite number of possible values
+        4.1.2 Probability distribution: specifies the probabilites for each of the values that a random variable may take
+            4.1.2.1 Probability distribution for discrete variable is called 'probability mass function'
+            4.1.2.2 Probability distribution for continuous variable is called 'probability density function'
+    4.2 Cumulative probability and distributions
+        4.2.1 The mean of a random variable
+            4.2.1.1 the mean of a discrete random variable
+                • probability-weighted average of all possible values that the random variable can take, μ_x = E(x) = ∑[xP(x)] 
+            4.2.1.2 the mean of a continuous random variable
+                • average of all possible values that the random variable can take, μ_x = E(x) = intelgra[-∞, ∞](xf(x) dx)
+            4.2.1.3 Combining different random variables
+                • x → a+bx, then μ_x → μ_{a + bx}
+                • μ_{x+y} = μ_x + μ_y
+        4.2.2 The variance of a random variable
+            4.2.2.1 discrete X: var(X)=∑(x_i−μ)^2*P_i(x_i)
+            4.2.2.2 continuous X: integral[-∞, ∞]((x-μ)^2*f(x) dx)
+    4.3 The normal distribution
+        4.3.1 Functional form of the normal distribution
+            • A random variable X is normally distributed with mean μ and standard deviation σ, then one may write X ~ N(μ, σ^2) 
+            • Normal probability distribution = Gaussian distribution
+            • Cumulative normal probability distribution = Sigmoid shape
+            • Form of normal distribution(pdf, probability density function), f(x) = 1/(σ*sqrt(2π) * e^{-0.5 *{(x - μ)/σ}^2}
+        4.3.2 The normal distribution: probability calculations
+            • μ ± σ → 0.68,  μ ± 2σ → 0.95,  μ ± 3σ → 0.997 
+        4.3.3 The standard normal distribution (X ~ N(0, 1), which means μ = 0, σ = 1)
+            • Normal probability distribution → the standard normal distribution (z-distribution) 
+            • Standardize the normal probability distribution to the standard normal distribution (z-distribution), then utilize the z-table
+            • z = (x - μ)/σ
+            • ex. P(x ≤ 6)? → P((x - μ)/σ = z ≤ (6 - μ)/σ) → Use z-table
+    4.4 The binomial distribution
+            • binomial distribution = discrete probability distribution
+            • x = #success, n = #trials, p = probability of success
+            • discrete probability distribution, μ(mean) = np, σ(standard deviation) = sqrt(np(1 - p))
+            • Formula for the binomial probability distribution, P(x) = n!/(x!(n - x)!) * p^x * (1 - p)^{n - x}, where x = 0, 1, 2, ... , n
+            • Formula for the cumulative probability distribution, F(x) = P(X ≤ x) = ∑[k=0 .. x] n!/(k!(n - k)!) * P^k * (1 - p)^{n - k}
+
+5. Sampling distributions
+    5.1 Sample and sampling
+        5.1.1 Sample
+            • Sample → Descriptive statistics → statiscal data
+            • Methods for summraizing sample data are called Descriptive statistics
+            • Represented by Roman letters, (ex. mean(x), s for standard deviation)
+            • univariate analysis → mode, mean, meadian
+            • bivariate analysis → Pearon's R, regression analysis
+        5.1.2 Population
+            • Sample → Descriptive statistics → statiscal data → Inferential statistics → Population → statiscal data (parameters)
+            • Represented by Greek letters, (ex. μ = mean, σ = standard deviation)
+        5.1.3 Sampling
+            • Simple random sample: each subject in the populatin has a same change of being selected 
+            • simple random sample Bias (undercoverage, sampling bias, nonresponse bias, response bias)
+    5.2 Sampling distribution of sample mean and Central limit theorem
+        5.2.1 The sampling distribution of the sample mean (Sampling distribution)
+            • infinite number of samples → the mean of that distribution = mean in the population (Sampling distribution)
+            • Sampling distribution ≠ Sample distribution ≠ Data distribution
+        5.2.2 Central limit theorem
+            • No matter how a variable is distributed in the population, the sampling distribution of the sample mean is approximately normal as long as the sample size is at least thirty
+            • Mean of sampling distributiom μ_{mean(x)} = population mean μ,  σ_{mean(x)} = σ / sqrt(n) where n is sample size
+        5.2.3 Three distributions
+    5.3 Three distributions
+        5.3.1 Population distribution (Greek letters, μ = mean, σ = standard deviation)
+        5.3.2 Data/sample distribution (Roman letters, mean(x), s)
+        5.3.3 Sampling distribution (Greek letters with mean(x), μ_{mean(x)} = μ, σ_{mean(x)}  = σ / sqrt(n))
+    5.4 Sampling distribution of sample proportion
+
+6.
+7.
