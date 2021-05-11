@@ -138,6 +138,32 @@ Descriptive, Inferential statistics
         5.3.2 Data/sample distribution (Roman letters, mean(x), s)
         5.3.3 Sampling distribution (Greek letters with mean(x), μ_{mean(x)} = μ, σ_{mean(x)}  = σ / sqrt(n))
     5.4 Sampling distribution of sample proportion
+        - Sampling distribution of sample mean → approximately bell-shaped if population is normally distributed or if sample size is sufficiently large (≥30)
+        - Sampling distribution of the sample proportion → approximately bell-shaped if nπ ≥ 15 and n(1 - π) ≥ 15, where n is sample size, and π is population proportion
+        - Standard deviation of sampling distribution of sample proportion → σ_p = sqrt(π(1 - π)/n), where n is sample size, π is population proportion
 
-6.
+6. Confidence Intervals
+    6.1 Inference and confidence interval for mean
+        6.1.1 Statiscal inference (Estimation / Hypothesis testing)
+            - Sample information → Infer total population information
+        6.1.2 Estimation 
+            6.1.2.1 Point estimate 
+                - ex. Sample mean(x) = 2.6 → Estimate population mean, μ = 2.6? (not clear how close)
+            6.1.2.2 Interval estimate
+                - Sample mean(x) → Estimate population mean interval, μ = 2.6 ~ 2.9 with confidence level 0.95 (95% confidence interval)
+        6.1.3 Confidence Interval for mean with known population standard deviation(σ)
+            - Confidence Interval → estimate a population mean → in 95% of the samples the population value will fall within the confidence interval (
+            - mean(x) ± 1.96σ_{mean(x)}  or  mean(x) ± Z_{95%}σ_{mean(x)}, where σ_{mean(x)} = σ / sqrt(n), but we usually don't know σ which is sd of population
+        6.1.4 Confidence Interval for mean with unknown population standard deviation(σ)
+            - Use sample sd and T-distribution to add error 
+            - mean(x) ± t_{95%}(se), where se = s / sqrt(n), where se = the estimated standard deviation of the sampling distribution of the sample mean
+        6.1.5 assumptions
+            - sample should be random sample
+            - population approximately normal population distribution (but T-distribution method robust against the violation)
+            - be wary of extreme outliers
+
+    6.2 Confidence interval for proportion and confidence levels
+    6.3 Sample size and example
+
+
 7.

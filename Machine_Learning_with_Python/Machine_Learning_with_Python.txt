@@ -44,10 +44,7 @@
             - Simple regression model (predicting dependent variable with one independent variable)
             - Multiple regression model (predicting dependent variable with more than one independent variable)
         2.1.3 Applications of regression
-            - Sales forecasting
-            - Satisfaction analysis
-            - Price estimation
-            - Employment income
+            - Sales forecasting, Satisfaction analysis, Price estimation, Employment income
         2.1.4 Regression algorithms
             - Oridinal regression
             - Poisson regression
@@ -60,51 +57,49 @@
             - KNN (K-nearest neighbors)
     2.2 Simple Linear Regression 
         : Predicting dependent variable with one independent variable
-    2.3 Model Evaluation in Regression Models
-        2.2.1 Model evaluation approaches
-            2.2.1.1 Train and Test on the same dataset
-	  - High training accuracy isn't necessarily a good thing
-	  - Result of overf-fitting
-            2.2.1.2 Train / Test Split
-	  - It's important that our models have a high, out-of-sample accuracy
-	  - More accuracte evaluation on out-of-sample accuracy
-	  - Highly depedent on which datasets the date is trained and tested
-        2.2.2 K-fold cross-validation
-    2.4 Evaluation Metrics in regression models
-        2.4.1 What is an error of the model?
-	- MAE (Mean Absolute Error)
-	- MSE (Mean Squared Error)
-	- RMSE (Root Mean Squared Error)
-	- RAE (Relative Absolute Error)
-	- RSE (Relative Squared Error)
-	- R^2 = 1 - RSE
-    2.5 Multiple Linear Regression
+    2.3 Multiple Linear Regression
         : Predicting dependent variable with multiple independent variables
-        2.5.1 Examples of multiple linear regression
+        2.3.1 Examples of multiple linear regression
 	- Independent variables effectiveness on prediction
 	- Predicting impacts of changes
 	- ex. Co2Em = θ_0 + θ_1*Engine_size + θ_2*Cylinders + θ_3*Fuelconsumption + ...
 	    → y^ = θ^T * X where θ^T = [θ_0  θ_1 θ_2  ... ], X = [1, x_1, x_2, ... ]
-        2.5.2 Finding parameters
+        2.3.2 Finding parameters
 	- Using MSE (Mean Squared Error), Find minimun value of 1/n * ∑(y_i - y^_i)^2
-	2.5.2.1 Ordinary Least Squares
+	2.3.2.1 Ordinary Least Squares
 	    - Lineaer algebra operations
 	    - Takes a long time for large datasets (10K + rows)
-	2.5.2.2 An optimization algorithm
+	2.3.2.2 An optimization algorithm
 	    - Gradient Descent
 	    - Proper approach if you have a very large dataset
-    2.6 Non-Linear Regression
-        2.6.1 Polynomial regression is linear regression
+    2.4 Non-Linear Regression
+        2.4.1 Polynomial regression is linear regression
 	: A polynomial regression model can be transformed into linear regression model with mutiple linear regression (Least Squares)
-        2.6.2 What is non-linear regression?
+        2.4.2 What is non-linear regression?
 	- To model non-linear relationship between the dependent variable and a set of independent variables
 	- y^ must be a non-linear function of the parameter θ, not necessarily the features x
-        2.6.3 How can I know a non-linear problem?
+        2.4.3 How can I know a non-linear problem?
 	- Inspect visually, Based on accuracy
-        2.6.4 How should I model non-linear data?
+        2.4.4 How should I model non-linear data?
 	- Polynomial regression
 	- Non-linear regression model
 	- Transform your data
+    2.5 Evaluation
+        2.5.1 Model Evaluation in Regression Models
+            2.5.1.1 Model evaluation approaches
+                2.5.1.1.1 Train and Test on the same dataset
+    	      - High training accuracy isn't necessarily a good thing
+	      - Result of overf-fitting
+                2.5.1.1.2 Train / Test Split
+	      - It's important that our models have a high, out-of-sample accuracy
+	      - More accuracte evaluation on out-of-sample accuracy
+	      - Highly depedent on which datasets the date is trained and tested
+            2.5.1.2 K-fold cross-validation
+        2.5.2 Evaluation Metrics in regression models
+            2.5.1.2 What is an error of the model?
+	    - MAE (Mean Absolute Error), MSE (Mean Squared Error), RMSE (Root Mean Squared Error)
+	    - RAE (Relative Absolute Error), RSE (Relative Squared Error)
+	    - R^2 = 1 - RSE
 
 3. Classification
     3.1 Introduction to classification
@@ -163,4 +158,53 @@
 	- Predicting a customer's propensity to purchase a product or halt a subscription
 	- Predicting the probability of failure of a given process or product
 	- Predicting the likelihood of a homeowner defaulting on a mortgage
-
+        3.4.4 Logistic Regression vs Linear Regression
+	- Logistic Regression can measure the probability of a case beloning to a class but not with Linear Regression
+	- Logistic Regression can predict the probability with Sigmoid function, σ(θ^T*X) = 1 / (1 + e^{-θ^T*X})
+        3.4.5 Logistic Regression Training
+            3.4.5.1 The training procee of logistic regression
+                - 1. Initialize θ
+                - 2. Calculate y^ = σ(θ^T*X) for a customer
+                - 3. Compare the output of y^ with actual output of customer, y, and record it as error
+                - 4. Calculate the error for all customers
+                - 5. Change the θ to reduce the cost (ex. gradient descent method to find the proper θ)
+                - 6. Go back to step 2
+            3.4.5.2 Mminimizing the cost function of the model
+                3.4.5.2.1 How to find the best parameters for our model?
+	      - Minimize the cost function
+                3.4.5.2.2 How to minimize the cost function?
+	      - Using Gradient Descent
+                3.4.5.2.3 What is gradient descent?
+                    - A technique to use the derivative of a cost function to change the parameter values, in order to minimize the cost
+            3.4.5.3 Training algorithm recap (with gradient descent metod)
+                - 1. Initialize the parameters randomly (θ^T = [θ_0, θ_1, θ_2, ... ])
+                - 2. Feed the cost function with training set, and calculate the error (J(θ) = ~~)
+                - 3. Calculate the gradient of cost function (▽J = [δJ/δθ_1, δJ/δθ_2, ... , δJ/δθ_k])
+                - 4. Update weights with new values (θ_new = θprev - η▽J)
+                - 5. Go to step 2 until cost is small enough
+                - 6. Predict the new customer X
+    3.5 Support Vector Machine
+        3.5.1 What is SVM?
+            - SVM is a supervised algorithm that classfies cases by finding a separator
+            - 1. Mapping data to a high-dimentional feature space
+            - 2. Finding a separator
+        3.5.2 Data transformation
+            - Kernelling, Mapping data into a higher dimensional sapce, in such a way that can change a linearly inseperable dataset into a linearly separable dataset
+            - Ways of Kernelling: Linear, Polynomial, RBF (Radio Bases Function), and Sigmoid
+        3.5.3 Using SVM to find the hyperplane
+            - Find the hyperlane by choosing Support vectors and maximize the margin
+        3.5.4 Pros and cons of SVM
+            3.5.4.1 Advantages
+                - Accurage in high-dimentional spaces
+                - Memory efficient
+            3.5.4.2 Disadvantages
+                - Prone to over-fitting
+                - No probability estimation
+                - Small datasets (Not efficient to large dataset, e.x. more than 1000 rows)
+        3.5.5 SVM applications
+            - Image recognition
+            - Text category assignment
+            - Detecting spam
+            - Sentiment analysis
+            - Gene Expression Classification
+            - Regression, outlier detection and clustering
