@@ -208,3 +208,46 @@
             - Sentiment analysis
             - Gene Expression Classification
             - Regression, outlier detection and clustering
+
+4. Clustering
+    4.1 Introduction to Clustering
+        4.1.1 What is clustering?
+            - Cateogriging groups or objects having similar characteristics
+            - What is cluster?, A group of objects that are similar to other objects in the cluster, and dissimilar to data points in other clusters
+        4.1.2 Clustering vs Classification
+            - Labled datatset -> Classification, Unlabled dataset -> Clustering
+        4.1.3 Clustering applications
+            4.1.3.1 Retail / Marketing, dentifying buying patterns of customers, Recommending new books or movies to new customers
+            4.1.3.2 Banking, Fraud detection in credit card use, Identifying clusters of customers (e.g., loyal)
+            4.1.3.3 Insurance, Fraud detection in claims analysis, Insurance risk of customers
+            4.1.3.4 Publication, Auto-categorizing news based on their content, Recommending similar news articles
+            4.1.3.5 Medicine, Characterizing patient behavior
+            4.1.3.6 Biology, Clustering genetic markers to identify family ties
+        4.1.4 General purpose
+            - Exploratory data analysis, Summary generation, Outlier detection, Finding duplicates, Pre-processing step
+        4.1.5 Clustering algorithms
+            4.1.5.1 Partitioned-based Clustering, Relatively efficient, Middle, Large size dataset, e.g. k-Means, k-Median, Fuzzy c-Means
+            4.1.5.2 Hierarchical Clustering, Produces trees of clusters, Small size dataset, e.g. Agglomerative, Divisive
+            4.1.5.3 Density-based Clustering, Produces arbitrary shaped clusters, e.g. DBSCAN
+    4.1 k-Means Clustering
+        4.1.1 Characteristics of k-Means algorithms
+            - Partitioning Clustering
+            - K-means divides the data into non-overlapping subsets (clusters) without any cluster-internal structure
+            - Examples within a cluster are very similar
+            - Examples across different clusters are very different
+        4.1.2 k-Means algorithms
+            - 1. Initialize k centroids randomly
+            - 2. Distance calculation from the centroid to each point
+            - 3. Assign each point to the closest centroid
+            - 4. Assign new centroids to the mean values of points in each cluster
+            - 5. Repeat until there are no more changes (minimize the sum distance b/t centroids and each point in each cluster)
+        4.1.3 k-Means accuracy
+            4.1.3.1 External approach
+                - Compare the clusters with the ground truth, if it is available
+            4.1.3.2 Internal approach
+                - Average the distance between data points within a cluster
+
+    4.2 Hierarchical Clustering
+
+    4.3 Density-based Clustering
+    
