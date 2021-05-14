@@ -2,14 +2,14 @@
     1.1 What is machine learning?
         : Machine learning is the subfield of computer science that gives "computers the ability to learn without being explicitly programmed."
     1.2 Major machine learning techniques
-        1.2.1 Regression/Estimation: Predicting continuous values
-        1.2.2 Classification: Predicting the item class/category of a case
-        1.2.3 Clustering: Finding the structure of data; summarization
+        1.2.1 Regression/Estimation: Predicting continuous values ✔
+        1.2.2 Classification: Predicting the item class/category of a case ✔
+        1.2.3 Clustering: Finding the structure of data; summarization ✔
         1.2.4 Associations: Associating frequent co-occuring items/events
         1.2.5 Anomaly detection: Discovering abnormal and unusual cases
         1.2.6 Sequence mining: Predicting next events; click-stream (Markov Model, HMM)
         1.2.7 Dimension Reduction: Reducing the size of data (PCA)
-        1.2.8 Recomendation systems: Recommending items
+        1.2.8 Recomendation systems: Recommending items ✔
     1.3 Python for Machine Learning
         1.3.1 python libraries for machine learning
             1.3.1.1 NumPy
@@ -26,8 +26,8 @@
         1.4.1 What is supervised learning?
             : Teaching the model with labeled data
         1.4.2 Types of supervised learning
-            - Classification: Classification is the process of predicting discrete class labels or categories.
             - Regression: Regression is the process of predicting continuous values.
+            - Classification: Classification is the process of predicting discrete class labels or categories.
         1.4.3 What is unsupervised learning?
 	: The model works on its own to discover information
         1.4.4 Types of unsupervised learning
@@ -46,32 +46,28 @@
         2.1.3 Applications of regression
             - Sales forecasting, Satisfaction analysis, Price estimation, Employment income
         2.1.4 Regression algorithms
-            - Oridinal regression
-            - Poisson regression
-            - Fast forest quantile regression
+            - Oridinal regression, Poisson regression, Fast forest quantile regression
             - Linear, Polynomial, Lasso, Stepwise, Ridge regression
-            - Bayesian linear regression
-            - Neural network regression
-            - Decision forest regression
-            - Boosted decision tree regression
-            - KNN (K-nearest neighbors)
-    2.2 Simple Linear Regression 
-        : Predicting dependent variable with one independent variable
-    2.3 Multiple Linear Regression
-        : Predicting dependent variable with multiple independent variables
-        2.3.1 Examples of multiple linear regression
-	- Independent variables effectiveness on prediction
-	- Predicting impacts of changes
-	- ex. Co2Em = θ_0 + θ_1*Engine_size + θ_2*Cylinders + θ_3*Fuelconsumption + ...
+            - Bayesian linear regression, Neural network regression, Decision forest regression, Boosted decision tree regression
+            - KNN (K-nearest neighbors, classification algorithm but it can be used for regression too)
+    2.2 Linear Regression 
+        2.2.1 Simple Linear Regression 
+            : Predicting dependent variable with one independent variable
+        2.2.2 Multiple Linear Regression
+            : Predicting dependent variable with multiple independent variables
+            2.2.2.1 Examples of multiple linear regression
+	  - Independent variables effectiveness on prediction
+	  - Predicting impacts of changes
+	  - ex. Co2Em = θ_0 + θ_1*Engine_size + θ_2*Cylinders + θ_3*Fuelconsumption + ...
 	    → y^ = θ^T * X where θ^T = [θ_0  θ_1 θ_2  ... ], X = [1, x_1, x_2, ... ]
-        2.3.2 Finding parameters
-	- Using MSE (Mean Squared Error), Find minimun value of 1/n * ∑(y_i - y^_i)^2
-	2.3.2.1 Ordinary Least Squares
-	    - Lineaer algebra operations
-	    - Takes a long time for large datasets (10K + rows)
-	2.3.2.2 An optimization algorithm
-	    - Gradient Descent
-	    - Proper approach if you have a very large dataset
+            2.2.2.2 Finding parameters
+	  - Using MSE (Mean Squared Error), Find minimun value of 1/n * ∑(y_i - y^_i)^2
+	  2.2.2.2.1 Ordinary Least Squares
+	      - Lineaer algebra operations
+	      - Takes a long time for large datasets (10K + rows)
+	  2.2.2.2.2 An optimization algorithm
+	      - Gradient Descent
+	      - Proper approach if you have a very large dataset
     2.4 Non-Linear Regression
         2.4.1 Polynomial regression is linear regression
 	: A polynomial regression model can be transformed into linear regression model with mutiple linear regression (Least Squares)
@@ -81,9 +77,7 @@
         2.4.3 How can I know a non-linear problem?
 	- Inspect visually, Based on accuracy
         2.4.4 How should I model non-linear data?
-	- Polynomial regression
-	- Non-linear regression model
-	- Transform your data
+	- Polynomial regression, Non-linear regression model, Transform your data
     2.5 Evaluation
         2.5.1 Model Evaluation in Regression Models
             2.5.1.1 Model evaluation approaches
@@ -178,7 +172,7 @@
                     - A technique to use the derivative of a cost function to change the parameter values, in order to minimize the cost
             3.4.5.3 Training algorithm recap (with gradient descent metod)
                 - 1. Initialize the parameters randomly (θ^T = [θ_0, θ_1, θ_2, ... ])
-                - 2. Feed the cost function with training set, and calculate the error (J(θ) = ~~)
+                - 2. Feed the cost function with training set, and calculate the error (J(θ) = 1/m∑[i=1..m](y^i * log(y^^i) + (1 - y^i) * log(1 - y^^i))
                 - 3. Calculate the gradient of cost function (▽J = [δJ/δθ_1, δJ/δθ_2, ... , δJ/δθ_k])
                 - 4. Update weights with new values (θ_new = θprev - η▽J)
                 - 5. Go to step 2 until cost is small enough
@@ -246,8 +240,40 @@
                 - Compare the clusters with the ground truth, if it is available
             4.1.3.2 Internal approach
                 - Average the distance between data points within a cluster
-
     4.2 Hierarchical Clustering
-
+        4.2.1 What is Hierarchical Clustering?
+            - Hierarchical clustering algorithms build a hierarchy of clusters where each node is a cluster consists of the clusters of its daughter nodes
+            - There are two types: Agglomerative(Bottom-up↑), Divisive(Top-down↓)
+        4.2.2 Agglomerative algorithm
+            - 1. Create n clusters, one for each data point
+            - 2. Compute the Proximity Matrix
+            - 3. Repeat
+                - i. Merge the two closest clusters
+                - ii. Update the proximity matrix
+            - 4. Until only a single cluster remains
+        4.2.3 Distance between clusters
+            - Single-Linkage Clustering, Minimum distance between clusters
+            - Complete-Linkage Clustering, Maximum distance between clusters
+            - Average Linkage Clustering, Average distance between clusters
+            - Centroid Linkage Clustering, Distance between cluster centroids
     4.3 Density-based Clustering
+        4.3.1 What is DBSCAN?
+            4.3.1.1 DBSCAN (Density-Based Spatial Clustering of Application with Noise)
+                - Is one of the most common clustering algorithms
+                - Works based on density of objects
+            4.3.1.2 R (Radius of neighborhood)
+                - Radius (R) that if includes enough number of points within, we call it a dense area
+            4.3.1.3 M (Min number of neighbors)
+                - The minimum number of data points we want in a neighborhood to define a cluster
+        4.3.2 DBSCAN algorithm
+            - 1. Check Core points/ Border points/ Outilers 
+                 - Core point: A data point is a core point if within our neighborhood of the point there are at least M points
+                 - Border points: A data point is a border point if its neighbourhood contains less than M data points or it is reachable from some core point
+                 - Outliers: An outlier is a point that is not a core point and also is not close enough to be reachable from a core point
+            - 2. Connect core points that are neighbors and put them in the same cluster
+        4.3.3 Advantages of DBSCAN
+            - 1. Aribitrary shaped clusters
+            - 2. Robust to outliers
+            - 3. Does not require specification of the number of clusters
+
     
