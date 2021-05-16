@@ -42,6 +42,46 @@ Python for Data Science, AI & Development
             - Attributes, Methods
 
 4. Working with Data in Python
+    4.1 Reading Files with Open
+        - Open a file and it should be closed at the end: ex. File = open("/resources/data/Example2.txt","w") // File.close()
+        - "w": write mode (can create a file), "a": append mode, "r": read mode
+        - Open with ... as then it close the file automatically without the block:
+          with open("/resources/data/Example2.txt","w") as File1:
+              file_stuff = File1.read()
+              print(file_stuff)
+        - readline(), readlines(), readlines(n) // read n characters
+    4.2 Loading Data with Pandas
+        - import pandas as pd
+              csv_path = 'file1.csv'
+              df = pd.read_csv(csv_path) // df means dataframe (dataframe is data fram consists of rows and columns)
+              df.head() // read first five rows of dataframe
+        - Convert dictionary to dataframe, ex. songs_frame = pd.DataFrame(songs) // songs = {'Album':['Thriller','Comedy'], 'Released':[1982,1980]}
+        - Add new columns to a dataframe, ex. y = df[['Artist', 'Length']]
+        - Extract unqiue elements, ex.df['Released'].unique()
+        - Save as CSV, ex. df1.to_csv('new_songes.csv')
+    4.3 One Dimensional Numpy
+        4.3.1 Basics and Array creation
+            - import numpy as np
+                  a = np.array([0, 1, 2, 3, 4])
+            - >> a: array([0,1,2,3,4]),  type(a): numpy.ndarray,  a.dtype: dtype('int64'),  a.size: 5,  a.ndim: 1 //dimension,  a.shape: (5,) //size of the array in each dimension
+        4.3.2 Indexing and Slicing (Same to list)
+        4.3.3 Basic Operations
+            - Vector Addition, Substraction, Multiplication, Division
+            - Addition/Substraction/Multiplication/Division with a scalar, ex. y = np.array([1,2]),  z = 2*y,  z: array([2,4])
+            - Product of two numpy arrays, ex. u = np.array([1,2]), v = np.array([3,2]),  z = u*v,  z: array([3,4])
+            - Dot Product, ex. u = np.array([1,2]), v = np.array([3,2]),  result = np.dot(u,v),  result: 5
+        4.3.4 Universal Functions
+            - mean(), ex. a = np.array([1,-1,1,-1]),  mean_a = a.mean(),  mean_a: 0
+            - max(), ex. b = np.array([1,-2,3,4,5]),  max_b = b.max(),  max_b: 5
+            - sin(), ex. x = np.arrapy([0, np.pi/2, np.pi]),  y = np.sin(x),  y: array([0,1,1.2e-16])
+            - np.linspace(first, last, number of elements), ex. a = np.linspace(-2,2,9),  a: array([-2. , -1.5, -1. , -0.5,  0. ,  0.5,  1. ,  1.5,  2. ])
+    4.4 Two Dimensional Numpy
+        4.4.1 The Basics and Array Creation in 2D
+            - a = [[1,2,3],[4,5,6],[7,8,9]],  b = np.array(a),  b = array([[1, 2, 3], [4, 5, 6], [7, 8, 9]])
+            - b.ndim: 2,  b.shape: (3,3),  b.size: 9
+        4.4.2 Indexing and Slicing in 2D
+        4.4.3 Basic Operations in 2D
+            - Dot Product, ex. A=np.array([[0,1,1],[1,0,1]]), B=np.array([[1,1],[1,1],[-1,1]]), C=np.dot(A,B),  C: array([[0,2],[0,2]])
 
 5. APIs, and Data Collection
     
