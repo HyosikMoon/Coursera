@@ -84,4 +84,105 @@ Python for Data Science, AI & Development
             - Dot Product, ex. A=np.array([[0,1,1],[1,0,1]]), B=np.array([[1,1],[1,1],[-1,1]]), C=np.dot(A,B),  C: array([[0,2],[0,2]])
 
 5. APIs, and Data Collection
-    
+    5.1 Simple APIs
+        5.1.1 What is an API?
+            - API (Application Program Interface) helps to communicate between programs, ex. pandas(API) helps to communicate python with data
+        5.1.2 REST API
+            - REST APIs (REpresentational State Transfer APIs) are another popular type of API
+            - They allow you to communicate through the internet allowing you to take advantage of resources like storage, access more data, AI algorithms, etc.
+        5.1.3 Simple APIs example
+            5.1.3.1 API keys and endpoints
+                - API keys, it's a way to access the API, It's a unique set of characters that the API uses to identify you and authorize you
+                - endpoints, An endpoint is simply the location of the service. It's used to find the API on the Internet just like a web address
+            5.1.3.2 Watson Speech to Text
+            5.1.3.3 Watson Translate
+    5.2 REST APIs (HTTP), Webscraping
+        5.2.1 HTTP Protocol
+            - The HTTP protocol can be thought of as a general protocol of transferring information through the web
+            - This includes many types of REST APIs. Recall that REST API’s function by sending a request, and the request is communicated via HTTP message
+            - The HTTP message usually contains a JSON file
+            5.2.1.1 URL (Uniform Resource Locator) is the most popular way to find resources on the web
+                - Scheme: the protocol, ex. http://
+                - Internet address or Base URL, this will be used to find the location; ex. www.ibm.com
+                - Route: this is the location on the web server; ex.  /images/IDSNlogo.png
+            5.2.1.2 Request in python
+                - import request
+                  url = 'https://www.ibm.com/'
+                  r = request.get(url)
+                - then we can check, >> r.status_code: 200, r.request.headers: ~~, r.request.body, r.encoding, r.text[0:100], etc.
+                5.2.1.2.1 Get/Post request with URL parameters
+                    - Get request URL: http://httpbin.org/get?name=Joseph&ID=123
+                    - Post request URL: http://httpbin.org/post
+        5.2.2 HTMP for Webscraping
+            5.2.2.1 Review the HTML of a basic web page
+            5.2.2.2 Composition of an HTML Tag
+                - In HTML <~~> angle brackets and its contents are tags
+                - ex. <html> ~ <head> ~~ </head> <body> ~~~ </body> ~ </html>
+            5.2.2.3 HTML Trees
+                - below structure is html tree like nested tags
+                <!DOCTYPE html>
+                <html>
+                    <head>
+                        <title>Page Title</title>
+                    </head>
+                    <body>
+                        <h3>    <b  id='boldest'>  Lebron James</b></h3>
+                        <p> Salary:  $  92,000,000 </p>
+                        <h3> Stephen Curry</h3>
+                        <p> Salary:  $  85,000,000 </p>
+                    </body>
+                </html>
+            5.2.2.4 HTML Tables
+                - below codes representing html table
+                <table >
+                    <tr> //table row
+                        <td>Name</td>
+                        <td>Age</td>
+                        <td>Salary</td>
+                    </tr>
+                    <tr>
+                        <td>Steeve</td>
+                        <td>17</td>
+                        <td> $ 10,000</td>
+                    </tr>
+                    <tr>
+                        <td>Nancy</td>
+                        <td>17</td>
+                        <td> $ 7,000</td>
+                    </tr>
+                </html>
+            5.2.2.5 Webscraping
+                5.2.2.5.1 What is Webscraping
+                    - Webscraping is a process that can be used to automatically extract information from a website
+                5.2.2.5.2 Beautiful Soup Objects
+                    - We need a little Python code and the help of two modules named Requests and Beautiful Soup
+                    - from bs4 import BeautifulSoup
+                      html="<!DOCTYPE html><html><head><title>Page Title</title></head><body><h3><b id='boldest'> ... </b></h3> ... </body></html>"
+                      soup = BeautifulSoup(html, 'html5lib')
+                    - now we can extract data with soup object
+                    - ex. tag_object=soup.title: <title>Page Title</title>,  tag_object=soup.h3: <h3><b id='boldest'> ... </b></h3>
+                          , tag_child=tag_object.b: <b id='boldest'> ... </b>,  parent_tag=tag_child.parent: <h3><b id='boldest'> ... </b></h3>
+                          , tag_object.next_sibling,  tag_child.attrs,  tag_child.string, etc.
+                5.2.2.5.3 Find_all
+                    - This is a filter, you can use filters to filter based on a tag’s name, it’s attributes, the text of a string, or on some combination of these
+                    - table_row=table.find_all(name='tr'): [<tr><td>Name</td><td>Age</td><td>Salary</td></tr>,
+                                                                        <tr><td>Steeve</td><td>17</td><td> $ 10,000</td></tr>,
+                                                                        <tr><td>Nancy</td><td>17</td><td> $ 7,000</td></tr>]
+    5.3 Working with different file formats (csv, xml, json, xlsx)
+        - We use pandas library to read different types of files
+        5.3.1 Reading CSV Files
+            - import pandas as pd
+              file = "FileExample.csv"
+              df = pd.read_csv(file)
+            - if the file doesn't  have a hearder, we can easily add a header by using dataframes, ex. df.columns = ['Name', 'Phone Number', 'Birthday']
+        5.3.1 Reading JSON Files
+            - import json
+              with open('filesampe.json', 'r') as openfile:
+                  json_object = json.load(openfile)
+              print(json_object)
+        5.3.1 Reading XML (extensible markup language) Files
+            - import pandas as pd
+              import xml.etree.ElementTree as etree
+              tree = etree.parse("fileExample.xml")
+              root = tree.getroot()
+              ~~ extract data ~~
