@@ -113,7 +113,9 @@ Python for Data Science, AI & Development
                 5.2.1.2.1 Get/Post request with URL parameters
                     - Get request URL: http://httpbin.org/get?name=Joseph&ID=123
                     - Post request URL: http://httpbin.org/post
-        5.2.2 HTMP for Webscraping
+        5.2.2 HTML for Webscraping
+            - HTML (HyperText Markup Language) is the standard markup language for documents designed to be displayed in a web browser
+             , *a markup language is a system for annotating a document in a way that is visually distinguishable from the content.
             5.2.2.1 Review the HTML of a basic web page
             5.2.2.2 Composition of an HTML Tag
                 - In HTML <~~> angle brackets and its contents are tags
