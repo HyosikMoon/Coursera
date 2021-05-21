@@ -45,3 +45,31 @@ Databases and SQL for Data Science with Python
              - A Data Manipulation Language (DML) statement used to read and modify data
              - The general syntax of DELETE statement is: DELETE [TableName] SET [[ColumnName]=[Value]] <WHERE [Condition]>
              - ex. DELETE FROM AUTHOR WHERE AUTHOR_ID IN ('A2','A3')
+
+2. Relational Database Concepts
+    2.1 What is relational database
+        - Relational database is tables consisting of entities
+        - Entities are independent objects which have attributes
+        - The key advantage of the relational model is data independence
+    2.2 Databse instance on Cloud
+        2.2.1 Characteristics of Cloud databses
+            - Eaas of Use and Access, ex. API, Web Interface, Cloud or Remote Application
+            - Scalability & Economic, Diaster Recovery
+        2.2.2 Examples of Cloud databases
+            - IBM Db2, Databases for PostgreSQL, Oracle Database Cloud Service, Microsoft Azure SQL Database, Amazon Relational Database Services (RDS)
+        2.2.3 Database service instances
+            - DBaaS (Database-as-a-Service) provides users with access to Database resources in cloud without setting up hardware and installing software
+            - Database service instance holds data in data objects/tables
+            - Once data is loaded, it can be queried using web interfaces and applications
+    2.3 Tpyes for SQL statements (DDL vs DML)
+        2.3.1 DDL (Data Definition Langugae) statements
+            - Define, change, or drop data, ex. CREATE, ALTER, TRUNCATE, DROP
+        2.3.2 DML (Data Manipulation Language) statements:
+            - Read and modify data, CRUD operations (Create, Read, Update, Delete rows)
+            - Common DML, ex. INSERT, SELECT, UPDATE, DELETE
+
+3. Using String Patterns and Ranges
+    3.1 Refining your Results
+    3.2 Functions, Multiple, Tables, and Sub-queries
+
+4. Accessing Databases using Python
