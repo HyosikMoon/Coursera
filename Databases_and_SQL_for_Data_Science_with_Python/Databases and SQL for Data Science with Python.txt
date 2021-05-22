@@ -70,6 +70,7 @@ Databases and SQL for Data Science with Python
 
 3. Using String Patterns and Ranges
     3.1 Refining your Results
+        3.1.1 Using Strings 
     3.2 Functions, Multiple, Tables, and Sub-queries
 
 4. Accessing Databases using Python
