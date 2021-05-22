@@ -100,7 +100,7 @@ Databases and SQL for Data Science with Python
             - ex. select country, count(country) as Count from Author group by country
         3.3.3 +Having clause: select column_name count(column_name) as Count from table_name group by column_name having count(column_name) > count_number
             - ex. select country, count(country) as Count from Author group by country having count(country) > 4
-    3.4 Functions, Multiple, Tables, and Sub-queries
+    3.4 Functions, Sub-queries, and Multiple Tables
         3.4.1 Built-in Functions
             3.4.1.1 Aggregate or Column functions
                 3.4.1.1.1 SUM: select SUM(column_name) as print_column_name from table_name
@@ -122,8 +122,31 @@ Databases and SQL for Data Science with Python
                     - ex. select DISTINCT(UCASE(ANIMAL)) as ANIMAL from PETRESCUE
                 3.4.1.2.4 LCASE: select LCASE(column_name) as print_column_name from table_name
                     - ex. select * from PETRESCUE where LCASE(ANIMAL) = 'cat'
-- AGREEGATE: SUM, MIN, MAX, AVG, 
-- SCALAR: ROUND, LENGTH, UCASE, LCASE
-
+            3.4.1.3 Date and Time Built-in functions
+                3.4.1.3.1 DAY: select DAY(column_name) from table_name
+                    - ex. select DAY(RESCUEDATE) from PETRESCUE where ANIMAL='Cat'
+                3.4.1.3.2 MONTH: select MONTH(column_name) from table_name
+                    - ex. select COUNT(*) from PETRESCUE where MONTH(RESCUEDATE)='05'
+                3.4.1.3.3 Arithmetic: select (column_name + n DAYS) from table_name
+                    - ex. select (RESCUEDATE + 3 DAYS) from PETRESCUE
+                    - ex. select (CURRENT_DATE - RESCUEDATE) from PETRESCUE
+        3.4.2 Sub-Queries and Nested Selects
+            3.4.2.1 Sub-queries with aggregate functions: select column_name1, column_name2 from table_name where column_name2 < (select AVG(column_name2) from table_name)
+                - ex. select EMP_ID, F_NAME, L_NAME, SALARY from employees where SALARY < (select AVG(SALARY) from employees)
+            3.4.2.2 Sub-queries in list of columns: select column_name1, column_name2, (select AVG(column_name) from table) as print_column_name from table_name
+                - ex. select EMP_ID, SALARY, (select AVG(SALARY) from employees) as AVG_SALARY from employees
+            3.4.2.3 Sub-queries in FROM clause: select * from (select column_name1, column_name2, column_name3 from table_name) as print_column_name
+                - ex. select * from (select EMP_ID, F_NAME, L_NAME, DEP_ID from employees) as EMP4ALL
+        3.4.3 Woring with Multiple Tables
+            3.4.3.1 Multiple tables with Sub-queries: select * from table_name1 where column_name1 IN (select column_name2 from table_name2)
+                - ex. select * from employees where DEP_ID IN (select DEPT_ID_DEP from departments)
+                - ex. select * from employees where DEP_ID IN (select DEPT_ID_DEP from departments where LOC_ID = 'L0002')
+                - ex. select DEPT_ID_DEP, DEP_NAME from departments where DEPT_ID_DEP IN (select DEP_ID from employees where SALARY > 70000)
+            3.4.3.1 Multiple tables with Implicit Join: select * from table_name1, table_name2
+                - ex. select * from employees, departments
+                - ex. select * from employees, departments where employees.DEP_ID = departments.DEPT_ID_DEP
+                - ex. select * from employees E, department D where E.DEP_ID = D.DEPT_ID_DEP
+                - ex. select EMP_ID, DEP_NAME from employee E, departments D where E.DEP_ID = D.DEP_ID_DEP
+                - ex. select E.EMP_ID, D.DEP_ID_DEP from employees E, departments D where E.DEP_ID = D.DEPT_ID_DEP
 
 4. Accessing Databases using Python
