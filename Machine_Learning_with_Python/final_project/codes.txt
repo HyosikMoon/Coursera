@@ -1,0 +1,60 @@
+Firstly train you dataset on each algorithm and get prediction results on test data. 
+Then you can easily find accuracies by passing true results and predicted results to accuracy metrics.
+
+Let's see code for this:
+
+import jaccard score metrics, F1 score and log loss
+
+from sklearn.metrics import jaccard_score
+from sklearn.metrics import f1_score
+from sklearn.metrics import log_loss
+1.For KNN:
+
+from sklearn.neighbors import
+knn = KNeighborsClassifier(n_neighbors=5) 
+knn.fit(X_train, y_train)
+#prediction results
+results = knn.predict(X_test)
+
+#jaccard score
+print(jaccard_score(y_test, results))
+#f1 score
+print(f1_score(y_test, results, average=None))
+2.For Decision tree:
+
+from sklearn import tree
+decision_tree = tree.DecisionTreeClassifier() 
+decision_tree.fit(X_train, y_train)
+results = decision_tree.predict(X_test)
+
+#jaccard score
+print(jaccard_score(y_test, results))
+#f1 score
+print(f1_score(y_test, results, average=None))
+3.For SVM:
+
+from sklearn import svm
+svm_model = svm.SVC()
+svm_model.fit(X_train, y_train)
+#prediction results
+results = svm_model.predict(X_test)
+
+#jaccard score
+print(jaccard_score(y_test, results))
+#f1 score
+print(f1_score(y_test, results, average=None))
+4. For Logistic Regression:
+
+
+from sklearn.linear_model import LogisticRegression
+lr = LogisticRegression(random_state=0)
+lr.fit(X_train, y_train)
+#prediction results
+results = lr.predict(X_test)
+
+#jaccard score
+print(jaccard_score(y_test, results))
+#f1 score
+print(f1_score(y_test, results, average=None))
+#log_loss
+print(log_loss(y_test, results))
