@@ -69,8 +69,61 @@ Databases and SQL for Data Science with Python
             - Common DML, ex. INSERT, SELECT, UPDATE, DELETE
 
 3. Using String Patterns and Ranges
-    3.1 Refining your Results
-        3.1.1 Using Strings 
-    3.2 Functions, Multiple, Tables, and Sub-queries
+    3.1 Retrieving rows
+        - select * from table_name (Retrieve all rows of the table)
+        3.1.1 Using Strings: select column_name from table_name where condition 
+            - the WHERE clause to refine your query results
+            - ex. select book_id, title from Book WHERE book_id='B1'
+            - the wildcard character (%) as a substitute for unknown characters in a pattern
+            - ex. select firstname from Author WHERE firstname like 'R%'
+        3.1.2 Using Ranges: select column_name from table_name where condition
+            - ex. select title, pages from Book WHERE pages >= 290 AND pages <= 300
+            - BETWEEN ... AND ... to specify a range of numbers
+            - ex. select title, pages from Book WHERE pages between 290 and <= 300
+        3.1.3 Using Set of values: select column_name from table_name where condition
+            - ex. select firstname, lastname, country from Author WHERE country='AU' OR country='BR'
+            - ex. select firstname, lastname, country from Author WHERE country IN ('AU', 'BR')
+    3.2 Sorting Results Sets
+        - sort query results into ascending or descending order, using the ORDER BY clause to specify the column to sort on
+        3.2.1 Ascending order (default): select column_name from table_name ORDER BY column_name
+            - ex. select title from Book ORDER BY title
+        3.2.2 Descending order: select column_name from table_name ORDER BY column_name DESC
+            - ex. select title from Book ORDER BY title DESC
+        3.2.3 Order by column number: select column_name from table_name ORDER BY column_number
+            - ex. select title from Book ORDER BY 2
+    3.3 Grouping Result Sets
+        3.3.1 Eliminating duplicates: select distinct(column_name) from table_name
+            - ex. select distinct(country) from Author
+        3.3.2 Eliminate duplicates and count: select column_name count(column_name) as Count from table_name GROUP BY column_name
+            - group query results by using the GROUP BY clause
+            - count() is function, as Count is a column name for count() result
+            - ex. select country, count(country) as Count from Author group by country
+        3.3.3 +Having clause: select column_name count(column_name) as Count from table_name group by column_name having count(column_name) > count_number
+            - ex. select country, count(country) as Count from Author group by country having count(country) > 4
+    3.4 Functions, Multiple, Tables, and Sub-queries
+        3.4.1 Built-in Functions
+            3.4.1.1 Aggregate or Column functions
+                3.4.1.1.1 SUM: select SUM(column_name) as print_column_name from table_name
+                    - ex. select SUM(COST) as SUM_OF_COST from PETRESCUE
+                3.4.1.1.2 MAX: select MAX(column_name) as print_column_name from table_name
+                    - ex. select MAX(QUANTITY) as MAX_OF_QUANTITY from PETRESCUE
+                3.4.1.1.3 MIN: select MIN(column_name) as print_column_name from table_name
+                    - ex. select MIN(ID) as MIN_OF_ID from PETRESCUE where ANIMAL = 'Dog'
+                3.4.1.1.4 AVG: select AVG(column_name) as print_column_name from table_name
+                    - ex. select AVG(COST) as AVG_OF_COST from PETRESCUE
+                    - ex. select AVG(COST / QUANTITY) as AVG_OF_COST_dby_QUANTITY from PETRESCUE where ANIMAL = 'Dog'
+            3.4.1.2 Scalar and String functions
+                3.4.1.2.1 Round: select ROUND(column_name) as print_column_name from table_name
+                    - ex. select ROUND(COST) from PETRESCUE
+                3.4.1.2.2 LENGTH: select LENGTH(column_name) as print_column_name from table_name
+                    - ex. select LENGTH(COST) from PETRESCUE
+                3.4.1.2.3 UCASE: select UCASE(column_name) as print_column_name from table_name
+                    - ex. select UCASE(ANIMAL) from PETRESCUE
+                    - ex. select DISTINCT(UCASE(ANIMAL)) as ANIMAL from PETRESCUE
+                3.4.1.2.4 LCASE: select LCASE(column_name) as print_column_name from table_name
+                    - ex. select * from PETRESCUE where LCASE(ANIMAL) = 'cat'
+- AGREEGATE: SUM, MIN, MAX, AVG, 
+- SCALAR: ROUND, LENGTH, UCASE, LCASE
+
 
 4. Accessing Databases using Python
