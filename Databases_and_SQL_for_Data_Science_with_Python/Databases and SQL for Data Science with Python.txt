@@ -159,9 +159,17 @@ Databases and SQL for Data Science with Python
     4.2 Writing code using DB-API
         4.2.1 Concepts of the Python DB API
             - My Application ⇔ Open, Execute, Fetchall, close ⇔ Cursor object ⇔ Connection object ⇔ Database
+            - DB-API is Python's standard API for accessing relational databases
+            - It allows you to write a single program that works with multiple kinds of relational databases instead of writing a separate program for each one
+            - The DB_API  connect constructor creates a connection to the database and returns a Connection Object, 
+              which is then used by the various connection methods
             4.2.1.1 Connection Object
                 - Database connections, Manage transactions
                 - ex. .cursor(), .commit(), .rollback(), .close()
+                - The cursor() method, which returns a new cursor object using the connection.
+                - The commit() method, which is used to commit any pending transaction to the database.
+                - The rollback() method, which causes the database to roll-back to the start of any pending transaction.
+                - The close() method, which is used to close a database connection. 
             4.2.1.2 Cursor Objects
                 - Databse Queries, Scroll through result set, Retrieve results
                 - ex. .callproc(), .execute(), .executemany(), .fetchone(), .fetchmany(), .fetchall(), .nextset(), .arraysize(), .close()
@@ -178,21 +186,21 @@ Databases and SQL for Data Science with Python
                     - Cursor.close()
                     - Connection.close()
     4.3 Connecting to a database using ibm_db API
+        - ex. import ibm_db
+               dsn_driver = "{IBM DB2 ODBC DRIVER}"
+               dsn_database = "BLUDB"
+               dsn_hostname = "MyDb2Hostname"
+               dsn_port = "50000"
+               dsn_protocol = "TCPIP"
+               # Create databsae connection
+               dsn = (  "DRIVER={{IBM DB2 ODBC DRIVER}};"  
+                           "DATABASE={0};"  "HOSTNAME={1};"  
+                           "PORT={2};"  
+                           "PROTOCOL=TCPIP;"  
+                           "UID={3};"  "PWD={4};"  ).format(dsn_database, dsn_hostname, dsn_port, dsn_uid, dsn_pwd)
+               conn = ibm_db.connect(dsn, "", "")
     4.4 Creating tables, loading data and querying data
-        4.4.1 Connect to the database
-            - ex. import ibm_db
-                   dsn_driver = "{IBM DB2 ODBC DRIVER}"
-                   dsn_database = "BLUDB"
-                   dsn_hostname = "MyDb2Hostname"
-                   dsn_port = "50000"
-                   dsn_protocol = "TCPIP"
-                   # Create databsae connection
-                   dsn = (  "DRIVER={{IBM DB2 ODBC DRIVER}};"  
-                               "DATABASE={0};"  "HOSTNAME={1};"  
-                               "PORT={2};"  
-                               "PROTOCOL=TCPIP;"  
-                               "UID={3};"  "PWD={4};"  ).format(dsn_database, dsn_hostname, dsn_port, dsn_uid, dsn_pwd)
-                   conn = ibm_db.connect(dsn, "", "")
+        4.4.1 Connect to the database (Refer 4.3)
         4.4.2 Create tables: ex. ibm_db.exec_immediate()
             - Three parameters: Connection, Statement, Options
             - ex. stmt = ibm_db.exec_immediate(conn, "CREATE TABLE Trucks(serial_no varchar(20) PRIMARY KEY NOT NULL, model VARCHAR(20) NOT NULL, 
@@ -206,3 +214,90 @@ Databases and SQL for Data Science with Python
                    pconn = ibm_db_dbi.Connection(conn)
                    df = pandas.real_sql('SELECT * FROM Trucks', pconn)
     4.5 Analyzing data with Python
+        4.5.1 Verify Loaded Data Using SQL 
+            - stmt = ibm_db.exec_immediate(conn, "SELECT * FROM MCDONALDS_NUTRITION")
+              imb_db.fetch_both(stmt)
+        4.5.2 Using pandas
+            - ex. import pandas
+                   import ibm_db_dbi
+                   pconn = ibm_db_dbi.Connection(conn)
+                   df = pandas.real_sql('SELECT * FROMMCDONALDS_NUTRITION', pconn)
+                   df.head()   # read first five rows of the df
+            4.5.2.1 Learn about data
+                - df.describe(include='all')  # Describe statistical and mathematical information about the summary of df
+            4.5.2.2 Visualization (examples)
+                4.5.2.2.1 Swarmplot
+                    - ex. import matplotlib.pyplot as plt
+                           %matplotlib inline
+                           import seaborn as sns
+                           ### Categorical scatterplots
+                           plot = sns.swarmplot(s="Category", y="Sodium", data=df)
+                           plt.setp(plot.get_xticklabels(), rotation=70)
+                           plt.title("Sodium Content")
+                           plt.show()
+                4.5.2.2.2 Jointplot
+                    - ex. import matplotlib.pyplot as plt
+                           %matplotlib inline
+                           import seaborn as sns
+                           plot = sns.jointplot(x="Protein", y="Total Fat", data=df)
+                           plot.show()
+                4.5.2.2.3 Boxplot
+                    - ex. import matplotlib.pyplot as plt
+                           %matplotlib inline
+                           import seaborn as sns
+                           plot = sns.set_style("withegrid")
+                           ax = sns.boxplot(x=df["Sugards"])
+                           plot.show()
+           4.5.2.3 Find information
+               - ex. Which food item has maximum sodium content?
+               - step1. find the overall data information by using describe() method
+                     - ex. df["Sodium"].describe()
+                            (Output) count     260.000000
+                                        mean      495.750000
+                                        std         577.026323
+                                            :
+                                        max        3600.000000
+                                        Name: Sodium,  dtype: float64
+               - step2. find the index of the value
+                     - ex. df["Sodium"].idxmax()
+                            (Output) 82
+               - step3. find the item with the index
+                     - ex. df.at[82, "Item"]
+                            (Output) 'Chicken McNuggets (40 piece)'
+
+5. Working with Real World Datasets
+    5.1 Working with CSV files
+        - Many real data sets are .CSV files
+        - .CSV: COMMA SEPERATED VALUES
+        5.1.1 Querying column names with mixed (upper and lower) case
+            - Use double quotes to specify mixed-case column names
+            - ex. select "Id" from DOGS
+        5.1.2 Querying column names with spaces and special characters
+            - By default, spaces and special characters are mapped to underscores
+            - select "Id", "Name_of_Dog", "Breed__dominant_breed_if_not_pure_breed_"
+                                                ⇔ "Breed (dominant breed if not pure breed)"
+        5.1.2 Using quotes in Jupyter notebooks
+            5.4.1 FIrst assign queries to variables: ex. selectQuery = 'select "Id" from dogs'
+            5.4.2 Use a backslash \ as the excape character in cases where the query contains single quotes
+                - ex. selectQuery = 'select * from dogs where "Name_of_Dog"=\`Huggy\` `
+        5.1.3 Splitting queries to multiple lines in Jupyter
+            5.1.3.1 Use backslash "\" to split the query into mutiple lines
+                - ex. %sql select "Id", "Name_of_Dog", \
+                             from dogs \
+                             where "Name_of_Dog"='Huggy'
+            5.1.3.2 Or use %%sql in the first row of the cell in the notebook
+                - ex. %%sql 
+                       select "Id", "Name_of_Dog", 
+                             from dogs 
+                             where "Name_of_Dog"='Huggy'
+        5.1.4 Restricting the # of rows retrieved
+            - To get a sample or look at a small set of rows, limit the result set by using the LIMIT clause
+            - ex. select * from census_data LIMIT 3
+    5.2 Getting Table and Column Details
+        5.2.1 Getting a list of tables in the database
+            - DB2 ⇔ SYSCAT.TABLES,  SQL Server ⇔ INFORMATION_SCHEMA.TABLES,  Oracle ⇔ ALL_TABLES or USER_TABLES
+            - ex. select * from syscat.tables
+            - ex. select TABSCHEMA, TABNAME, CREATE_TIME from syscat.tables where tabschema='Db2 unser_name'
+        5.2.2 Getting a list of columns in the database
+            - ex. select * from syscat.columns where tabname='DOGS'
+            - ex. select distinct(name), coltype, length from sysibm.syscolumns where tbname='DOGS'
