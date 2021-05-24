@@ -1,0 +1,69 @@
+Scalable_Machine_Learning_on_Big_Data_using_Apache_Spark
+
+1. Introduction
+    1.1 What is Big Data?
+        - Volume, Velocity, Variety, Veracity 
+    1.2 Understanding how Apache Spark works
+        1.2.1 Data storage solutions
+            - BigData, Changing schemas, Log-term storage
+            * A database schema represents the logical configuration of all or part of a relational database.
+            1.2.1.1 SQL (Structured Query Language) database
+               - Advantages: Well know, well established, High integrity, high data normalization, Fast indexed access, Open standard
+               - Disadvantages: Changes of schema need DDL, Hard to scale, High storage cost
+            1.2.1.2 NoSQL database
+                - Advantages: Dynamic schema, change of schema no problem, Low storage cost, Linearly scalable
+                - Disadvantages: No data normalizatioin, no data integrity, Less established, Generally slower in access than SQL
+            1.2.1.3 ObjectStorage
+                - Advantages: Very low storage cost, Linearly scalable, Seamless schema migration, schema-less
+                - Disadvantages:Very low query speed
+        1.2.2 Parallel data processing strategies of Apache Spark
+            1.2.2.1 RDD (Resilient Distributed Dataset)
+                - Distributed, immutable collection of data
+                - Created from HDFS, ObjectStore, Cloudant NoSQL, dashDB SQL, simple files, etc.
+                - In-memory, but spillable to disk, Lazy
+            1.2.2.2 JBOD (Just a Bunch Of Discs)
+                - Simply attach hard drives directly to the worker nodes
+                - This approach is called directly attached storage
+            1.2.2.3 HDFS (Hadoop Distributed File System)
+                - When a file is divided in equal size chunks and distribute them over the physical disks
+                 , HDFS creates a virtual view on top of those chunks so that it can be treated as a single large file spanning the whole cluster.
+                - Since HDFS is aware of the location of individual chunks of the file, computations can be done in parallel using CPU's residing on the same physical worker node
+
+
+
+
+Syllabus:
+
+- Week 1: Introduction
+-- Understanding how Apache Spark works
+--- What is Big Data?
+--- Data storage solutions
+--- Parallel data processing strategies of Apache Spark
+--- Functional programming basics
+--- Resilient Distributed Dataset and DataFrames - ApacheSparkSQL
+
+- Week 2: Scaling Math for Statistics on Apache Spark
+-- Experience parallel programming on Apache Spark
+--- Averages
+--- Standard deviation
+--- Skewness
+--- Kurtosis
+--- Covariance, Covariance matrices, correlation
+
+- Week 3: Introduction to Apache SparkML
+-- Introduction to Apache SparkML
+--- How ML Pipelines work
+--- Introduction to SparkML
+--- Extract - Transform - Load
+-- Unsupervised Learning with Apache SparkML
+--- Introduction to Clustering: k-Means
+--- Using K-Means in Apache SparkML
+
+- Week 4: Supervised and Unsupervised learning with SparkML
+-- Supervised Learning with Apache SparkML
+--- Linear Regression
+--- LinearRegression with Apache SparkML
+--- Logistic Regression
+--- LogisticRegression with Apache SparkML
+
+-- Course Project
