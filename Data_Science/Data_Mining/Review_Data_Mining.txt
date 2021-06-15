@@ -1,0 +1,514 @@
+Midterm 
+Final 6/18 (2h)
+
+1. Introduction
+    1.1 Basic Data Mining Concepts 
+        1.1.1 Why do we need data mining?
+	• We are drowning in data but starving for knowledge! 
+	• We need Data mining to automatically analyze massive data.
+        1.1.2 What is data mining?
+	• Extraction of interesting (non-trivial, implicit, previously unknown and potentially useful) patterns or knowledge from huge amount of data
+        1.1.3 A multi-dimensional view of data mining
+	• Machine learning, Pattern recognition, Statistics, ... , etc.
+        1.1.4 A brief history of data mining society
+    1.2 Getting to Know Big Data 
+        1.2.1 What is data?
+            1.2.1.1 Data
+	  • Data is an abstract concept
+	  • Data is represented by values of qualitative or quantitative variables that belong to a set of items.
+	  • Data can be viewed as the lowest level of abstraction from which information and knowledge are derived
+            1.2.2.2 Information
+	  • A sequence of symbols that can be interpreted as a message
+	  • Knowledge communicated or received concerning a particular fact or circumstance
+            1.2.2.3 Knowledge
+	  • Familiarity with someone or something, which can include facts, information, descriptions, or skills acquired through experience or education
+	  • Implicit knowledge: practical skill or expertise
+	  • Explicit knowledge: theoretical understanding of a subject
+        1.2.2 What kinds of data can be mined?
+	1.2.2.1 Record data (Relational records, Data matrix, Transaction data, Document data)
+	1.2.2.2 Graphs and Networks (transportation network, world wide web, molecular structures, social and information networks)
+	1.2.2.3 Ordered Data (Video data, Temporal data, Sequential data, Genetic sequence data)
+	1.2.2.4 Spatial, image and multimedia data
+        1.2.3 What can we mine from data?
+	1.2.3.1 Pattern discovery
+	1.2.3.2 Classification
+	1.2.3.3 Cluster Analysis
+	1.2.3.4 Outlier analysis
+	1.2.3.5 Trend and Eveloution analysis
+	1.2.3.6 Network Analysis
+    1.3 Data Preprocessing
+        1.3.1 Why do we need to preprocess data?
+	• The quality of raw data is usually not good. 
+	• Missing, noisy, inconsistent, scattered, and redundant data
+        1.3.2 Typical tasks and techniques.
+	1.3.2.1 Data cleaning: Handle missing data, smooth noisy data, identify or remove outliers, and resolve inconsistencies.
+	1.3.2.2 Data integration: Integration of multiple databases, data cubes, and files.
+	1.3.2.3 Data reduction: Dimensionality reduction, numerosity reduction, data compression, etc.
+	1.3.2.4 Data transformation: Normalization, discretization, etc.
+
+2. Getting to Know Big Data
+    2.1 Data Object and Attribute Types
+        2.1.1 Data Object: Data sets are made up of data objects such as samples, examples, instances, etc.
+            - A data object represents an entity
+            - Data objects are described by attributes
+        2.1.2 Attributes: A data field, representing a charateristics or feature of a data object
+            - Levels of measurement: categorical(nominal (binary: only two states), ordinal), quantitative(Numeric (interval, ratio))
+            2.1.2.1 Nominal: Nominal means "relating to names"
+                - The values of a nominal attribute are symbols or names of things
+            2.1.2.2 Binary: Nominal attribute with only 2 states (0 and 1, true and false)
+            2.1.2.3 Ordinal: The values of an ordinal attribute have a meaningful order or raking among them
+	  - but the magnitude between successive values is not known
+            2.1.2.4 Numeric: A numeric attribute is quantitative, that is, it's a measurable quantity, represented in integer or real value
+                2.1.2.4.1 Interval-scaled: values have order but no ture zero-point
+                    - ex. temperature in Celsius or Fahrenheit, calendar dates
+                2.1.2.4.2  ratio-scaled: A ratio-scaled attribute is a numeric attribute with an inherent zero-point. 
+                    - That is, if a measurement is ratio-scaled, we can speak of a value as being a multiple (or ratio) of another value.
+                    - e.g., temperature in Kelvin, length, counts, monetary quantities
+        2.1.3 Discrete ve Continuous attributes
+            - Discrete, Has only a finite or countably infinite set of values
+            - Continuous, Has real numbers as attribute values
+    2.2 Basic Statistical Description of Data
+        2.2.1 Central Tendency
+            2.2.1.1 Mean: The sum of all the values divided by the number of obeservations
+            2.2.1.2 Median: The middle value of your observations when arranged from the smallest to the largest
+	       - Estimated by interpolation for grouped data ▶
+            2.2.1.3 Mode: Value that occurs most frequently (the most common outcome) - categorical
+	       - unimodal emirical formula: mean - mode = 3*(mean - median)
+            2.2.1.4 Midrange: the average of the largest and smallest values in the set  
+            2.2.1.5 Symmetric data, Positively skewed data, Negatively skewed data
+        2.2.2 Dispersion(Distribution)
+            2.2.2.1 Range:  highest value - lowest value
+            2.2.2.2 Quartiles, Interquartile range:  divide range Q1(25%), Q2(50%=median), Q3(75%), IQR(Interqutile range) = Q3 - Q1
+            2.2.2.3 Variance:  ∑(x - mean(x))^2 / (n - 1), larger variance -> larger variablity -> the more the values are spread out around the mean
+            2.2.2.4 Standard deviation:  s = Sqrt(Variance) = Sqrt(∑(x - mean(x))^2 / (n - 1)): the average distance of an observation from the mean
+        2.2.3 Graphic Displays
+            2.2.3.1 Boxplot:  graphic display of five-number summary
+            2.2.3.2 Histogram:  x-axis shows values, y-axis shows frequencies
+            2.2.3.3 Quantile Plot:  A quantile plot is a simple and effective way to have a first look at a univariate data distribution
+		* univariate: A type of data which consists of observations on only a single characteristic or attribute
+		- it displays all of the data for the given attribute (allowing the user to assess both the overall behavior and unusual occurrences).
+            2.2.3.3 Quantile-Quantile Plot: A q-q plot graphs the quantiles of one univariate distribution against the corresponding quantiles of another. 
+                - It is a powerful visualization tool in that it allows the user to view whether there is a shift in going from one distribution to another
+                - ex. unit price data of items sold at two branches of AllElectronics
+            2.2.3.4 Scatter Plot: Provides a first look at bivariate data to see clusters of points, outliers, etc
+		- Each pair of values is treated as a pair of coordinates and plotted as points in the plane
+    2.3 Data Visualization
+        - Why data visualization?
+            - Gain insight into an information space by mapping data onto graphical primitives
+            - Provide qualitative overview of large data sets
+            - Search for patterns, trends, structure, irregularities, relationships among data
+        2.3.1 Pixel-Oriented Visualization Techniques
+        2.3.2 Geometric Projection Visualization Techniques
+            - Direct visualization
+            - Scatterplot Matrices
+            - Landscapes
+            - Parallel Coordinates
+        2.3.3 Icon-Based Visualization Techniques
+            - Chernoff Faces
+            - Stick Figures
+        2.3.4 Hierarchical Visualization Techniques
+            - Visualization of the data using a hierarchical partitioning into subspaces
+            2.3.4.1 Methods
+                2.3.4.1.1 Dimensional Stacking
+                2.3.4.1.2 Worlds-within-Worlds
+                2.3.4.1.3 Tree-Map 
+                2.3.4.1.4 Cone Trees
+                2.3.4.1.5 InfoCube
+        2.3.5 Visualizing Complex Data and Relations
+            - Tag cloud: Visualizing user-generated tags
+            - Social and information networks: Visualizing non-numerical data: 
+    2.4 Measuring Data Similarity, Dissimilarity, and Proximity
+        - This section presents similarity and dissimilarity measures, which are referred to as measures of proximity.
+        - Levels of measurement: categorical(nominal, binary(nominal w/ two states), ordinal), quantitative(Numeric(interval, ratio))
+        2.4.1 Data Matrix vs Dissimilarity Matrix
+            2.4.1.1 Data matrix (or object-by-attribute structure)
+	   - This structure stores the n data objects in the form of a relation table, or n-by-matrix (n objects x p attributes)
+            2.4.1.2 Dissimilarity matrix (or object-by-object structrue)
+	   - This structure stores a collection of proximities that are available for all pairs of n objects
+        2.4.2 Proximity Measures for Nominal (Categorical) Attributes
+            - The dissimilarity between two objects i and j can be computed based on the ratio of mismatches
+            - d(i, j) = (p − m) / p, where m is the number of matches, and p is the total number of attributes describing the objects
+        2.4.3 Proximity Measures for Binary Attributes
+            2.4.3.1 Distance measure for symmetric binary variables
+	  - Dissimilarity that is based on symmetric binary attributes
+	  - d(i, j) = (r + s) / (q + r + s + t)
+            2.4.3.2 Distance measure for asymmetric binary variables
+	  - The agreement of two 1s (a positive match) is considered more significant that that of two 0s (a negative match)
+	  - The number of negative matches, t, is considered unimportant and is this ignored
+	  - d(i, j) = (r + s) / (q + r + s)
+            2.4.3.3 Jaccard coefficient (asymmetric binary similarity)
+	  - we can measure the difference between two binary attributes based on the notion of similarity instead of dissimilarity
+	  - sim(i, j) = q / (q + r + s) = 1 − d(i, j) : Jaccard coefficient
+        2.4.4 Dissimilarity of Numeric Data: Minkowski Distance
+            2.4.4.1 Manhattan distance (L_1 norm)
+            2.4.4.2 Eucliden distance (L_2 norm)
+            2.4.4.3 Minkowski distance (L_p norm)
+	   - Minkowski distance is a generalization of the Euclidean and Manhattan distances
+            2.4.4.4 Supremum distance ((L_max, L_∞ norm)
+        2.4.5 Proximity Measures for Ordinal Attributes
+            - Z_{if} = (r_{if} - 1) / (M_f - 1) where M_f is highest rank, r_{if} is ith object's rank
+            - Example: freshman: 0; sophomore: 1/3; junior: 2/3; senior 1, Then distance: d(freshman, senior) = 1, d(junior, senior) = 1/3
+        2.4.6 Dissimilarity for Attributes of Mixed Types
+        2.4.7 Cosine Similarity
+            - The cos(θ) represent the similarity bewtween two vectors. cos(θ)=0 → different, cos(θ)=1 → same
+            - If d1 and d2 are two vectors (e.g., term-frequency vectors), then sim(d1, d2) = cos(d1, d2) = (d1◦d2) / (||d1|| x ||d2||)
+    2.5 KL Divergence (Kullback-Leibler Divergence)
+        - Measure the difference between two probability distributions over the same variable x
+        - It's measuring the relative entropy between two probability distributions
+        - D_{KL}(p(x)||q(x)) = ∑[x∈X]{p(x)*ln(p(x)/q(x))}, if the value is 0 then the two probability distributions is equal
+        - More info. https://www.youtube.com/watch?v=xjKm4BcwqX8
+
+3. Data preprocessing
+    3.1 Data Preprocessing: An Overview
+        3.1.1 Data Quality: Why Preprocess the Data?
+            - Accuracy, Completeness, Consistency, Timeliness, Believability, Interpretability
+        3.1.2 Major Tasks in Data Preprocessing
+            3.1.2.1 Data cleaning
+                - clean the data by filling in missing values, smoothing noisy data, identifying or removing outliers, and resolving inconsistencies
+            3.1.2.2 Data integration
+                - include data from multiple sources
+                - integrating multiple databases, data cubes, or files 
+            3.1.2.3 Data reduction
+                - obtaining a reduced representation of the data set that is much smaller in volume, yet produces the same (or almost the same) analytical results
+            3.1.2.4 Data transformation
+                - Normalization, data discretization, and concept hierarchy generation
+    3.2 Data Cleaning
+        3.2.1 Missing Values 
+            - Ignore the tuple(missing value)
+            - Fill in the missing value manually
+            - Use a global constant to fill in the missing value
+            - Use a measure of central tendency
+        3.2.2 Noisy Data (smoothing techniques)
+            3.2.2.1 Binning (p.90)
+                - First sort data and partition into (equal-frequency) bins
+                - Then one can smooth by bin means, smooth by bin median, smooth by bin boundaries, etc.
+            3.2.2.2 Regression
+                - Data smoothing can also be done by regression, a technique that conforms data values to a function
+            3.2.2.3 Outlier analysis
+                - Outliers may be detected by clustering, for example, where similar values are organized into groups, or “clusters.”
+            3.2.2.4 Semi-supervised methods
+                - Combined computer and human inspection
+                - Detect suspicious values and check by human (e.g., deal with possible outliers)
+    3.3 Data Integration
+        - merging of data from multiple data stores
+        - reduce and avoid redundancies and inconsistencies in the resulting data set
+        - improve the accuracy and speed of the subsequent data mining process
+        3.3.1 Entity Identification Problem
+            - How can equivalent real-world entities from multiple data sources be matched up?
+        3.3.2 Redundancy and Correlation Analysis
+            - Redundancy and Inconsistency can be measured by the correlation coefficient and covariance
+            - Correlation and Covariance for Nominal/Numeric Data (Textbook p135(95))
+            3.3.2.1 χ^2 Correlation test for Nominal data
+	   - For nominal data, a correlation relationship between two attributes, A and B, can be discovered by a χ^2 (chi-square) test
+            3.3.2.2 Correlation Coefficient for Numeric Data (correlation coefficient, Pearson's r  = ∑ (ZxZy) / (n - 1))
+	   - For numeric attributes, we can evaluate the correlation between two attributes, A and B, by computing the correlation coefficient
+                 - r_{A,B} = (∑[i=1..n](a_i*b_i) - n*mean(A)*mean(B)) / (n*σ_A*σ_B)
+            3.3.2.3 Covariance of Numeric Data
+                 - Covariance is nothing but a measure of correlation. Correlation refers to the scaled form of covariance. 
+                 - Covariance indicates the direction of the linear relationship between variables. 
+                 - Correlation on the other hand measures both the strength and direction of the linear relationship between two variables.
+                 - Covariance between two variables A and B: σ_{AB} = E[A*B] - E[A]*E[B]
+        3.3.3 Tuple Duplication
+            - duplication should also be detected at the tuple level 
+            - Inconsistencies often arise between various duplicates
+        3.3.4 Data Value Conflict Detection and Resolution
+            - for the same real-world entity, attribute values from different sources may differ
+            - This may be due to differences in representation, scaling, or encoding
+    3.4 Data Reduction
+        3.4.1 Overview of Data Reduction Strategies
+            - The process to obtain a reduced representation of the data set without losing much task-related information
+        3.4.2 Regression, Regression and log-linear models can be used to approximate the given data
+        3.4.3 Histograms, partition data into buckets and store average (sum) for each bucket
+        3.4.4 Clustering, partition data set into clusters based on similarity, and store cluster representation only
+        3.4.5 Sampling, obtaining a small sample s to represent the whole data set N
+            3.4.5.1 Simple random sampling:  equal probability of selecting every item
+            3.4.5.2 Sampling without replacement:  Once an object is selected, it is removed from the population
+            3.4.5.3 Sampling with replacement:  A selected object is not removed from the population
+            3.4.5.4 Stratified sampling:  Partition the data set and draw samples from each partitio
+    3.5 Data Transformation
+        - The process to transform data into a proper form or format that better suits a data mining algorithm
+        - Data transformation routines convert the data into appropriate forms for mining
+        - For example, Nnomalization, Discretization and Attribute Construction
+        3.5.1 Nomarlization
+            - transforming the values of attributes into a reasonable range
+            3.5.1.1 Min-max normalization: v' = {(v - min) / (max - min)} * (new_max - new_min) + new_min
+            3.5.1.2 Z-score normalization: v' = (v - μ) / σ
+        3.5.2 Discretization
+            - converting continuous attribute values into a finite set of intervals and associating with each interval some specific data value
+            3.5.2.1 Binning, Equal-width (distance) or Equal-depth (frequency) partitioning
+            3.5.2.2 Clustering
+            3.5.2.3 Histogram Analysis, Cluster, Decision Tree, and Correlation Analyses
+        3.5.3 Attribute Construction ✔A1.1
+            - Constructing new attributes by combining existing attributes in either a linear manner or a non-linear manner
+            - Projecting to higher dimensional space, and Makes data instances more separable
+
+4. Mining Frequent Patterns 
+    - Frequent patterns are patterns (e.g., itemsets, subsequences, or substructures) that appear frequently in a data set
+    4.1 Basic concepts (Associations, Correlations) 
+        4.1.1 Market Basket Analysis: A Motivating Example
+            - Buying patterns that reflect items that are frequently associated or purchased together can be represented in the form of association rules
+            - ex. computer ⇒ antivirus_software [support = 2%, confidence = 60%]
+            - support 2% means that computer and antivirus_software out of all the transactions are bought together (support(A⇒B) = P(A∪B))
+            - confidence 60% means that 60% of the customers who purchased a computer also bought the software (confidence(A⇒B) = P(B|A))
+        4.1.2 Frequent Itemsets, Closed Itemsets, and Association Rules ✔A2.2
+    4.2 Frequent Itemsete Mining Methods
+        4.2.1 Apriori Algorithm ✔A1.2, A2.2
+            - Apriori Algorithm: Finding Frequent Itemsets by Confined Candidate Generation
+            4.2.1.1 Generating Association Rules from Frequent Itemsets
+            4.2.1.2 Improving the Efficiency of Apriori
+                4.2.1.2.1 Hash-based technique
+                4.2.1.2.2 Transaction reduction
+                4.2.1.2.3 Partitioning, Sampling, Dynamic itemset counting
+        4.2.2 FP-growth Algorithm ✔A2.1
+            - FP-growth (finding frequent itemsets without candidate generation)
+            - 1. list frequent items in a descending order, organize ordered freq items
+            - 2. FP-Tree → Conditional Pattern Base → Conditional FP-tree → Frequent Patterns Generated 
+        4.2.3 H-mine Algorithm
+            - Divde and qunquer principle → Apply it with pointers not with FP-tree
+    4.3 Concise Representation of Patterns ✔A2.2
+        4.3.1 Frequent max patterns
+            - An itemset X is a maximal frequent itemset (or max-itemset) in a data set D if X is frequent
+             , and there exists no super-itemset Y such that X ⊂ Y and Y is frequent in D.
+        4.3.2 Frequent closed patterns
+            - An itemset X is closed in a data set D if there exists no proper super-itemset Y such that Y has the same support count as X in D.
+            - An itemset X is a closed frequent itemset in set D if X is both closed and frequent in D.
+    4.4 Constraint-based Pattern Mining ▼
+        4.4.1 Motivation of constraint-based pattern mining
+        4.4.2 Anti-monotonic constraints and monotonic constraints
+        4.4.3 Convertible constraints and strongly convertible constraints
+        4.4.4 Pushing constraints into the pattern mining process
+    4.5 Significance of Patterns
+        4.5.1 Motivate the significance of patterns
+        4.5.2 Introduced several typical criteria
+            4.5.2.1 Lift:  Lift(B, C) may tell how B and C are correlated, ex. Lift(B, C) = sup(B∪C) / (sup(B) x sup(C)) and [0, ∞]
+                - Lift(B, C) = 1:  B and C are independent
+                - > 1:  postively correlated
+                - < 1:  negatively correlated
+            4.5.2.2 Leverage
+            4.5.2.3 Conviction
+            4.5.2.4 Odds Ration
+        4.5.3 Simpson's Paradox
+
+5. Clustering Analysis
+    5.1 Overview of Cluster Analysis
+        5.1.1 What is Cluster Analysis?
+            - Cluster analysis or simply clustering is the process of partitioning a set of data objects into subsets.
+            - Each subset is a cluster, such that objects in a cluster are similar to one another, yet dissimilar to objects in other clusters
+            - Applications: Business intelligence, Image recognition, Web search, data mining function, etc.
+        5.1.2 Requirements for Cluster Analysis
+            - Scalability, Different types of attributes, Arbitrary shape, Domain knowledge, Noisy data, Incremental clustering, etc.
+        5.1.3 Basic Clustering Methods
+            5.1.3.1 Partitioning methods:  typically exclusive cluster seperation, distance-based, ex. k-means, k-medoids
+            5.1.3.2 Hierarchical methods:  agglomerative or divisive, distance-based or density/continuity based, never be undone
+            5.1.3.3 Density-based methods:  arbitrary shape, robust to noise and outliers, exclusive clusters only
+            5.1.3.4 Grid-based methods:  grid structure, fast processing time, integrated with other clustering methods
+        5.1.4 Advanced Clustering Methods
+            5.1.4.1 Clustering high-dimensional data
+                5.1.4.1.1 Subspace Clustering Methods:  ex. Biclustering Methods
+                5.1.4.1.2 Dimensionality Reduction Methods and Spectral Clustering
+            5.1.4.2 Probabilistic model-based clustering
+                5.1.4.2.1 Fuzzy Clusters
+                5.1.4.2.2 Mixture Models
+                5.1.4.2.3 Expectation-Maximization Algorithm
+    5.2 Basic Clustering Methods
+        5.2.1 Partitioning Methods
+            5.2.1.1 K-Means:  A Centroid-Based Teqchnique ✔A3.1
+                - Form K clusters by assigning each point to its closest centroid
+                - Re-compute the centroids (i.e., mean point) of each cluster until convergence criterion is satisfied
+            5.2.1.2 K-Medoids:  A Representative Object-Based Teqchnique, ex. PAM (Partitioning Around Medoids)
+                - k-medoids method is more robust than k-means in the presence of noise and outliers b/c a medoid is less influenced by outliers than a mean
+               - much more costly than the k-means → sampling-based method called CLARA (Clustering LARge Applications), use random sample data set
+            5.2.1.3 K-Modes:  An extension to K-Means by replacing means of clusters with modes ✔A3.2
+                - ex. Calculate the relative modes of the attributes → with the relative modes find the clusters of the objects until satisfy the convergence criterion
+                - Algorithm is still based on iterative object cluster assignment and centroid update
+            5.2.1.4 Kernel K-Means:  Project data onto the high-dimensional kernel space, and then perform K-Means clustering
+                - Map data points in the input space onto a high-dimensional feature space using the kernel function
+                - Perform K-Means on the mapped feature space
+        5.2.2 Hierarchical Methods
+            - Algorithmic methods:  Agglomerative, divisive, and multiphase methods are algorithmic, meaning they consider data objects as deterministic
+            - Probabilistic methods:  Use probabilistic models to capture clusters and measure the quality of clusters by the fitness of models
+            - Bayesian methods:  Compute a distribution of possible clusterings, they return a group of clustering structures and their probabilities
+            5.2.2.1 Agglomerative versus Divisive Hierarchical Clustering
+            5.2.2.2 Distance Measures in Algorithmic Methods:  Minimum, Maxmum, Mean, Average distances ✔A4.1
+            5.2.2.3 BIRCH:  Multiphase Hierarchical Clustering Using Clustering Feature Trees ✔A4.2
+                - BIRCH (Balanced Iterative Reducing and Clustering Using Hierarchies) is a multiphase clustering algorithm
+                - BIRCH uses the notions of clustering feature (CF) to summarize a cluster, and clustering feature tree (CF-tree) to represent a cluster hierarchy
+                - A CF-tree is a height-balanced tree that stores the clustering features for a hierarchical clustering
+                - Objects are first partitioned hierarchically using a tree structure into microclusters, which are then clustered into macroclusters via other clustering algorithms
+            5.2.2.4 Chameleon:  Multiphase Hierarchical Clustering Using Dynamic Modeling
+                - Chameleon is a hierarchical clustering algorithm that uses dynamic modeling to determine the similarity between pairs of clusters
+                - Once a k-nearest-neighbor graph is constructed, it is partitioned into small graphlets, which are then merged back together to create clusters
+                - Data set → Construct a sparse  graph (k-nearest-neighbor graph) → Partition the graph (min(EC_{Ci,Cj})) → Merge partitions ({RI(Ci,Cj) & RC(Ci,Cj)} > thresholds)
+            5.2.2.5 Probabilistic Hierarchical Clustering ✔
+                - Use probabilistic models to measure distances between clusters
+                - Generative model: Regard the set of data objects to be clustered as a sample of the underlying data generation mechanism to be analyzed
+                - Generative models adopt common distribution functions, e.g., Gaussian distribution or Bernoulli distribution, governed by parameters
+                - The task of learning a generative model is finding the parameter values for which the model best fits the observed data set
+                - Find pair of clusters Ci and Cj such that max[ log_{ P(Ci ∪ Cj) } { P(Ci)·P(Cj) } ] then if P(Ci ∪ Cj) / P(Ci)·P(Cj) > 0 → merge Ci and Cj
+            5.2.2.6 CURE:  Clustering Using Representatives
+                - Represent a cluster using a set of well-scattered representative points
+        5.2.3 Density-Based Methods
+            5.2.3.1 DBSCAN: Density-Based Clustering Based on Connected Regions with High Density
+            5.2.3.2 OPTICS: Ordering Points to Identify the Clustering Structure
+                - This is a linear list of all objects under analysis and represents the density-based clustering structure of the data
+            5.2.3.3 DENCLUE: Clustering Based on Density Distribution Functions
+        5.2.4 Grid-Based Methods
+            5.2.4.1 STING:  STatistical INformation Grid
+                - The spatial area is divided into rectangular cells at different levels of resolution, and these cells form a tree structure
+                - Statistical information of each cell is calculated and stored beforehand and is used to answer queries
+            5.2.4.2 CLIQUE:  An Apriori-like Subspace Clustering Method
+                - (CLustering In QUEst) CLIQUE is a density-based and grid-based subspace clustering algorithm
+                - It uses a density threshold to identify dense cells and sparse ones. A cell is dense if the number of objects mapped to it exceeds the density threshold
+    5.3 Advanced Clustering Methods ✔
+        5.3.1 Clustering high-dimensional data 
+            5.3.1.1 Subspace Clustering Methods
+                5.3.1.1.1 Bi-Clustering (ex. Pattern-based Clustering)
+                    - Concept, Pattern-based clustering → Algorithm Details with pCluster
+                5.3.1.1.2 Gene-Sample-Time Series (GST)
+                    - Concept, Characteristics
+                5.3.1.1.3 Phenotypes and Informative Genes
+                    - Concepts, Algorithm
+            5.3.1.2 Dimensionality Reduction Methods and Spectral Clustering
+                5.3.1.2.1 Dimensionality reduction:  choosing the informative dimensions for clustering analysis
+                    - 1. Feature selection: choosing a subset of existing dimensions
+                    - 2. Feature construction: construct a new (small) set of informative attributes
+                    - Principal component analysis (PCA) is a technique for reducing the dimensionality of such datasets
+                      , increasing interpretability but at the same time minimizing information loss.
+                5.3.1.2.2 Spectral clustering 
+                    - Data → Affinity matrix → Computing the leading k eigenvectors of A → Clustering in the new space → Projecting back to cluster the original data
+                    - 1. Finding eigenvectors to construct new space (Larger eigenvalues mean larger variances)
+                    - 2. Finding clusters in the new space
+                    - 3. Project the clusters back to the original space
+        5.3.2 Probabilistic model-based clustering
+            5.3.2.1 Fuzzy Clusters 
+                - Fuzzy clustering (also referred to as soft clustering or soft k-means) is a form of clustering in which each data point can belong to more than one cluster
+                - FCM (Fuzzy C-Mmeans):  Concepts, Algorithm Details, Choicke of p
+            5.3.2.2 Mixture Models
+                - A cluster can be modeled as a probability distribution. 
+                - Multiple clusters are a mixture of different probability distributions
+                - A data set is a set of observations from a mixture of models (probability distributions)
+            5.3.2.3 Expectation-Maximization Algorithm
+                - Maximal Likelihood Estimation:  Find objects distribution parameters maximizing the probability of observing the entire dataset
+                - 1. Expectation Step: for each object, calculate the probability that it belongs to each distribution. prob(x | Θ)
+                - 2. Maximization Step: given the probabilities from the expectation step, find the new estimates of the parameters that maximize the expected likelihood. Σprob(x | Θ)
+    5.4 Clustering Evaluation 
+        5.4.1 Assessing Clustering Tendency
+            - Clustering tendency:  Spatial histogram for clusterability assessment
+            - Hopkins Statistic:  If a data set D is uniformly distributed, then H would be round 0.5. If D is skewed. then H would be close to 0 (good to cluster D).
+        5.4.2 Determining the Number of Clusters ▼
+            - Cluster stability: Finding the best k
+        5.4.3 Measuring Clustering Quality
+            5.4.3.1 Extrinsic (External):   Supervised, employ criteria not inherent to the dataset
+                - Compare a clustering against prior or expert-specified knowledge (i.e., the ground truth)
+                5.4.3.1.1 Matching-based measures:  purity, maximum matching, F-measure 
+                5.4.3.1.2 Entropy-based measures: conditional entropy, normalized mutual information (NMI) 
+                5.4.3.1.3 Pairwise measures – Four possibilities: True positive (TP), FN, FP, TN; Jaccard coefficient
+            5.4.3.2 Intrinsic (Internal):  Unsupervised, criteria derived from data itself
+                - Evaluate clustering result by considering how well the clusters are separated and how compact the clusters are, e.g., silhouette coefficient
+                - ex. BetaCV, Normalized Cut, Modularity measures
+            5.4.3.3 Relative:  Directly compare different clusterings, usually those obtained via different parameter settings for the same algorithm
+
+6. Classification
+    6.1 Basic ideas of classification
+        6.1.1 Definition
+            - Classification is a form of data analysis that extracts models describing important data classes
+            - Such models, called classifiers, predict categorical (discrete, unordered) class labels
+            - Regression analysis is a statistical methodology that is most often used for numeric prediction
+            - Classification and numeric prediction are the two major types of prediction problems
+        6.1.2 General approach for classfication
+            - 1. Model construction (Learning):  Training data are analyzed by a classification algorithm
+            - 2. Model application (Classfication):  Test data are used to estimate the accuracy of the classification rules
+    6.2 Classification Methods
+        6.2.1 Decision tree algorithms
+            6.2.1.1 ID3
+                - Construct a tree in a top-down recursive divide-and-conquer manner
+                - The attribute for division is chosen by Information gain and Gini index (gini index↓ → information gain↑)
+                - Information gain is statiscal properties that the expected reduction in entropy caused by partitioning the examples according to an attribute
+                - Information gain is biased towards multivalued attributes (ex. date) → Gain ratio by incorporating split information
+                - Gini impurity measures how well an attribute separates the training exmples
+            6.2.1.2 C4.5 
+                - Capability of handling continuous numerical attributes
+                - Convert the trained tree into sets of if-then rules
+            6.2.1.3 C5.0
+                - Significantly faster and memory more efficient than C4.5
+                - Support for boosting, weighting samples, automatically removing unhelpful attributes
+            - CART for classification
+            - Overfitting
+        6.2.2 Bayesian clssification ✔A5.1
+            - A statistical classifier performing probabilistic prediction based on Bayes’ Theorem, p(Ci | D) =p(D | Ci) · p(Ci) / p(D)
+            - Even when Bayesian methods are computationally intractable, they can provide a standard of optimal decision making against which other methods can be measured
+            6.2.2.1 Naive bayes classifier
+            - Assumption: attributes are independent
+        6.2.3 Instance-based Methods
+            - Store training examples and delay the processing until a new instance must be classified (“lazy evaluation”)
+            6.2.3.1 K-Nearest Neighbor
+                - Return the most common value among the k training examples nearest to the query point, ex. Euclidean distance
+            6.2.3.2 Locally weighted regression
+                - Train a local model in a local region using weighted data instances
+            * Lazy Methods vs. Eager Methods
+                - Efficiency:  Lazy learning uses less training time but more predicting time
+                - Accuracy:  Lazy methods effectively uses a richer hypothesis space, but Eager methods must commit to a single hypothesis
+        6.2.4 Linear Classficiatioin Methods 
+            6.2.4.1 Linear Classifier
+                - Built a classification model using a straight line used for (categorical data) binary classification
+            6.2.4.2 Linear Regression
+                - Linear regression is used to predict the continuous dependent variable using a given set of independent variables.
+                - In linear regression, we find the best fit line, by which we can easily predict the output.
+                - Least square estimation method is used for estimation of accuracy. (Find weight and bias to minimize the SSE)
+            6.2.4.3 Logistic Regression
+                - Logistic Regression is used to predict the categorical dependent variable using a given set of independent variables.
+                - In Logistic Regression, we find the S-curve by which we can classify the samples.
+                - Maximum likelihood estimation method is used for estimation of accuracy.
+                - Stochastic gradient descent: at each iteration, only use a small random sample to update
+            6.2.4.4 Perceptron
+                - input (linear regression) → output (step function), i.e., sign(z) = 1 if z > 0 and sign(z) = 0 otherwhise, where z is linear regression output
+            * Generative vs. Discriminative Classifiers
+                - 1. Generative Classifiers
+                    - Generative Classifiers tries to model class, i.e., what are the features of the class. In short, it models how a particular class would generate input data
+                    - It tries to learn the joint probability distribution, p(x,y). ex. Naive Bayes, Bayesian Networks
+                - 2. Discriminative Classifiers
+                    - Discriminative Classifiers learn what the features in the input are most useful to distinguish between the various possible classes.
+                    - It directly calculates the posterior probability, P(y|x). ex. Logistic Regression, Support Vector Machines
+                    - Prediction accuracy is generally high but it's difficult to understand the learned function (weights) and not easy to incorporate domain knowledge
+        6.2.5 Support Vector Machine 
+            - SVMs can efficiently perform a non-linear classification using kernel functions, implicitly mapping their inputs into high-dimensional feature spaces
+            - SVM finds this hyperplane using support vectors and margins
+        6.2.6 Esenble Methods ✔(Frequent question in Job market) ▼
+            - Construct a set of base classifiers and take a vote on predictions in classification
+            6.2.6.1 AdaBoost (Adaptive Boosting)
+                - Each base classifier carries an importance score related to its error rate
+                - The lower a classifier’s error rate, the more accurate it is, and therefore, the higher its weight for voting should be. 
+                - The weight of classifier Mi’s vote is log{ (1 − error(Mi)) / error(Mi) }
+            6.2.6.2 Random Forest
+        6.2.7 Neural Networks
+    6.3 Classfication Performance Evaluation
+        6.4.1 Performance evaluation matrix
+            - TP, TN, FN, and FP
+            - Accuracy, precision, recall
+            - Type I and Type II errors
+            - F-measure
+            - Weighted accuracy
+        6.4.2 Evaluation methods
+            6.4.2.1 Holdout method
+                - Partition the available labeled data set into two disjoint subsets: the training set and the test set
+                - Build a classifier using the training set → Evaluate the accuracy using the test set
+            6.4.2.2 Cross validation
+                - 1. Partition the data into k equal-sized subsets
+                - 2. In each round, use one subset as the test set, and use the rest subsets together as the training set
+                - 3. Repeat k times and The total error is the sum or average of the errors in k rounds
+            6.4.2.3 Confidence interval ✔A5.2
+            6.4.2.1 ROC curve
+                - Receiver operating characteristic curves are a useful visual tool for comparing two classification models
+                - An ROC curve for a given model shows the trade-off between the true positive rate (TPR) and the false positive rate(FPR)
+                - The closer the ROC curve of a model is to the diagonal line, the less accurate the model
+                - To assess the accuracy of a model, we can measure the area under the curve, A model with perfect accuracy will have an area of 1.0.
+
+7. Business Intelligence
+    7.1 Data Warehousing
+    7.2 Data Lakes
+
+
+
+Chapter 5: Business Intelligence
+	Data Warehousing
+	Data Lakes
