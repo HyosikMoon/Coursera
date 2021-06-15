@@ -28,8 +28,15 @@ Scalable_Machine_Learning_on_Big_Data_using_Apache_Spark
                 - When a file is divided in equal size chunks and distribute them over the physical disks
                  , HDFS creates a virtual view on top of those chunks so that it can be treated as a single large file spanning the whole cluster.
                 - Since HDFS is aware of the location of individual chunks of the file, computations can be done in parallel using CPU's residing on the same physical worker node
-
-
+        1.2.3 Functional Programming 
+            - Mathematical concept of "Lambda Calculus"
+            - Scala, Pythone, R and Java also rudimentary support FP
+            - ApacheSpark parallelises computations using the lambda calculus
+            - All functional spark programs are inherently parallel
+        1.2.4 Resilient Distributed Dataset and DataFrames - ApacheSparkSQL
+            - ApacheSpark supports SQL via data frame API
+            - Internally still RDDs are used
+            - Makes writing APacheSpark jobs easier
 
 
 Syllabus:

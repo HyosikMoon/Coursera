@@ -124,7 +124,7 @@ Descriptive, Inferential statistics
             • Represented by Greek letters, (ex. μ = mean, σ = standard deviation)
         5.1.3 Sampling
             • Simple random sample: each subject in the populatin has a same change of being selected 
-            • simple random sample Bias (undercoverage, sampling bias, nonresponse bias, response bias)
+            • Simple random sample Bias (undercoverage, sampling bias, nonresponse bias, response bias)
     5.2 Sampling distribution of sample mean and Central limit theorem
         5.2.1 The sampling distribution of the sample mean (Sampling distribution)
             • infinite number of samples → the mean of that distribution = mean in the population (Sampling distribution)
