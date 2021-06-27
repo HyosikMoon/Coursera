@@ -189,7 +189,7 @@
             - Find the hyperlane by choosing Support vectors and maximize the margin
         3.5.4 Pros and cons of SVM
             3.5.4.1 Advantages
-                - Accurage in high-dimentional spaces
+                - Accurate in high-dimentional spaces
                 - Memory efficient
             3.5.4.2 Disadvantages
                 - Prone to over-fitting

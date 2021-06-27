@@ -329,6 +329,8 @@ Final 6/18 (2h)
             - Probabilistic methods:  Use probabilistic models to capture clusters and measure the quality of clusters by the fitness of models
             - Bayesian methods:  Compute a distribution of possible clusterings, they return a group of clustering structures and their probabilities
             5.2.2.1 Agglomerative versus Divisive Hierarchical Clustering
+                - Agglomerative clustering varies on different similarity measures among clusters
+                - Single link (nearest neighbor), Complete link (diameter), Average link (group average), Centroid link (centroid similarity)
             5.2.2.2 Distance Measures in Algorithmic Methods:  Minimum, Maxmum, Mean, Average distances ✔A4.1
             5.2.2.3 BIRCH:  Multiphase Hierarchical Clustering Using Clustering Feature Trees ✔A4.2
                 - BIRCH (Balanced Iterative Reducing and Clustering Using Hierarchies) is a multiphase clustering algorithm
@@ -368,7 +370,7 @@ Final 6/18 (2h)
                     - Concept, Characteristics
                 5.3.1.1.3 Phenotypes and Informative Genes
                     - Concepts, Algorithm
-            5.3.1.2 Dimensionality Reduction Methods and Spectral Clustering
+            5.3.1.2 Dimensionality Reduction Methods and Spectral Clustering ✔
                 5.3.1.2.1 Dimensionality reduction:  choosing the informative dimensions for clustering analysis
                     - 1. Feature selection: choosing a subset of existing dimensions
                     - 2. Feature construction: construct a new (small) set of informative attributes
@@ -473,20 +475,32 @@ Final 6/18 (2h)
         6.2.5 Support Vector Machine 
             - SVMs can efficiently perform a non-linear classification using kernel functions, implicitly mapping their inputs into high-dimensional feature spaces
             - SVM finds this hyperplane using support vectors and margins
-        6.2.6 Esenble Methods ✔(Frequent question in Job market) ▼
+        6.2.6 Esenble Methods ✔(Frequent question in Job market) 
             - Construct a set of base classifiers and take a vote on predictions in classification
+            - Bagging is a tree ensemble that combines the prediction of several trees that were trained on bootstrap samples of the data.
             6.2.6.1 AdaBoost (Adaptive Boosting)
-                - Each base classifier carries an importance score related to its error rate
+                - Boosting methods are additive in the sense that they sequentially retrain decision trees using the observations with the highest residuals on the previous tree. 
+                  , To do so, observations with a high residual are assigned a higher weight
+                - In AdaBoost, Each base classifier carries an importance score related to its error rate
                 - The lower a classifier’s error rate, the more accurate it is, and therefore, the higher its weight for voting should be. 
                 - The weight of classifier Mi’s vote is log{ (1 − error(Mi)) / error(Mi) }
             6.2.6.2 Random Forest
+                - Random forest is a tree ensemble that has a similar approach to bagging. 
+                - Their main characteristic is that they add randomness by only using a subset of features to train each split of the trees it trains.
         6.2.7 Neural Networks
+                - Perceptron method: a neural network perspective
+                - Sigmoid network: substituting a sign function by a sigmoid function
+                - Feed forward neural network and recurrent neural network
+                - Training neural networks
+                    - Gradient descent:  Find weights and biases which minimize the cost C(w, b)
+                    - Stochastic gradient descent:  Computing for a small sample of randomly chosen training inputs and averaging over them → estimate of the true gradient
+                    - Backpropagation  Reset weights on the “front” neural units and this is sometimes done in combination with training where the correct result is known
     6.3 Classfication Performance Evaluation
         6.4.1 Performance evaluation matrix
-            - TP, TN, FN, and FP
-            - Accuracy, precision, recall
-            - Type I and Type II errors
-            - F-measure
+            - TP, FP, FN, TN
+            - Accuracy:  (TP+TN) / (TP+FP+FN+TN),  Precision:  TP / (TP+FP),  Recall:  TP / (TP + FN),  Specificity:  TN / (FP + TN)
+            - Type I (FP)  and  Type II (FN)  errors
+            - F-measure:  2*(Precision*Recall) / (Precision + Recall), Measure harmonic mean of Precision and Recall
             - Weighted accuracy
         6.4.2 Evaluation methods
             6.4.2.1 Holdout method
@@ -497,7 +511,7 @@ Final 6/18 (2h)
                 - 2. In each round, use one subset as the test set, and use the rest subsets together as the training set
                 - 3. Repeat k times and The total error is the sum or average of the errors in k rounds
             6.4.2.3 Confidence interval ✔A5.2
-            6.4.2.1 ROC curve
+            6.4.2.1 ROC curve 
                 - Receiver operating characteristic curves are a useful visual tool for comparing two classification models
                 - An ROC curve for a given model shows the trade-off between the true positive rate (TPR) and the false positive rate(FPR)
                 - The closer the ROC curve of a model is to the diagonal line, the less accurate the model
@@ -505,10 +519,66 @@ Final 6/18 (2h)
 
 7. Business Intelligence
     7.1 Data Warehousing
+        7.1.1 Data Warehouse: Basic Concepts
+            7.1.1.1 What is a Data Warehouse?
+                - A data warehouse is a subject-oriented, integrated, time-variant, and nonvolatile data collection organized in support of management decision making.
+            7.1.1.2 Differences between Operational Database Systems and Data Warehouses
+            7.1.1.3 But, Why Have a Separate Data Warehouse?
+            7.1.1.4 Data Warehousing: A Multitiered Architecture
+                - Three-tier architecture:  Client (top) ← OLAP server (middle)  ←  warehouse database server (bottom)
+            7.1.1.5 Data Warehouse Models: Enterprise Warehouse, Data Mart, and Virtual Warehouse
+            7.1.1.6 Extraction, Transformation, and Loading
+                - A data warehouse contains back-end tools and utilities for populating and refreshing the warehouse. 
+                - These cover data extraction, data cleaning, data transformation, loading, refreshing, and warehouse management.
+            7.1.1.7 Metadata Repository
+                - Data warehouse metadata are data defining the warehouse objects. 
+                - A metadata repository provides details regarding the warehouse structure, data history, the algorithms used for summarization, etc.
+        7.1.2 Data Warehouse Modeling: Data Cube and OLAP
+            - Three Data Warehouse Models:  Enterprise warehouse, Data Mart, Virtual warehouse
+            - Enterprise collects all of the information about subjects spanning the entire organization
+            - Data Mart is a subset of corporate-wide data that is of value to a specific groups of users
+            - Virtual warehouse is a set of views over operational databases
+            7.1.2.1 Data Cube: A Multidimensional Data Model
+                - The core of the multidimensional model is the data cube, consists of a large set of facts (or measures) and a number of dimensions. 
+                - Dimensions are the entities or perspectives with respect to which an organization wants to keep records and are hierarchical in nature.
+                - A data cube consists of a lattice of cuboids, each corresponding to a different degree of summarization of the given multidimensional data.
+            7.1.2.2 Stars, Snowflakes, and Fact Constellations: Schemas for Multidimensional Data Models
+            7.1.2.3 Dimensions: The Role of Concept Hierarchies
+                - Concept hierarchies organize the values of attributes or dimensions into gradual abstraction levels. They are useful in mining at multiple abstraction levels.
+            7.1.2.4 Measures: Their Categorization and Computation
+            7.1.2.5 Typical OLAP Operations
+                - Online analytical processing can be performed in data warehouses/marts using the multidimensional data model.
+                - Typical OLAP operations include roll-up, and drill-(down, across, through), slice-and-dice, and pivot (rotate), as well as statistical operations.
+            7.1.2.6 A Starnet Query Model for Querying Multidimensional Databases
+        7.1.3 Data Warehouse Design and Usage
+            7.1.3.1 A Business Analysis Framework for Data Warehouse Design
+                - Data warehouses are used for information processing (querying and reporting)
+                 , analytical processing (which allows users to navigate through summarized and detailed data by OLAP operations)
+                 , and data mining (which supports knowledge discovery).
+            7.1.3.2 Data Warehouse Design Process
+            7.1.3.3 Data Warehouse Usage for Information Processing
+            7.1.3.4 From Online Analytical Processing to Multidimensional Data Mining
+        7.1.4 Data Warehouse Implementation
+            7.1.4.1 Efficient Data Cube Computation: An Overview
+            7.1.4.2 Indexing OLAP Data: Bitmap Index and Join Index
+                - In bitmap indexing, each attribute has its own bitmap index table. 
+                - Bitmap indexing reduces join, aggregation, and comparison operations to bit arithmetic.
+                - Join indexing registers the joinable rows of two or more relations from a relational database, reducing the overall cost of OLAP join operations. 
+            7.1.4.3 Efficient Processing of OLAP Queries
+                - Full materialization, Vectorized processing, Late Materialization
+            7.1.4.4 OLAP Server Architectures: ROLAP versus MOLAP versus HOLAP
+        7.1.5 Data Generalization by Attribute-Oriented Induction
+            - Data generalization is a process that abstracts a large set of task-relevant data in a database from a relatively low conceptual level to higher conceptual levels.
+            - Data generalization approaches include data cube-based data aggregation and attribute-oriented induction.
+            - Concept description (characterization and comparison) describes a given set of task-relevant data in a concise and summarative manner.
+            7.1.5.1 Attribute-Oriented Induction for Data Characterization
+                - Data Characterization summarizes and describes a data collection, called the target class
+            7.1.5.2 Efficient Implementation of Attribute-Oriented Induction
+            7.1.5.3 Attribute-Oriented Induction for Class Comparisons
+                - Class Comparison summarizes and distinguishes one data collection, called the target class, from other data collection(s), collectively called the contrasting class(es).
     7.2 Data Lakes
-
-
-
-Chapter 5: Business Intelligence
-	Data Warehousing
-	Data Lakes
+        - A data lake is a vast pool of raw data, the purpose for which is not yet defined
+          , whereas a data warehouse is a repository for structured, filtered data that has already been processed for a specific purpose.
+        - Data lakes are often difficult to navigate by those unfamiliar with unprocessed data.
+        - Data lake architecture has no structure and is therefore easy to access and easy to change.
+        - ex. Data lakes allow for a combination of structured and unstructured data, which tends to be a better fit for healthcare companies.
