@@ -26,8 +26,17 @@
             - Structured Query Language (SQL) represents a set  of relational databases with fixed schemas.
             - ex. Microsoft SQL Server, Postgres, MySQL, AWS Redshift, Oracle DB, Db2 Family
         1.6.4 NoSQL Databases
-            - Not-only SQL (NoSQL) databases are not relational, vary more in structure.
+            - Not-only SQL (NoSQL) databases are not relational, var y more in structure.
             - Most NoSQL databases store data in JSON format.
             - ex. Document databases (mongoDB, couchDB), Key-value stores (Riak, Voldemort, Redis), Graph databases (Neo4j, HyperGraph), Wide-column stores (Cassandra, HBase)
         1.6.5 APIs and Cloud Data Access
             - A variety of data providers make data available via Application Programming Interfaces (APIs), that makes it easy to access such data via Python.
+    1.6 Data Cleaning
+        - Data cleaning is one of ways to preprocess data among data Cleaning, Integration, Reduction, and Transformation
+        - Key aspects of Machine Learning Workflow depend on cleaned data: Observations, Labels, Algorithms, Features, Model
+          (Algorithms: Computer programs that estimate models based on available data, Model: Hypothesized relationship between observations and data)
+        - Messy data can lead to "Garbage-in, Garbage-out" effect, and unreliable outcomes.
+        - For missing data → Remove, Impute, Mask.  /  For outliers → Remove, Assign, Transform, Predict, Keep.
+    1.7 Exploratory Data Analysis (EDA)
+        - Exploratory data analysis (EDA) is an approach to analyzing data sets to summarize their main characteristics, often with visual methods.
+
