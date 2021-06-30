@@ -39,4 +39,10 @@
         - For missing data → Remove, Impute, Mask.  /  For outliers → Remove, Assign, Transform, Predict, Keep.
     1.7 Exploratory Data Analysis (EDA)
         - Exploratory data analysis (EDA) is an approach to analyzing data sets to summarize their main characteristics, often with visual methods.
-
+        - Visualization can be created in multiple ways such as Matplotlib, Pandas (via Matplotlib), and Seaborn
+    1.8 Feature Engineering and Variable Transformation
+        Variables must often be transformed before they can be included in models. ex. log and polynomial transformations, Encoding (non-numeric → numeric), Scaling
+        1.8.1 Feature encoding
+            - Binary encoding, One-hot encoding, Ordinal encoding
+        1.8.2 Feature scaling
+            - Standard scaling, Min-max scaling, Robust scaling
