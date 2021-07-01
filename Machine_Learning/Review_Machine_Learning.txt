@@ -45,3 +45,5 @@
         1.8.2 Feature scaling
             - Standard scaling, Min-max scaling, Robust scaling
             - ex. Log transforming skew variables
+    1.9 Estimation and Inference
+    1.10 Hypothesis Testing
