@@ -52,12 +52,25 @@
         - Hypothesis testing is an act in statistics whereby an analyst tests an assumption regarding a population parameter.
         - Hypothesis testing is used to assess the plausibility of a hypothesis by using sample data.
         - In hypothesis testing, an analyst tests a statistical sample, with the goal of providing evidence on the plausibility of the null hypothesis.
+        - significance leve, p-value, ex. https://www.youtube.com/watch?v=KS6KEWaoOOE
 
-Brief description of the data set and a summary of its attributes
-Initial plan for data exploration
-Actions taken for data cleaning and feature engineering
-Key Findings and Insights, which synthesizes the results of Exploratory Data Analysis in an insightful and actionable manner
-Formulating at least 3 hypothesis about this data
-Conducting a formal significance test for one of the hypotheses and discuss the results 
-Suggestions for next steps in analyzing this data
-A paragraph that summarizes the quality of this data set and a request for additional data if needed
+2. Supervised Machine Learning: Regression
+    2.1 Introduction to Supervised Machine Learning and Linear Regression
+        2.1.1 Types of Machine Learning
+            - y_p = f(Ω, x)  where x=input, y_p=output(values predicted by the model), Ω=parameters
+            - J(y, y_p): Loss, Machine Learning model chooses parameters Ω to minimize loss J by using features x and outcome y.
+            - cf. hyperparameters is a parameter that is not learned directly from the data, but relates to implementation of training our ML model.
+            - ex. Regression's output(y) is numeric, and Classification's output(y) is categorical.
+        2.1.2 Interpretation and Prediction
+
+    2.2 Data Splits and Cross Validation
+    2.3 Regression with Regularization Techniques: Ridge, LASSO, and Elastic Net
+
+
+
+
+
+3. Supervised Machine Learning: Classification
+4. Unsupervised Machine Learning
+5. Deep Learning and Reinforcement Learning
+6. Specialized Models: Time Series and Survival Analysis
