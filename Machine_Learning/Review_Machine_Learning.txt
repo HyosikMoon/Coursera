@@ -64,7 +64,9 @@
         2.1.2 Interpretation and Prediction
             - Interpretation is to train a model to find insights from the data especiall from the Ω.
             - Prediction is to make the best prediction comparing y_p with y.
-        2.1.3 Regression and Classification examples
+        2.1.3 Linear Regression
+            - Making our target variable normally distributed often will lead to better results → Check normality by visually and using a statistical data
+            - Try some common transformations to try and get y to be normally distributed:  ex. Log, Square root, Box cox
     2.2 Data Splits and Cross Validation
     2.3 Regression with Regularization Techniques: Ridge, LASSO, and Elastic Net
 
