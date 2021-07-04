@@ -64,9 +64,19 @@
         2.1.2 Interpretation and Prediction
             - Interpretation is to train a model to find insights from the data especiall from the Ω.
             - Prediction is to make the best prediction comparing y_p with y.
-        2.1.3 Linear Regression
-            - Making our target variable normally distributed often will lead to better results → Check normality by visually and using a statistical data
+        2.1.3 Linear Regression 
+            - Making our target variable normally distributed often will lead to better results 
+              → Check normality by visually and using a statistical data (ex. from scipy.stats.mstats import normaltest)
             - Try some common transformations to try and get y to be normally distributed:  ex. Log, Square root, Box cox
+            2.1.3.1 Process of Linear Regression ✔ Step4. Modelling
+            - 1) Create X and Y
+            - 2) Polynomial Features of X 		→	X_pf = pf.fit_transform(X)  where, pf = PolynomialFeatures(degree=2, include_bias=False)
+            - 3) Train test split of X_pf, Y 		→ 	X_train, X_teest, Y_train, Y_test = train_test_split(X_pf, Y, test_size=0.3, random_state=42)
+            - 4) Standard Scalar of X_train 		→ 	X_train_s = s.fit_transform(X_train)  where, s = StandardScaler()
+            - 5) normalize Y_train 		→ 	Y_train_bc = boxcox(Y_train)
+            - 6) fit model 			→ 	lr(X_train_s, Y_train)
+            - 7) Standard Scalar of X_test 		→ 	X_test_s = s.transform(X_test)
+            - 8) Predict normalized Y_test 		→ 	Y_pred_bc = lr.predict(X_test_s)
     2.2 Data Splits and Cross Validation
     2.3 Regression with Regularization Techniques: Ridge, LASSO, and Elastic Net
 
