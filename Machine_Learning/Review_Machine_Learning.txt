@@ -58,7 +58,7 @@
     2.1 Introduction to Supervised Machine Learning and Linear Regression
         2.1.1 Types of Machine Learning
             - y_p = f(Ω, x)  where x=input, y_p=output(values predicted by the model), Ω=parameters
-            - J(y, y_p): Loss, Machine Learning model chooses parameters Ω to minimize loss J by using features x and outcome y.
+            - J(y, y_p): Loss, Machine Learning model chooses parameters Ω to minimize loss J by using features x and outcom e y.
             - cf. hyperparameters is a parameter that is not learned directly from the data, but relates to implementation of training our ML model.
             - ex. Regression's output(y) is numeric, and Classification's output(y) is categorical.
         2.1.2 Interpretation and Prediction
@@ -79,6 +79,7 @@
                 - 8) Predict normalized Y_pred 		→ 	Y_pred_bc = lr.predict(X_test_s)
                 - 9) Inverse of Y_pred_bc			→	Y_pred = inv_boxcox(Y_pred_bc, lambda1) 
                 - 10) Determine R^2 b/w Y_test and Y_pred	→	r2_score(y_pred, y_test)  where, from sklearn.metrics import r2_score
+            2.1.3.2 One-hot-encoding for categorical variables
     2.2 Data Splits and Cross Validation
     2.3 Regression with Regularization Techniques: Ridge, LASSO, and Elastic Net
 
