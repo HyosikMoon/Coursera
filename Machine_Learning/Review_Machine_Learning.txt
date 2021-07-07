@@ -85,17 +85,34 @@
             2.1.3.4 Visualize the result (ex. Scatter plot)
     2.2 Data Splits and Cross Validation
         2.2.1 Training and Test Splits
+            - ex. X_train, X_test, y_train, y_test = train_test_split(X_data, y_data, test_size=0.3, random_state=42)
         2.2.2 Cross Validation
             - Find the best model of a complexity where training and cross validation errors are both low
             2.2.2.1 K-fold Cross Validation:  Using each of k subsamples as a test sample
-                - Pipeline and cross_val_predict
+                - ex. kf = KFold(shuffle=True, random_state=72018, n_splits=3)
             2.2.2.2 Leave One Out Cross Validation:  Using each observation as a test sample
             2.2.2.3 Stratified Cross Validation:  K-fold Cross Validation with representative samples
-
     2.3 Regression with Regularization Techniques: Ridge, LASSO, and Elastic Net
-
-
-
+        - Pipeline and cross_val_predict
+        2.3.1 LASSO
+            - ex1. las = Lasso(alpha=best_alpha, max_iter=100000)
+                     estimator = Pipeline([("make_higher_features", pf), ("scaler", s), ("lasso_regression", las)])  #where, s = StandardScaler()
+                     predictions = cross_val_predict(estimator, X, y, cv=kf)  #where, kf = KFold(shuffle=True, random_state=72018, n_splits=3)
+                     score = r2_score(y, predictions)
+            - ex2. best_estimator = Pipeline([("make_higher_degree", PolynomialFeatures(degree=2, include_bias=False)), ("scaler", s), ("lasso_regression", Lasso(alpha=best_alpha, max_iter=100000))])
+	       best_estimator.fit(X, y)
+	       best_estimator.score(X, y)
+        2.3.2 Hyperparameter selection
+            - Use GridSearchCV
+            - ex. from sklearn.model_selection import GridSearchCV
+	     estimator = Pipeline([  ("polynomial_features",  PolynomialFeatures()),  ("scaler", StandardScaler()),  ("ridge_regression", Ridge())  ])
+	     params = {  'polynomial_features__degree': [1, 2, 3],  'ridge_regression__alpha': np.geomspace(4, 20, 30)  }
+	     grid = GridSearchCV(estimator, params, cv=kf)
+	     grid.fit(X, y)
+	     y_predict = grid.predict(X)
+	     r2_score(y, y_predict)
+	     # grid.best_score_, grid.best_params_
+	     # grid.best_estimator_.named_steps['ridge_regression'].coef_
 
 3. Supervised Machine Learning: Classification
 4. Unsupervised Machine Learning
