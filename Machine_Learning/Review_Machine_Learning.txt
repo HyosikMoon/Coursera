@@ -88,8 +88,10 @@
         2.2.2 Cross Validation
             - Find the best model of a complexity where training and cross validation errors are both low
             2.2.2.1 K-fold Cross Validation:  Using each of k subsamples as a test sample
+                - Pipeline and cross_val_predict
             2.2.2.2 Leave One Out Cross Validation:  Using each observation as a test sample
             2.2.2.3 Stratified Cross Validation:  K-fold Cross Validation with representative samples
+
     2.3 Regression with Regularization Techniques: Ridge, LASSO, and Elastic Net
 
 
