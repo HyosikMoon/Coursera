@@ -120,6 +120,10 @@
         - "Linear Regression" means linear combinations of features not linear relationship between features(variables)
         - ex. y(x) = β0 + β1*x + β2*x^2 + β3*x^3   or   y(x) = β0 + β1*x1 + β2*x2 + β3*x1*x2  are also linear regression models.
         - Polynomial terms help you capture nonlinear effects of your features. (Capture the relation of the outcome with features of higher order.)
+    2.5 Regularization
+        2.5.1 Bias and Variance
+            - Bias is a tendency to miss. ex. Underfitting (High bias, Low variance), low-order function
+            - Variance is tendency to be inconsistent  ex. Overfitting (Low bias, High variance), high-order function
 
 3. Supervised Machine Learning: Classification
 4. Unsupervised Machine Learning
