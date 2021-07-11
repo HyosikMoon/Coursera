@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 21.1) (preloaded format=pdflatex 2021.1.24)  11 JUL 2021 02:01
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 21.1) (preloaded format=pdflatex 2021.1.24)  11 JUL 2021 02:10
 entering extended mode
 **./Peergrade.tex
 (Peergrade.tex
@@ -264,22 +264,22 @@ File: l3backend-pdftex.def 2020-09-24 L3 backend support: PDF output (pdfTeX)
 ) (Peergrade.aux)
 \openout1 = `Peergrade.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
 
 (C:\Users\moon\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mki
 i
@@ -302,7 +302,7 @@ Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 85.
 )
-Package hyperref Info: Link coloring OFF on input line 23.
+Package hyperref Info: Link coloring OFF on input line 26.
 
 (C:\Users\moon\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\nameref.sty
 Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
@@ -316,9 +316,9 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count284
 )
-LaTeX Info: Redefining \ref on input line 23.
-LaTeX Info: Redefining \pageref on input line 23.
-LaTeX Info: Redefining \nameref on input line 23.
+LaTeX Info: Redefining \ref on input line 26.
+LaTeX Info: Redefining \pageref on input line 26.
+LaTeX Info: Redefining \nameref on input line 26.
  (Peergrade.out) (Peergrade.out)
 \@outlinefile=\write3
 \openout3 = `Peergrade.out'.
@@ -327,61 +327,59 @@ LaTeX Info: Redefining \nameref on input line 23.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: subfig package v1.3 is loaded.
 Package caption Info: End \AtBeginDocument code.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 26.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 29.
 
 
 (C:\Users\moon\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 26.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 29.
 
 
 (C:\Users\moon\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-
-LaTeX Warning: No \author given.
-
 <figures/data_description.png, id=9, 781.41937pt x 580.41844pt>
 File: figures/data_description.png Graphic file (type png)
 <use figures/data_description.png>
-Package pdftex.def Info: figures/data_description.png  used on input line 41.
+Package pdftex.def Info: figures/data_description.png  used on input line 44.
 (pdftex.def)             Requested size: 286.80598pt x 213.03331pt.
 <figures/categorical_var.png, id=11, 311.66437pt x 412.54124pt>
 File: figures/categorical_var.png Graphic file (type png)
 <use figures/categorical_var.png>
-Package pdftex.def Info: figures/categorical_var.png  used on input line 43.
+Package pdftex.def Info: figures/categorical_var.png  used on input line 46.
 (pdftex.def)             Requested size: 168.43808pt x 222.9578pt.
 <figures/pairplot.png, id=13, 1420.30624pt x 1420.30624pt>
 File: figures/pairplot.png Graphic file (type png)
 <use figures/pairplot.png>
-Package pdftex.def Info: figures/pairplot.png  used on input line 54.
+Package pdftex.def Info: figures/pairplot.png  used on input line 57.
 (pdftex.def)             Requested size: 409.71689pt x 409.71106pt.
 <figures/ohc.png, id=15, 934.24031pt x 365.86688pt>
 File: figures/ohc.png Graphic file (type png)
 <use figures/ohc.png>
-Package pdftex.def Info: figures/ohc.png  used on input line 62.
+Package pdftex.def Info: figures/ohc.png  used on input line 65.
 (pdftex.def)             Requested size: 364.19664pt x 142.6261pt.
 <figures/std.png, id=17, 1114.91531pt x 446.41782pt>
 File: figures/std.png Graphic file (type png)
 <use figures/std.png>
-Package pdftex.def Info: figures/std.png  used on input line 70.
+Package pdftex.def Info: figures/std.png  used on input line 73.
 (pdftex.def)             Requested size: 364.19664pt x 145.82655pt.
 <figures/normalize.png, id=19, 574.39594pt x 149.05687pt>
 File: figures/normalize.png Graphic file (type png)
 <use figures/normalize.png>
-Package pdftex.def Info: figures/normalize.png  used on input line 79.
+Package pdftex.def Info: figures/normalize.png  used on input line 82.
 (pdftex.def)             Requested size: 364.19664pt x 94.5113pt.
+
 [1
 
 {C:/Users/moon/AppData/Local/MiKTeX/pdftex/config/pdftex.map}]
 <figures/rmse.png, id=42, 176.91093pt x 155.07938pt>
 File: figures/rmse.png Graphic file (type png)
 <use figures/rmse.png>
-Package pdftex.def Info: figures/rmse.png  used on input line 90.
+Package pdftex.def Info: figures/rmse.png  used on input line 93.
 (pdftex.def)             Requested size: 182.09485pt x 159.62703pt.
 
-Overfull \hbox (60.17136pt too wide) in paragraph at lines 94--96
+Overfull \hbox (60.17136pt too wide) in paragraph at lines 97--99
 \OT1/cmr/m/n/12 rmse val-ues. But the best one was Ridge $(\OML/cmm/m/it/12 rid
 geCV:alpha[] \OT1/cmr/m/n/12 : 21\OML/cmm/m/it/12 :\OT1/cmr/m/n/12 056578947368
 422\OML/cmm/m/it/12 ridgeCV[]rmse \OT1/cmr/m/n/12 :
@@ -390,22 +388,18 @@ geCV:alpha[] \OT1/cmr/m/n/12 : 21\OML/cmm/m/it/12 :\OT1/cmr/m/n/12 056578947368
 <figures/factors.png, id=44, 420.06938pt x 402.75468pt>
 File: figures/factors.png Graphic file (type png)
 <use figures/factors.png>
-Package pdftex.def Info: figures/factors.png  used on input line 102.
+Package pdftex.def Info: figures/factors.png  used on input line 105.
 (pdftex.def)             Requested size: 364.19664pt x 349.18921pt.
 [2 <./figures/data_description.png> <./figures/categorical_var.png>] [3 <./figu
 res/pairplot.png>] [4 <./figures/ohc.png> <./figures/std.png> <./figures/normal
 ize.png>] [5 <./figures/rmse.png> <./figures/factors.png>] (Peergrade.aux)
 Package rerunfilecheck Info: File `Peergrade.out' has not changed.
 (rerunfilecheck)             Checksum: A6BCE1E5FF6AE0015ECFBF354619B68F;43.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
  ) 
 Here is how much of TeX's memory you used:
  8128 strings out of 479798
  131356 string characters out of 2870238
- 425002 words of memory out of 3000000
+ 424998 words of memory out of 3000000
  24983 multiletter control sequences out of 15000+200000
  544228 words of font info for 64 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -418,7 +412,7 @@ amsfonts/cm/cmmi12.pfb><C:/Users/moon/AppData/Local/Programs/MiKTeX/fonts/type1
 s/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/moon/AppData/Local/Programs/MiKT
 eX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/moon/AppData/Local/Progra
 ms/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on Peergrade.pdf (5 pages, 638560 bytes).
+Output written on Peergrade.pdf (5 pages, 638845 bytes).
 PDF statistics:
  104 PDF objects out of 1000 (max. 8388607)
  21 named destinations out of 1000 (max. 500000)
