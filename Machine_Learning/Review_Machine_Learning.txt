@@ -55,6 +55,7 @@
         - significance leve, p-value, ex. https://www.youtube.com/watch?v=KS6KEWaoOOE
 
 2. Supervised Machine Learning: Regression
+    - Regression models, which predict a continuous outcome
     2.1 Introduction to Supervised Machine Learning and Linear Regression
         2.1.1 Types of Machine Learning
             - y_p = f(Ω, x)  where x=input, y_p=output(values predicted by the model), Ω=parameters
@@ -137,9 +138,25 @@
         - "Linear Regression" means linear combinations of features not linear relationship between features(variables)
         - ex. y(x) = β0 + β1*x + β2*x^2 + β3*x^3   or   y(x) = β0 + β1*x1 + β2*x2 + β3*x1*x2  are also linear regression models.
         - Polynomial terms help you capture nonlinear effects of your features. (Capture the relation of the outcome with features of higher order.)
-*Regression Summary: 2.1 Modeling, 2.2 Validation1 (Cross validation), 2.3 Validation2 (Regularization), 2.4    
+    *Regression Summary: 2.1 Modeling, 2.2 Validation (Cross validation, Regularization) 2.3 Decision (Error rates, Coefficients analysis)
 
 3. Supervised Machine Learning: Classification
+    - Classification models, which predict a categorical outcome.
+    3.1 Logistic Regression
+        3.1.1 What is Logistic Regression
+            - Logistic regression is a type of regression that models the probability of a certain class occurring given other independent variables.
+            - The input of logistic regression result is the linear regression, and the output is the probability belonging to a specific category. 
+        3.1.2 Classification Error Metrics
+            3.1.2.1 Confusion matrix:  A confusion matrix tabulates true positives, false negatives, false positives and true negatives.
+            3.1.2.2 ROC curve:  The receiver operating characteristic (ROC) plots the true positive rate (sensitivity) of a model vs. its false positive rate (1-specificity).
+            3.1.2.3 Precision-Recall curve:  The precision-recall curve measures the trade-off between precision and recall.
+            - The ROC curve generally works better for data with balanced classes, while the precision-recall curve generally works better for data with unbalanced classes.  
+    3.2 K Nearest Neighbors
+    3.3 Support Vector Machines
+    3.4 Decision Trees
+    3.5 Ensemble Models
+    3.4 Modeling Unbalanced Classes
+
 4. Unsupervised Machine Learning
 5. Deep Learning and Reinforcement Learning
 6. Specialized Models: Time Series and Survival Analysis
