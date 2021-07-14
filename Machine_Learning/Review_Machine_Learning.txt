@@ -152,6 +152,7 @@
             3.1.2.3 Precision-Recall curve:  The precision-recall curve measures the trade-off between precision and recall.
             - The ROC curve generally works better for data with balanced classes, while the precision-recall curve generally works better for data with unbalanced classes.  
     3.2 K Nearest Neighbors
+
     3.3 Support Vector Machines
     3.4 Decision Trees
     3.5 Ensemble Models
