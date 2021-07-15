@@ -152,7 +152,12 @@
             3.1.2.3 Precision-Recall curve:  The precision-recall curve measures the trade-off between precision and recall.
             - The ROC curve generally works better for data with balanced classes, while the precision-recall curve generally works better for data with unbalanced classes.  
     3.2 K Nearest Neighbors
-
+            - K nearest neighbor methods are useful for classification. The elbow method is frequently used to identify a model with low K and low error rate.
+              # Categorical(nominal (binary: only two states), ordinal), Quantitative(Numeric (interval, ratio))
+              # Categorical(ordinal) -> LabelEncoder -> MinMaxScaler
+              # Categorical(nominal) -> OneHotEncoder or get_dummies
+              # Categorical(binary)  -> LabelBinarizer
+              # Numeric -> MinMaxScaler
     3.3 Support Vector Machines
     3.4 Decision Trees
     3.5 Ensemble Models
