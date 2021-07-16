@@ -146,6 +146,9 @@
         3.1.1 What is Logistic Regression
             - Logistic regression is a type of regression that models the probability of a certain class occurring given other independent variables.
             - The input of logistic regression result is the linear regression, and the output is the probability belonging to a specific category. 
+            - from sklearn.linear_model import LogisticRegression
+            - from sklearn.linear_model import LogisticRegressionCV
+            - from sklearn.metrics import precision_recall_fscore_support as score
         3.1.2 Classification Error Metrics
             3.1.2.1 Confusion matrix:  A confusion matrix tabulates true positives, false negatives, false positives and true negatives.
             3.1.2.2 ROC curve:  The receiver operating characteristic (ROC) plots the true positive rate (sensitivity) of a model vs. its false positive rate (1-specificity).
@@ -158,7 +161,16 @@
               # Categorical(nominal) -> OneHotEncoder or get_dummies
               # Categorical(binary)  -> LabelBinarizer
               # Numeric -> MinMaxScaler
+            - from sklearn.neighbors import KNeighborsClassifier
+              knn = KNeighborsClassifier(n_neighbors=5, weights='distance')
+              knn = knn.fit(X_train, y_train)
+              y_pred = knn.predict(X_test)
+            - from sklearn.metrics import confusion_matrix, accuracy_score, classification_report, f1_score
     3.3 Support Vector Machines
+         - Regularization in SVMs, costfunction, J(βi) = SVMCost(βi) + 1/c ∑iβi
+         - from sklearn.svm import LinearSVC
+         - from sklearn.svm import SVC	# Gaussian Kernel		# g, c↓ → means higher regularization = complexity↓ 
+           SVC_Gaussian = SVC(kernel='rbf', gamma=g, C=c)   	# g, c↑ → means lower regularization = complexity↑
     3.4 Decision Trees
     3.5 Ensemble Models
     3.4 Modeling Unbalanced Classes
