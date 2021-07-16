@@ -167,11 +167,12 @@
               y_pred = knn.predict(X_test)
             - from sklearn.metrics import confusion_matrix, accuracy_score, classification_report, f1_score
     3.3 Support Vector Machines
-         - Regularization in SVMs, costfunction, J(βi) = SVMCost(βi) + 1/c ∑iβi
-         - from sklearn.svm import LinearSVC
-         - from sklearn.svm import SVC	# Gaussian Kernel		# g, c↓ → means higher regularization = complexity↓ 
-           SVC_Gaussian = SVC(kernel='rbf', gamma=g, C=c)   	# g, c↑ → means lower regularization = complexity↑
+        - Regularization in SVMs, costfunction, J(βi) = SVMCost(βi) + 1/c ∑iβi
+        - from sklearn.svm import LinearSVC
+        - from sklearn.svm import SVC	# Gaussian Kernel		# g, c↓ → means higher regularization = complexity↓ 
+          SVC_Gaussian = SVC(kernel='rbf', gamma=g, C=c)   	# g, c↑ → means lower regularization = complexity↑
     3.4 Decision Trees
+        - from sklearn.tree import DecisionTreeClassifier
     3.5 Ensemble Models
     3.4 Modeling Unbalanced Classes
 
