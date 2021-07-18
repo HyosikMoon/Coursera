@@ -172,9 +172,29 @@
         - from sklearn.svm import SVC	# Gaussian Kernel		# g, c↓ → means higher regularization = complexity↓ 
           SVC_Gaussian = SVC(kernel='rbf', gamma=g, C=c)   	# g, c↑ → means lower regularization = complexity↑
     3.4 Decision Trees
-        - from sklearn.tree import DecisionTreeClassifier
+        - Decision trees split your data using impurity measures such as Entropy and Gini index. (Greedy algorithm)
+        - Decision trees tend to overfit and to be very sensitive to different data. Cross validation and pruning sometimes help with some of this.
+        - Great advantages of decision trees are that they are really easy to interpret and require no data preprocessing.
+        3.4.1 DecisionTreeClassfier
+            - from sklearn.tree import DecisionTreeClassifier
+              from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score
+            - from sklearn.model_selection import GridSearchCV
+        3.4.2 DecisionTreeRegressor
+            - from sklearn.tree import DecisionTreeRegressor
+              from sklearn.metrics import mean_squared_error
     3.5 Ensemble Models
-    3.4 Modeling Unbalanced Classes
+        3.5.1 Bagging (Boostrap aggregating)
+            - A model that averages the predictions of multiple models reduces the variance of a single model and has high chances to generalize well.
+            - Bagging is a tree ensemble that combines the prediction of several trees that were trained on bootstrap samples of the data.
+            - from sklearn.ensemble import BaggingClassifier
+        3.5.2 RandomForest
+            - Bagging & Choose features randomly
+            - from sklearn.ensemble import RandomForestClassifer
+        3.5.3 Extra RandomForest
+            - RandomForest & Create splits randomly (not greedily)
+            - from sklearn.ensemble import ExtraTreesClassifier
+
+    3.6 Modeling Unbalanced Classes
 
 4. Unsupervised Machine Learning
 5. Deep Learning and Reinforcement Learning
