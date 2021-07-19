@@ -216,6 +216,11 @@
             - from sklearn.metrics import f1_score, roc_auc_score
             - from sklearn.metrics import roc_curve, precision_recall_curve, confusion_matrix
     3.6 Modeling Unbalanced Classes
+        - https://imbalanced-learn.org/stable/user_guide.html (scikit-learn unbalanced classes modeling guide)
+        - Downsampling or removing observations from the most common class
+        - Upsampling or duplicating observations from the rarest class or classes
+        - Randomsampling, A mix of downsampling and upsampling
+        - Ensure that you first do your train test split before doing any of this over or undersampling.
 
 4. Unsupervised Machine Learning
 5. Deep Learning and Reinforcement Learning
