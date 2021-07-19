@@ -167,10 +167,10 @@
               y_pred = knn.predict(X_test)
             - from sklearn.metrics import confusion_matrix, accuracy_score, classification_report, f1_score
     3.3 Support Vector Machines
-        - Regularization in SVMs, costfunction, J(βi) = SVMCost(βi) + 1/c ∑iβi
+        - Regularization in SVMs, cost function, J(βi) = SVMCost(βi) + 1/c ∑iβi
         - from sklearn.svm import LinearSVC
         - from sklearn.svm import SVC	# Gaussian Kernel		# g, c↓ → means higher regularization = complexity↓ 
-          SVC_Gaussian = SVC(kernel='rbf', gamma=g, C=c)   	# g, c↑ → means lower regularization = complexity↑
+          SVC_Gaussian = SVC(kernel='rbf', gamma=g, C=c)    	# g, c↑ → means lower regularization = complexity↑
     3.4 Decision Trees
         - Decision trees split your data using impurity measures such as Entropy and Gini index. (Greedy algorithm)
         - Decision trees tend to overfit and to be very sensitive to different data. Cross validation and pruning sometimes help with some of this.
@@ -184,16 +184,19 @@
               from sklearn.metrics import mean_squared_error
     3.5 Ensemble Models
         3.5.1 Bagging (Boostrap aggregating)
+            - Pick Sample / Average
             - A model that averages the predictions of multiple models reduces the variance of a single model and has high chances to generalize well.
             - Bagging is a tree ensemble that combines the prediction of several trees that were trained on bootstrap samples of the data.
             - from sklearn.ensemble import BaggingClassifier
         3.5.2 RandomForest
+            - Pick Sample / Pick Features / Average
             - Bagging & Choose features randomly
             - from sklearn.ensemble import RandomForestClassifer
         3.5.3 Extra RandomForest
             - RandomForest & Create splits randomly (not greedily)
             - from sklearn.ensemble import ExtraTreesClassifier
         3.5.4 Boosting
+            - Advance residually
             - Boosting methods are additive in the sense that they sequentially retrain decision trees using the observations with the highest residuals on the previous tree. 
             - To do so, observations with a high residual are assigned a higher weight.
             - The additive nature of gradient boosting makes it prone to overfitting. This can be addressed using cross validation, boosting iterations, and hyperparameters. 
@@ -204,6 +207,7 @@
             - from sklearn.ensemble import GradientBoostingClassifier
             - from sklearn.ensemble import AdaBoostClassifier
         3.5.6 Stacking
+            - Ensemble with different models
             - Stacking is an ensemble method that combines any type of model by combining the predicted probabilities of classes.
             - The two most common ways to combine the predicted probabilities are using a majority vote or using weights for each predicted probability.  
             - from sklearn.ensemble import VotingClassifier
