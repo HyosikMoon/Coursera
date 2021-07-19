@@ -193,7 +193,21 @@
         3.5.3 Extra RandomForest
             - RandomForest & Create splits randomly (not greedily)
             - from sklearn.ensemble import ExtraTreesClassifier
-        3.5.4 Evaluation
+        3.5.4 Boosting
+            - Boosting methods are additive in the sense that they sequentially retrain decision trees using the observations with the highest residuals on the previous tree. 
+            - To do so, observations with a high residual are assigned a higher weight.
+            - The additive nature of gradient boosting makes it prone to overfitting. This can be addressed using cross validation, boosting iterations, and hyperparameters. 
+            3.5.4.1 Loss functions for boosting algorithms
+                3.5.4.1.1 0-1 loss function, which ignores observations that were correctly classified. The shape of this loss function makes it difficult to optimize.
+                3.5.4.1.2 Adaptive boosting loss function, which has an exponential nature. The shape of this function is more sensitive to outliers.
+                3.5.4.1.2 Gradient boosting loss function. The most common gradient boosting implementation uses a binomial log likelihood loss function called deviance. 
+            - from sklearn.ensemble import GradientBoostingClassifier
+            - from sklearn.ensemble import AdaBoostClassifier
+        3.5.6 Stacking
+            - Stacking is an ensemble method that combines any type of model by combining the predicted probabilities of classes.
+            - The two most common ways to combine the predicted probabilities are using a majority vote or using weights for each predicted probability.  
+            - from sklearn.ensemble import VotingClassifier
+        3.5.7 Evaluation
             - from sklearn.metrics import classification_report, accuracy_score, precision_score, recall_score
             - from sklearn.metrics import f1_score, roc_auc_score
             - from sklearn.metrics import roc_curve, precision_recall_curve, confusion_matrix
