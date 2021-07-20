@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 21.1) (preloaded format=pdflatex 2021.1.24)  19 JUL 2021 02:22
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 21.1) (preloaded format=pdflatex 2021.1.24)  20 JUL 2021 01:53
 entering extended mode
 **./Course_Project_Classification_3.tex
 (Course_Project_Classification_3.tex
@@ -254,47 +254,55 @@ Package caption Info: listings package is loaded.
 \sf@top=\skip57
 \sf@bottom=\skip58
 )
-\c@stepnum=\count276
+("C:\Program Files\MiKTeX\tex/latex/float\float.sty"
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count276
+\float@exts=\toks19
+\float@box=\box49
+\@float@everytoks=\toks20
+\@floatcapt=\box50
+)
+\c@stepnum=\count277
 
 (C:\Users\moon\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdft
 ex.def
 File: l3backend-pdftex.def 2020-09-24 L3 backend support: PDF output (pdfTeX)
-\l__kernel_color_stack_int=\count277
-\l__pdf_internal_box=\box49
+\l__kernel_color_stack_int=\count278
+\l__pdf_internal_box=\box51
 ) (Course_Project_Classification_3.aux)
 \openout1 = `Course_Project_Classification_3.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
 
 (C:\Users\moon\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mki
 i
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count278
+\scratchcounter=\count279
 \scratchdimen=\dimen157
-\scratchbox=\box50
-\nofMPsegments=\count279
-\nofMParguments=\count280
-\everyMPshowfont=\toks19
-\MPscratchCnt=\count281
+\scratchbox=\box52
+\nofMPsegments=\count280
+\nofMParguments=\count281
+\everyMPshowfont=\toks21
+\MPscratchCnt=\count282
 \MPscratchDim=\dimen158
-\MPnumerator=\count282
-\makeMPintoPDFobject=\count283
-\everyMPtoPDFconversion=\toks20
+\MPnumerator=\count283
+\makeMPintoPDFobject=\count284
+\everyMPtoPDFconversion=\toks22
 )
 (C:\Users\moon\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-ba
 se.sty
@@ -302,7 +310,7 @@ Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 85.
 )
-Package hyperref Info: Link coloring OFF on input line 26.
+Package hyperref Info: Link coloring OFF on input line 27.
 
 (C:\Users\moon\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\nameref.sty
 Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
@@ -314,27 +322,28 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 estring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count284
+\c@section@level=\count285
 )
-LaTeX Info: Redefining \ref on input line 26.
-LaTeX Info: Redefining \pageref on input line 26.
-LaTeX Info: Redefining \nameref on input line 26.
+LaTeX Info: Redefining \ref on input line 27.
+LaTeX Info: Redefining \pageref on input line 27.
+LaTeX Info: Redefining \nameref on input line 27.
  (Course_Project_Classification_3.out)
 (Course_Project_Classification_3.out)
 \@outlinefile=\write3
 \openout3 = `Course_Project_Classification_3.out'.
 
-\c@lstlisting=\count285
+\c@lstlisting=\count286
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: subfig package v1.3 is loaded.
+Package caption Info: float package is loaded.
 Package caption Info: End \AtBeginDocument code.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 29.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 30.
 
 
 (C:\Users\moon\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 29.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 30.
 
 
 (C:\Users\moon\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
@@ -343,51 +352,108 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 <figures/data_info.png, id=8, 624.08156pt x 575.14874pt>
 File: figures/data_info.png Graphic file (type png)
 <use figures/data_info.png>
-Package pdftex.def Info: figures/data_info.png  used on input line 45.
+Package pdftex.def Info: figures/data_info.png  used on input line 42.
 (pdftex.def)             Requested size: 409.71689pt x 377.5984pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-<figures/corr.png, id=11, 240.9pt x 730.98094pt>
-File: figures/corr.png Graphic file (type png)
-<use figures/corr.png>
-Package pdftex.def Info: figures/corr.png  used on input line 58.
-(pdftex.def)             Requested size: 136.5746pt x 414.4327pt.
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-LaTeX Warning: Reference `ohc' on page 1 undefined on input line 63.
 
 [1
 
-{C:/Users/moon/AppData/Local/MiKTeX/pdftex/config/pdftex.map}] [2 <./figures/da
-ta_info.png>] [3 <./figures/corr.png>] (Course_Project_Classification_3.aux)
+{C:/Users/moon/AppData/Local/MiKTeX/pdftex/config/pdftex.map}]
+Overfull \hbox (8.18774pt too wide) in paragraph at lines 48--49
+[]\OT1/cmr/m/n/12 Data clean-ing. First, delete NaN data. Sec-ond, delete un-us
+ed fea-tures (columns).
+ []
+
+[2 <./figures/data_info.png>]
+<figures/corr.png, id=31, 245.41687pt x 721.19438pt>
+File: figures/corr.png Graphic file (type png)
+<use figures/corr.png>
+Package pdftex.def Info: figures/corr.png  used on input line 53.
+(pdftex.def)             Requested size: 136.5746pt x 401.35707pt.
+<figures/corr2.png, id=32, 401.5pt x 323.2075pt>
+File: figures/corr2.png Graphic file (type png)
+<use figures/corr2.png>
+Package pdftex.def Info: figures/corr2.png  used on input line 55.
+(pdftex.def)             Requested size: 295.90587pt x 238.21797pt.
+<figures/scaling.png, id=33, 628.59843pt x 716.6775pt>
+File: figures/scaling.png Graphic file (type png)
+<use figures/scaling.png>
+Package pdftex.def Info: figures/scaling.png  used on input line 62.
+(pdftex.def)             Requested size: 364.19664pt x 415.22488pt.
+ [3 <./figures/corr.png> <./figures/corr2.png>]
+<figures/lr_l1.png, id=45, 160.34906pt x 185.19188pt>
+File: figures/lr_l1.png Graphic file (type png)
+<use figures/lr_l1.png>
+Package pdftex.def Info: figures/lr_l1.png  used on input line 75.
+(pdftex.def)             Requested size: 182.09485pt x 210.31273pt.
+<figures/lr_l1_cm.png, id=46, 752.8125pt x 738.76pt>
+File: figures/lr_l1_cm.png Graphic file (type png)
+<use figures/lr_l1_cm.png>
+Package pdftex.def Info: figures/lr_l1_cm.png  used on input line 77.
+(pdftex.def)             Requested size: 227.62204pt x 223.37695pt.
+
+[4 <./figures/scaling.png>]
+<figures/svmg.png, id=58, 196.48407pt x 194.97844pt>
+File: figures/svmg.png Graphic file (type png)
+<use figures/svmg.png>
+Package pdftex.def Info: figures/svmg.png  used on input line 84.
+(pdftex.def)             Requested size: 182.09485pt x 180.7122pt.
+<figures/svmg_cm.png, id=59, 752.8125pt x 738.76pt>
+File: figures/svmg_cm.png Graphic file (type png)
+<use figures/svmg_cm.png>
+Package pdftex.def Info: figures/svmg_cm.png  used on input line 86.
+(pdftex.def)             Requested size: 227.62204pt x 223.37695pt.
+ [5 <./figures/lr_l1.png> <./figures/lr_l1_cm.png>]
+<figures/rf.png, id=72, 204.765pt x 193.47281pt>
+File: figures/rf.png Graphic file (type png)
+<use figures/rf.png>
+Package pdftex.def Info: figures/rf.png  used on input line 93.
+(pdftex.def)             Requested size: 182.09485pt x 172.06331pt.
+<figures/rf_cm.png, id=73, 743.77875pt x 736.7525pt>
+File: figures/rf_cm.png Graphic file (type png)
+<use figures/rf_cm.png>
+Package pdftex.def Info: figures/rf_cm.png  used on input line 95.
+(pdftex.def)             Requested size: 227.62204pt x 225.46802pt.
+
+[6 <./figures/svmg.png> <./figures/svmg_cm.png>]
+<figures/rfe.png, id=84, 874.26625pt x 445.665pt>
+File: figures/rfe.png Graphic file (type png)
+<use figures/rfe.png>
+Package pdftex.def Info: figures/rfe.png  used on input line 100.
+(pdftex.def)             Requested size: 364.19664pt x 185.65475pt.
+ [7 <./figures/rf.png> <./figures/rf_cm.png> <./figures/rfe.png>]
+<figures/roc_pr.png, id=95, 1130.2225pt x 553.06625pt>
+File: figures/roc_pr.png Graphic file (type png)
+<use figures/roc_pr.png>
+Package pdftex.def Info: figures/roc_pr.png  used on input line 110.
+(pdftex.def)             Requested size: 364.19664pt x 178.21692pt.
+<figures/feature_imp.png, id=97, 976.64874pt x 500.87125pt>
+File: figures/feature_imp.png Graphic file (type png)
+<use figures/feature_imp.png>
+Package pdftex.def Info: figures/feature_imp.png  used on input line 119.
+(pdftex.def)             Requested size: 364.19664pt x 186.7792pt.
+ [8 <./figures/roc_pr.png>] [9 <./figures/feature_imp.png>] (Course_Project_Cla
+ssification_3.aux)
 Package rerunfilecheck Info: File `Course_Project_Classification_3.out' has not
  changed.
 (rerunfilecheck)             Checksum: A6BCE1E5FF6AE0015ECFBF354619B68F;43.
-
-
-LaTeX Warning: There were undefined references.
-
  ) 
 Here is how much of TeX's memory you used:
- 8047 strings out of 479798
- 130400 string characters out of 2870238
- 423691 words of memory out of 3000000
- 24925 multiletter control sequences out of 15000+200000
+ 8203 strings out of 479798
+ 132819 string characters out of 2870238
+ 421847 words of memory out of 3000000
+ 25046 multiletter control sequences out of 15000+200000
  539534 words of font info for 46 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 66i,6n,76p,348b,460s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 66i,9n,76p,593b,550s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\moon\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1
 200.pk><C:/Users/moon/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts
 /cm/cmbx12.pfb><C:/Users/moon/AppData/Local/Programs/MiKTeX/fonts/type1/public/
-amsfonts/cm/cmr12.pfb><C:/Users/moon/AppData/Local/Programs/MiKTeX/fonts/type1/
-public/amsfonts/cm/cmr17.pfb>
-Output written on Course_Project_Classification_3.pdf (3 pages, 102876 bytes).
+amsfonts/cm/cmr10.pfb><C:/Users/moon/AppData/Local/Programs/MiKTeX/fonts/type1/
+public/amsfonts/cm/cmr12.pfb><C:/Users/moon/AppData/Local/Programs/MiKTeX/fonts
+/type1/public/amsfonts/cm/cmr17.pfb>
+Output written on Course_Project_Classification_3.pdf (9 pages, 415088 bytes).
 PDF statistics:
- 57 PDF objects out of 1000 (max. 8388607)
- 12 named destinations out of 1000 (max. 500000)
- 19 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 137 PDF objects out of 1000 (max. 8388607)
+ 32 named destinations out of 1000 (max. 500000)
+ 74 words of extra memory for PDF output out of 10000 (max. 10000000)
 
