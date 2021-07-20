@@ -217,8 +217,14 @@
             - from sklearn.metrics import roc_curve, precision_recall_curve, confusion_matrix
     3.6 Modeling Unbalanced Classes
         - https://imbalanced-learn.org/stable/user_guide.html (scikit-learn unbalanced classes modeling guide)
-        - Downsampling or removing observations from the most common class
-        - Upsampling or duplicating observations from the rarest class or classes
+        3.6.1 Downsampling
+            - Downsampling or removing observations from the most common class
+            - Recall goes up, and precision will go down  
+        3.6.2 Upsampling
+            - Upsampling or duplicating observations from the rarest class or classes
+            - Recall goes up, and precision will likely go down, but the gap is lesser. 
+        3.6.3 Resampling
+
         - Randomsampling, A mix of downsampling and upsampling
         - Ensure that you first do your train test split before doing any of this over or undersampling.
 
