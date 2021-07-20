@@ -217,6 +217,8 @@
             - from sklearn.metrics import roc_curve, precision_recall_curve, confusion_matrix
     3.6 Modeling Unbalanced Classes
         - https://imbalanced-learn.org/stable/user_guide.html (scikit-learn unbalanced classes modeling guide)
+        - Ensure that you first do your train test split before doing any of this over or undersampling. (To decrease the overfitting)
+        - Not use accuracy to evaluate unbalanced data set but to use f1-score, ROC, precision-recall curves 
         3.6.1 Downsampling
             - Downsampling or removing observations from the most common class
             - Recall goes up, and precision will go down  
@@ -224,10 +226,49 @@
             - Upsampling or duplicating observations from the rarest class or classes
             - Recall goes up, and precision will likely go down, but the gap is lesser. 
         3.6.3 Resampling
-
-        - Randomsampling, A mix of downsampling and upsampling
-        - Ensure that you first do your train test split before doing any of this over or undersampling.
-
+            - A mix of downsampling and upsampling. Upsampling the minority class, and Downsampling the majority class.
+        3.6.4 Weighting, Stratified Sampling
+        3.6.5 Oversampling
+            3.6.5.1 Random Oversampling (Randomly resample with replacement from minority class)
+            3.6.5.2 Synthetic Oversampling 
+                3.6.5.2.1 SMOTE - Synthetic Minority Oversampling Techniuque
+                    - Regular (Connect minority class points to any neighbor → Synthesize new minority between two points)
+                    - Borderline (Classify points as outlier, safe, or in-danger)
+                    - SVM (Use minority support vectors to generate new points)
+                3.6.5.2.2 ADASYN - ADAptive SYNthetic sampling
+        3.6.6 Undersampling
+            3.6.5.1 NearMiss
+                3.6.5.1.1 NearMiss-1 (Keep majority points closest to Nearby Minority Points)
+                3.6.5.1.2 NearMiss-2 (Keep majority points closest to Distant Minority Points)
+                3.6.5.1.2 NearMiss-3 (Keep majority points closest to Majority Neighbors of Minority Points)
+            3.6.5.2 Tomek Links (Mixed Mutual Nearest Neighbors) 
+                - Remove majority or minority points both closest neighbors together
+            3.6.5.3 Edited Nearest neighbors (Remove points that don't agree with neighbors' boundaries)
+                 
 4. Unsupervised Machine Learning
+
 5. Deep Learning and Reinforcement Learning
+    w1 Introduction to Neural Networks
+        - Optimization and Gradient Descent
+        - Activation Functions
+        - Backpropagation
+    w2 Neural Network Optimizers and Keras
+        - Optimizers and Data Shuffling
+        - Keras Library
+    w3 Convolutional Neural Networks
+        - Inroduction to CNN
+        - CNN Settings (Padding, Stride, Depth, Pooling)
+        - Transfer Learning
+        - CNN Architectures
+    w4 Recurrent Neural Networks and Long-Short Term Memory Networks
+        - Recurrent Neural Networks
+        - LSTM
+    w5 Deep Learning with Autoencoders
+        - Autoencoders
+        - Autoencoders Lab
+    w6 Deep Learning Applications and Reinforcement Learning
+        - Generative Adversarial Networks
+        - Reinforcement Learning
+
+
 6. Specialized Models: Time Series and Survival Analysis
