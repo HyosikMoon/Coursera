@@ -248,8 +248,24 @@
 4. Unsupervised Machine Learning
 
 5. Deep Learning and Reinforcement Learning
-    w1 Introduction to Neural Networks
-        - Optimization and Gradient Descent
+    5.1 Introduction to Neural Networks
+        5.1.1 Deep Learning Model Summary
+            - 1) Neural Network Models (Multi-Layer Perceptron, Feedforward Networks)
+                 : Applied to many traditional predictive porblems (classification and regression, tabular data)
+                  - ex. from sklearn.neural_network import MLPClassifier  #(Multi-Layer Perceptron Syntax)
+            - 2) Recurrent Neural Networks (RNN, LSTM)
+                 : Useful for modeling sequences (time-series forecasting, sentence prediction)
+            - 3) Convolutional Neural Networks (CNN)
+                 : Useful for feature and object recognition in visual data (images, video). Also applied in other contexts (forecasting)
+            - 4) Unsupervised Pre-trained Networks (Autoencoders, Deep Belief Networks, and Generative Adversarial Networks)
+                 : Many uses including generating images, labeling outcomes, dimensionality reduction
+        5.1.2 Optimization and Gradient Descent
+            - Gradient descent, Vanilla gradient descent (Entire data)
+            - Stochastic gradient descent (Single data)
+            - Mini-batch gradient descent (n numbers of data)  
+            
+            
+
         - Activation Functions
         - Backpropagation
     w2 Neural Network Optimizers and Keras
