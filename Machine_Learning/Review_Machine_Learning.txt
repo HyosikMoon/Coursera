@@ -250,25 +250,36 @@
 5. Deep Learning and Reinforcement Learning
     5.1 Introduction to Neural Networks
         5.1.1 Deep Learning Model Summary
-            - 1) Neural Network Models (Multi-Layer Perceptron, Feedforward Networks)
-                 : Applied to many traditional predictive porblems (classification and regression, tabular data)
-                  - ex. from sklearn.neural_network import MLPClassifier  #(Multi-Layer Perceptron Syntax)
-            - 2) Recurrent Neural Networks (RNN, LSTM)
-                 : Useful for modeling sequences (time-series forecasting, sentence prediction)
-            - 3) Convolutional Neural Networks (CNN)
-                 : Useful for feature and object recognition in visual data (images, video). Also applied in other contexts (forecasting)
-            - 4) Unsupervised Pre-trained Networks (Autoencoders, Deep Belief Networks, and Generative Adversarial Networks)
-                 : Many uses including generating images, labeling outcomes, dimensionality reduction
+            5.1.1.1 Neural Network Models (Multi-Layer Perceptron, Feedforward Networks)
+                - Applied to many traditional predictive porblems (classification and regression, tabular data)
+                - ex. from sklearn.neural_network import MLPClassifier  #(Multi-Layer Perceptron Syntax)
+            5.1.1.2 Recurrent Neural Networks (RNN, LSTM)
+                - Useful for modeling sequences (time-series forecasting, sentence prediction)
+            5.1.1.3 Convolutional Neural Networks (CNN)
+                - Useful for feature and object recognition in visual data (images, video). Also applied in other contexts (forecasting)
+            5.1.1.4 Unsupervised Pre-trained Networks (Autoencoders, Deep Belief Networks, and Generative Adversarial Networks)
+                - Many uses including generating images, labeling outcomes, dimensionality reduction
         5.1.2 Optimization and Gradient Descent
-            - Gradient descent, Vanilla gradient descent (Entire data)
+            - Gradient descent, (Full-batch gradient descent, Vanilla gradient descent) (Entire data)
             - Stochastic gradient descent (Single data)
             - Mini-batch gradient descent (n numbers of data)  
-            
-            
-
-        - Activation Functions
-        - Backpropagation
-    w2 Neural Network Optimizers and Keras
+        5.1.3 Backpropagation
+        5.1.4 Activation Functions
+            5.1.4.1 Sigmoid Activation
+                - Useful when outcomes should be in (0, 1), suffers from vanishing gradient issues
+            5.1.4.2 Hyperbolic Tangent
+                - Useful when outcomes should be in (-1, 1), suffers from vanishing gradient issues
+            5.1.4.3 ReLU (Rectified Linear Unit)
+                - Useful to capture large effects, doesn't suffer from vanishing gradient
+            5.1.4.4 LReLU ("Leaky" Rectified Linear Unit)
+                - Acts like ReLU, but allows negative outcomes
+        5.1.5 Regularization
+            5.1.5.1 Regularization penalty in cost function
+            5.1.5.2 Dropout
+            5.1.5.3 Early stopping
+            5.1.5.4 Stochastic / Mini-batch Gradient descent
+        
+    5.2 Neural Network Optimizers and Keras
         - Optimizers and Data Shuffling
         - Keras Library
     w3 Convolutional Neural Networks
