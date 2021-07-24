@@ -296,7 +296,7 @@
     w6 Deep Learning Applications and Reinforcement Learning
         - Generative Adversarial Networks
         - Reinforcement Learning
-
+change
 
 
 6. Specialized Models: Time Series and Survival Analysis
