@@ -1,0 +1,7 @@
+`21.7.24(Sun)
+
+- notebook setting 90m
+
+Cousera
+Chapter5 Neural Network
+- Optimizing and Data shuffling

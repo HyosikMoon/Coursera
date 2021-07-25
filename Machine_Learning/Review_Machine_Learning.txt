@@ -278,10 +278,18 @@
             5.1.5.2 Dropout
             5.1.5.3 Early stopping
             5.1.5.4 Stochastic / Mini-batch Gradient descent
-        
     5.2 Neural Network Optimizers and Keras
-        - Optimizers and Data Shuffling
-        - Keras Library
+        5.2.1 Optimizers and Data Shuffling
+            - There are several variants to updating the weights which give better performance in practice.  (ex. Momentum, RMSProp, Adam, etc)
+        5.2.2 Keras Library
+            5.2.2.1 Typcial command structure
+                - 1) Compile the model, specifying loss function, metrics, and optimizer (learning late)
+                - 2) Fit the model on your training data (batch size, epochs)
+                - 3) Predict on new data
+                - 4) Evaluate your results
+            5.2.2.2 Building the model
+                - Sequential Model:  allows a  linear stack of layers, simpler and more convenient if model has this form.
+                - Functional API:  more detailed and complex, but allows more complicated architectures.
     w3 Convolutional Neural Networks
         - Inroduction to CNN
         - CNN Settings (Padding, Stride, Depth, Pooling)
