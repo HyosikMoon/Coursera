@@ -1,7 +1,7 @@
 
 `21.7.26(Tue)
-- Keras, 70m, 51m, 24m
-- ssd, airbnb, preply, olympics
+- Keras, 214m
+- ssd, airbnb, preply, olympics, gm
 
 `21.7.25(Mon)
 - Keras, 76m
