@@ -1,7 +1,12 @@
-`21.7.24(Sun)
 
+`21.7.26(Tue)
+- Keras, 70m
+
+`21.7.25(Mon)
+- Keras, 76m
+
+`21.7.24(Sun) 183m / 93m
 - notebook setting 90m
-
 Cousera
 Chapter5 Neural Network
-- Optimizing and Data shuffling
+- Optimizing and Data shuffling, 93m
