@@ -280,21 +280,25 @@
             5.1.5.4 Stochastic / Mini-batch Gradient descent
     5.2 Neural Network Optimizers and Keras
         5.2.1 Optimizers and Data Shuffling
-            - There are several variants to updating the weights which give better performance in practice.  (ex. Momentum, RMSProp, Adam, etc)
+            5.2.1.1 Optimizers
+                - This approaches are based on the idea of tweaking and improving the weights using other methods instead of gradient descent.
+                - There are several variants to updating the weights which give better performance in practice.  (ex. Momentum, RMSProp, Adam, etc)
+            5.2.1.2 Data Shuffling
+                - Data shuffling, which aids convergence by making sure data is presented in a different order every epoch.
         5.2.2 Keras Library
             5.2.2.1 Typcial command structure
-                - 1) Compile the model, specifying loss function, metrics, and optimizer (learning late)
-                - 2) Fit the model on your training data (batch size, epochs)
+                - 1) Compile the model, specifying your loss function, metrics, and optimizer
+                - 2) Fit the model on your training data (specifying batch size, number of epochs)
                 - 3) Predict on new data
                 - 4) Evaluate your results
             5.2.2.2 Building the model
-                - Sequential Model:  allows a  linear stack of layers, simpler and more convenient if model has this form.
-                - Functional API:  more detailed and complex, but allows more complicated architectures.
-    w3 Convolutional Neural Networks
-        - Inroduction to CNN
-        - CNN Settings (Padding, Stride, Depth, Pooling)
-        - Transfer Learning
-        - CNN Architectures
+                - Sequential Model:  allows a linear stack of layers, simpler and more convenient if model has this form
+                - Functional API:  more detailed and complex, but allows more complicated architectures
+    5.3 Convolutional Neural Networks
+        5.3.1 Inroduction to CNN
+        5.3.2 CNN Settings (Padding, Stride, Depth, Pooling)
+        5.3.3 Transfer Learning
+        5.3.4 CNN Architectures
     w4 Recurrent Neural Networks and Long-Short Term Memory Networks
         - Recurrent Neural Networks
         - LSTM
