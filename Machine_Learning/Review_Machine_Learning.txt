@@ -297,6 +297,10 @@
     5.3 Convolutional Neural Networks
         5.3.1 Inroduction to CNN
         5.3.2 CNN Settings (Padding, Stride, Depth, Pooling)
+            - Padding,  adding extra pixels 0 to the boundary of the input image
+            - Stride,  "step size" as the kernel moves across the image
+            - Depth,  the number of channel is referred to as the "depth". ex. RGB image has 3 channels (depth)
+            - Pooling,  reduce the image size by mapping a patch of pixels to a single value
         5.3.3 Transfer Learning
         5.3.4 CNN Architectures
     w4 Recurrent Neural Networks and Long-Short Term Memory Networks
