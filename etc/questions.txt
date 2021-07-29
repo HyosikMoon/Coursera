@@ -1,1 +1,3 @@
-- stochastic gradient descent, online learning ?
+- stochastic gradient descent, online learning ? (O)
+- CNN, Conv2D feature size, depth, pooling size, hidden layer dense(units), 
+- Watsonstudio, (Cloud computing)

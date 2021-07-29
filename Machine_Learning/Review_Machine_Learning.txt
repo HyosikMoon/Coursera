@@ -294,6 +294,9 @@
             5.2.2.2 Building the model
                 - Sequential Model:  allows a linear stack of layers, simpler and more convenient if model has this form
                 - Functional API:  more detailed and complex, but allows more complicated architectures
+                * import pickle 		                          	# Write GV_GBC object as an pickle file, so we can load it later.
+                  pickle.dump(GV_GBC, open('gv_gbc.p', 'wb'))  	#write byte
+                  GV_GBC = pickle.load(open('gv_gbc.p', 'rb'))   	#read byte
     5.3 Convolutional Neural Networks
         5.3.1 Inroduction to CNN
         5.3.2 CNN Settings (Padding, Stride, Depth, Pooling)

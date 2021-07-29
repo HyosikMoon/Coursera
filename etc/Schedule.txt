@@ -1,5 +1,8 @@
+`21.7.29(Thu)
+- Keras, 171m, 75m
+
 `21.7.28(Wed)
-- Keras, 81m, 100m
+- Keras, 181m
 
 `21.7.27(Tue)
 - Keras, 36m
