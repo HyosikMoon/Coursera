@@ -305,8 +305,28 @@
             - Depth,  the number of channel is referred to as the "depth". ex. RGB image has 3 channels (depth)
             - Pooling,  reduce the image size by mapping a patch of pixels to a single value
         5.3.3 Transfer Learning
+            - The main idea of Transfer Learning consists of keeping early layers of a pre-trained network and re-train the later layers for a specific application.
+            - Last layers in the network capture features that are more particular to the specific data you are trying to classify.
+            - Later layers are easier to train as adjusting their weights has a more immediate impact on the final result.
         5.3.4 CNN Architectures
-    w4 Recurrent Neural Networks and Long-Short Term Memory Networks
+            5.3.4.1 LeNet-5
+                - Created by Yann LeCun in the 1990s, and Used on the MNIST data set.
+                - Novel Idea: Use convolutions to efficiently learn features on data set.
+            5.3.4.2 AlexNet
+                - Considered the “flash point” for modern deep learning, Created in 2012 for the ImageNet Large Scale Visual Recognition Challenge (ILSVRC).
+                - AlexNet developers performed data augmentation for training. (ex. Cropping, horizontal flipping, and other manipulations.)
+            5.3.4.3 VGG
+                - Simplify Network Structure: has same concepts and ideas from LeNet, considerably deeper.
+                - This was one of the first architectures to experiment with many layers (More is better!). 
+                - It can use multiple 3x3 convolutions to simulate larger kernels with fewer parameters and it served as ”base model” for future works.
+            5.3.4.4 Inception
+                - This architecture was built to turn each layer of the neural network into further branches of convolutions. Each branch handles a smaller portion of workload.
+                - The network concatenates different branches at the end. 
+            5.3.4.5 ResNet
+                - In the very deep (56-layer) networks, the early layers were just not getting updated and the signal got lost (due to vanishing gradient type issues).
+                - In theory, should be able to just have an “identity” transformation that makes the deeper network behave like a shallow one.
+                - Keeps passing both the the initial unchanged information and the transformed information to the next layer.
+    5.4 Recurrent Neural Networks and Long-Short Term Memory Networks
         - Recurrent Neural Networks
         - LSTM
     w5 Deep Learning with Autoencoders
