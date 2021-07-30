@@ -1,3 +1,6 @@
 - stochastic gradient descent, online learning ? (O)
+
 - CNN, Conv2D feature size, depth, pooling size, hidden layer dense(units), 
+- CNN model(architecture) selection, how to configure CNN architecture in real world?
+
 - Watsonstudio, (Cloud computing)

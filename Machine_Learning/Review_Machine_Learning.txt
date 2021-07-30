@@ -327,7 +327,9 @@
                 - In theory, should be able to just have an “identity” transformation that makes the deeper network behave like a shallow one.
                 - Keeps passing both the the initial unchanged information and the transformed information to the next layer.
     5.4 Recurrent Neural Networks and Long-Short Term Memory Networks
-        - Recurrent Neural Networks
+        5.4.1 Recurrent Neural Networks
+            - current_state = function1(old state, curren_input),  current_output = function2(current_state)
+            - We learn function1 and function2 by training our network
         - LSTM
     w5 Deep Learning with Autoencoders
         - Autoencoders
