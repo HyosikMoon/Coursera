@@ -328,11 +328,23 @@
                 - Keeps passing both the the initial unchanged information and the transformed information to the next layer.
     5.4 Recurrent Neural Networks and Long-Short Term Memory Networks
         5.4.1 Recurrent Neural Networks
+            - Recurrent Neural Networks are a class of neural networks that allow previous outputs to be used as inputs while having hidden states.
             - current_state = function1(old state, curren_input),  current_output = function2(current_state)
             - We learn function1 and function2 by training our network
-        - LSTM
-    w5 Deep Learning with Autoencoders
-        - Autoencoders
+        5.4.2 Long-Short Term Memory networks (LSTMs)
+            - LSTM solves one of the main weaknesses of RNNs, which makes it hard to keep information from distant past in current memory without reinforcement.
+            - Leave some dimensions unchanged over many steps.
+        5.4.3 Gated Recurrent Units (GRUs)
+            - GRUs are a gating mechanism for RNNs that is an alternative to LSTM. It is based on the principle of Removed Cell State.
+            - Think of as a “simpler” and faster version of LSTM.
+        5.4.4 Sequence-to-Sequence Models (Seq2Seq)
+            - Seq2Seq models improve accuracy by keeping necessary information in the hidden state from one sequence to the next.
+            - This way, at the end of a sentence, the hidden state will have all information relating to past words. 
+        5.4.5 Beam Search
+            - Beam search tries to produce multiple different hypotheses to produce words until <EOS> and then see which full sentence is most likely.
+    5.5 Deep Learning with Autoencoders
+        5.5.1 Autoencoders
+            - Autoencoders learn a compressed representation of the input by first compressing the input (encoding) and decompressing it back (decoding) to match the original input.
         - Autoencoders Lab
     w6 Deep Learning Applications and Reinforcement Learning
         - Generative Adversarial Networks
