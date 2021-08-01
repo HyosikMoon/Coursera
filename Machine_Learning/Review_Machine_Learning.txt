@@ -345,7 +345,8 @@
     5.5 Deep Learning with Autoencoders
         5.5.1 Autoencoders
             - Autoencoders learn a compressed representation of the input by first compressing the input (encoding) and decompressing it back (decoding) to match the original input.
-        - Autoencoders Lab
+        5.5.2 Autoencoders Lab
+
     w6 Deep Learning Applications and Reinforcement Learning
         - Generative Adversarial Networks
         - Reinforcement Learning
