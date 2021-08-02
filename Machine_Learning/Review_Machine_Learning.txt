@@ -363,7 +363,7 @@
             - The other neural network, the 'discriminator', decides for which images are generated or are fake and which ones are the actual images from our training set.
         5.6.2 Reinforcement Learning
             - Agent → Actions → Environment → Rewards → Agent
-change
+            - 1) Gather data, 2) Allocate rewards, 3) Fit the model, 4) Predict the optimal results with the maximal reward inputs
 
 
 6. Specialized Models: Time Series and Survival Analysis
