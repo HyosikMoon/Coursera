@@ -69,28 +69,28 @@ In order to train a model, we need the pole's position, velocity, angle, angular
         \caption{Data set information}\label{AdaBoost}
       \end{figure}
 
-      \item RandomForestRegressor. It showed the relatively good result. The average step maintaining the pole was 157, with a perfect score of 30 out of 100 trials. (Figure \ref{random_forest})
+      \item ExtraTreesRegressor. It showed the relatively good result. The average step maintaining the pole was 138, with a perfect score of 17 out of 100 trials. (Figure \ref{etr})
       \begin{figure}[H]
         \centering
         \includegraphics[width=0.9\textwidth]{figures/random_forest.png}
-        \caption{Data set information}\label{random_forest}
+        \caption{Data set information}\label{etr}
       \end{figure}
     \end{enumerate}
 
 \item \textbf{Explanation of your final model}
-Overall, the RandomForestRegressor showed the best performance. I think that this is because we used closely related features to predict the result which are `Cart Position', `Cart Velocity', `Pole Angle', and `Pole Angular velocity'. Thus, the result of RandomForest is better than ExtraTreesRegressor because ETR models train the model with randomly chosen features. In order to increase the performance, I trained the final model (RandomForestRegressor) with more data which have 20000 trials. And the final result shows that the average step maintaining the pole was 161, with a perfect score of 28 out of 100 trials. (Figure \ref{rf})
+Overall, the RandomForestRegressor showed the best performance. I think that this is because we used closely related features to predict the result which are `Cart Position', `Cart Velocity', `Pole Angle', and `Pole Angular velocity'. Thus, the result of RandomForest is better than ExtraTreesRegressor (ETR) because ETR trains the model with randomly chosen features not with all features. In order to increase the performance, I trained the final model (RandomForestRegressor) with more data which have 20000 trials. And the final result shows that the average step maintaining the pole was 157, with a perfect score of 35 out of 100 trials. (Figure \ref{rf2})
 
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.9\textwidth]{figures/rf.png}
-  \caption{Data set information}\label{rf}
+  \caption{Data set information}\label{rf2}
 \end{figure}
 
 \item \textbf{Summary Key Findings and Insights}
 
 
 \item \textbf{Suggestions for next steps}
-In order to increase the success rate, using deep neural network can be another way. Thus I also made two neural networks models such as deep neural network, and recurrent neural network.
+In order to increase the success rate, using deep neural network can be another way. Thus I will also make neural-networks models such as deep neural network, and recurrent neural network for the advanced steps.
 
 \end{itemize}
 

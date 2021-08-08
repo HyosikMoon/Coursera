@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.7) (preloaded format=pdflatex 2021.7.30)  8 AUG 2021 01:53
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.7) (preloaded format=pdflatex 2021.7.30)  8 AUG 2021 12:57
 entering extended mode
 **./Course_Project_DL_5.tex
 (Course_Project_DL_5.tex
@@ -277,8 +277,11 @@ ex.def
 File: l3backend-pdftex.def 2021-07-12 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count285
 \l__pdf_internal_box=\box54
+) (Course_Project_DL_5.aux
+
+LaTeX Warning: Label `random_forest' multiply defined.
+
 )
-No file Course_Project_DL_5.aux.
 \openout1 = `Course_Project_DL_5.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 27.
@@ -340,6 +343,7 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 27.
 LaTeX Info: Redefining \pageref on input line 27.
 LaTeX Info: Redefining \nameref on input line 27.
+ (Course_Project_DL_5.out) (Course_Project_DL_5.out)
 \@outlinefile=\write3
 \openout3 = `Course_Project_DL_5.out'.
 
@@ -360,49 +364,36 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 30.
 (C:\Users\moon\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-
-LaTeX Warning: Reference `data' on page 1 undefined on input line 38.
-
-<figures/data.png, id=3, 528.17325pt x 335.45325pt>
+<figures/data.png, id=8, 528.17325pt x 335.45325pt>
 File: figures/data.png Graphic file (type png)
 <use figures/data.png>
 Package pdftex.def Info: figures/data.png  used on input line 42.
 (pdftex.def)             Requested size: 409.71689pt x 260.22437pt.
+
 [1
 
 {C:/Users/moon/AppData/Local/MiKTeX/pdftex/config/pdftex.map}]
-
-LaTeX Warning: Reference `data' on page 2 undefined on input line 47.
-
-
-LaTeX Warning: Reference `random_forest' on page 2 undefined on input line 58.
-
-<figures/random_forest.png, id=15, 596.2275pt x 157.7895pt>
+<figures/random_forest.png, id=22, 596.2275pt x 157.7895pt>
 File: figures/random_forest.png Graphic file (type png)
 <use figures/random_forest.png>
 Package pdftex.def Info: figures/random_forest.png  used on input line 61.
 (pdftex.def)             Requested size: 409.71689pt x 108.42944pt.
-[2 <./figures/data.png>]
-
-LaTeX Warning: Reference `AdaBoost' on page 3 undefined on input line 65.
-
-<figures/AdaBoost.png, id=23, 585.387pt x 151.16475pt>
+ [2 <./figures/data.png>]
+<figures/AdaBoost.png, id=31, 585.387pt x 151.16475pt>
 File: figures/AdaBoost.png Graphic file (type png)
 <use figures/AdaBoost.png>
 Package pdftex.def Info: figures/AdaBoost.png  used on input line 68.
 (pdftex.def)             Requested size: 409.71689pt x 105.80305pt.
-
-LaTeX Warning: Reference `random_forest' on page 3 undefined on input line 72.
-
 File: figures/random_forest.png Graphic file (type png)
 <use figures/random_forest.png>
 Package pdftex.def Info: figures/random_forest.png  used on input line 75.
 (pdftex.def)             Requested size: 409.71689pt x 108.42944pt.
 
-LaTeX Warning: Reference `rf' on page 3 undefined on input line 81.
+
+LaTeX Warning: Reference `rf2' on page 3 undefined on input line 81.
 
 [3 <./figures/random_forest.png> <./figures/AdaBoost.png>]
-<figures/rf.png, id=35, 587.796pt x 163.812pt>
+<figures/rf.png, id=43, 587.796pt x 163.812pt>
 File: figures/rf.png Graphic file (type png)
 <use figures/rf.png>
 Package pdftex.def Info: figures/rf.png  used on input line 85.
@@ -412,33 +403,27 @@ Package pdftex.def Info: figures/rf.png  used on input line 85.
 LaTeX Warning: There were undefined references.
 
 
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+LaTeX Warning: There were multiply-defined labels.
 
-
-Package rerunfilecheck Warning: File `Course_Project_DL_5.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `Course_Project_DL_5.out':
-(rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  83A50C77CC696B32A37D6E7D24BEAB64;83.
+Package rerunfilecheck Info: File `Course_Project_DL_5.out' has not changed.
+(rerunfilecheck)             Checksum: 83A50C77CC696B32A37D6E7D24BEAB64;83.
  ) 
 Here is how much of TeX's memory you used:
- 10842 strings out of 478870
- 168842 string characters out of 2849310
- 469795 words of memory out of 3000000
- 28633 multiletter control sequences out of 15000+600000
+ 10851 strings out of 478870
+ 169304 string characters out of 2849310
+ 470287 words of memory out of 3000000
+ 28636 multiletter control sequences out of 15000+600000
  407876 words of font info for 44 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 69i,7n,79p,695b,483s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 69i,7n,79p,718b,491s stack positions out of 5000i,500n,10000p,200000b,80000s
  <C:\Users\moon\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1
 200.pk><C:/Users/moon/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts
 /cm/cmbx12.pfb><C:/Users/moon/AppData/Local/Programs/MiKTeX/fonts/type1/public/
 amsfonts/cm/cmr12.pfb><C:/Users/moon/AppData/Local/Programs/MiKTeX/fonts/type1/
 public/amsfonts/cm/cmr17.pfb>
-Output written on Course_Project_DL_5.pdf (4 pages, 157782 bytes).
+Output written on Course_Project_DL_5.pdf (4 pages, 158832 bytes).
 PDF statistics:
- 64 PDF objects out of 1000 (max. 8388607)
+ 73 PDF objects out of 1000 (max. 8388607)
  14 named destinations out of 1000 (max. 500000)
- 21 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 29 words of extra memory for PDF output out of 10000 (max. 10000000)
 
