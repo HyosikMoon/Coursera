@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.7) (preloaded format=pdflatex 2021.7.30)  8 AUG 2021 12:57
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.7) (preloaded format=pdflatex 2021.7.30)  9 AUG 2021 01:40
 entering extended mode
 **./Course_Project_DL_5.tex
 (Course_Project_DL_5.tex
@@ -277,11 +277,7 @@ ex.def
 File: l3backend-pdftex.def 2021-07-12 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count285
 \l__pdf_internal_box=\box54
-) (Course_Project_DL_5.aux
-
-LaTeX Warning: Label `random_forest' multiply defined.
-
-)
+) (Course_Project_DL_5.aux)
 \openout1 = `Course_Project_DL_5.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 27.
@@ -388,42 +384,44 @@ File: figures/random_forest.png Graphic file (type png)
 <use figures/random_forest.png>
 Package pdftex.def Info: figures/random_forest.png  used on input line 75.
 (pdftex.def)             Requested size: 409.71689pt x 108.42944pt.
-
-
-LaTeX Warning: Reference `rf2' on page 3 undefined on input line 81.
-
-[3 <./figures/random_forest.png> <./figures/AdaBoost.png>]
-<figures/rf.png, id=43, 587.796pt x 163.812pt>
-File: figures/rf.png Graphic file (type png)
-<use figures/rf.png>
-Package pdftex.def Info: figures/rf.png  used on input line 85.
-(pdftex.def)             Requested size: 409.71689pt x 114.18518pt.
- [4 <./figures/rf.png>] (Course_Project_DL_5.aux)
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: There were multiply-defined labels.
-
+ [3 <./figures/random_forest.png> <./figures/AdaBoost.png>]
+<figures/rf2.png, id=44, 608.2725pt x 166.82326pt>
+File: figures/rf2.png Graphic file (type png)
+<use figures/rf2.png>
+Package pdftex.def Info: figures/rf2.png  used on input line 85.
+(pdftex.def)             Requested size: 409.71689pt x 112.37173pt.
+<figures/nn.png, id=47, 708.6475pt x 521.95pt>
+File: figures/nn.png Graphic file (type png)
+<use figures/nn.png>
+Package pdftex.def Info: figures/nn.png  used on input line 94.
+(pdftex.def)             Requested size: 409.71689pt x 301.77548pt.
+ [4 <./figures/rf2.png>]
+<figures/nn_improve.png, id=56, 715.67375pt x 521.95pt>
+File: figures/nn_improve.png Graphic file (type png)
+<use figures/nn_improve.png>
+Package pdftex.def Info: figures/nn_improve.png  used on input line 100.
+(pdftex.def)             Requested size: 409.71689pt x 298.81276pt.
+ [5 <./figures/nn.png>] [6 <./figures/nn_improve.png>]
+(Course_Project_DL_5.aux)
 Package rerunfilecheck Info: File `Course_Project_DL_5.out' has not changed.
 (rerunfilecheck)             Checksum: 83A50C77CC696B32A37D6E7D24BEAB64;83.
  ) 
 Here is how much of TeX's memory you used:
- 10851 strings out of 478870
- 169304 string characters out of 2849310
- 470287 words of memory out of 3000000
- 28636 multiletter control sequences out of 15000+600000
+ 10872 strings out of 478870
+ 169688 string characters out of 2849310
+ 471412 words of memory out of 3000000
+ 28651 multiletter control sequences out of 15000+600000
  407876 words of font info for 44 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 69i,7n,79p,718b,491s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 69i,7n,79p,1231b,491s stack positions out of 5000i,500n,10000p,200000b,80000s
  <C:\Users\moon\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1
 200.pk><C:/Users/moon/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts
 /cm/cmbx12.pfb><C:/Users/moon/AppData/Local/Programs/MiKTeX/fonts/type1/public/
 amsfonts/cm/cmr12.pfb><C:/Users/moon/AppData/Local/Programs/MiKTeX/fonts/type1/
 public/amsfonts/cm/cmr17.pfb>
-Output written on Course_Project_DL_5.pdf (4 pages, 158832 bytes).
+Output written on Course_Project_DL_5.pdf (6 pages, 305352 bytes).
 PDF statistics:
- 73 PDF objects out of 1000 (max. 8388607)
- 14 named destinations out of 1000 (max. 500000)
- 29 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 90 PDF objects out of 1000 (max. 8388607)
+ 18 named destinations out of 1000 (max. 500000)
+ 39 words of extra memory for PDF output out of 10000 (max. 10000000)
 

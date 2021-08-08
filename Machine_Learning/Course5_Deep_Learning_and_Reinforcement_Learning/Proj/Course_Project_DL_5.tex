@@ -59,21 +59,21 @@ In order to train a model, we need the pole's position, velocity, angle, angular
       \begin{figure}[H]
         \centering
         \includegraphics[width=0.9\textwidth]{figures/random_forest.png}
-        \caption{Data set information}\label{random_forest}
+        \caption{RandomForestRegressor}\label{random_forest}
       \end{figure}
 
       \item AdaBoostRegressor. The result was terrable. Because in the case of AdaBoost it modifies the weights sequencially with the wrongly predicted data set. Since our data set consists of randomly chosen episodes, the AdaBoost model might be inappropriate to train the this data. (Figure \ref{AdaBoost})
       \begin{figure}[H]
         \centering
         \includegraphics[width=0.9\textwidth]{figures/AdaBoost.png}
-        \caption{Data set information}\label{AdaBoost}
+        \caption{AdaBoostRegressor}\label{AdaBoost}
       \end{figure}
 
       \item ExtraTreesRegressor. It showed the relatively good result. The average step maintaining the pole was 138, with a perfect score of 17 out of 100 trials. (Figure \ref{etr})
       \begin{figure}[H]
         \centering
         \includegraphics[width=0.9\textwidth]{figures/random_forest.png}
-        \caption{Data set information}\label{etr}
+        \caption{ExtraTreesRegressor}\label{etr}
       \end{figure}
     \end{enumerate}
 
@@ -82,15 +82,27 @@ Overall, the RandomForestRegressor showed the best performance. I think that thi
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=0.9\textwidth]{figures/rf.png}
-  \caption{Data set information}\label{rf2}
+  \includegraphics[width=0.9\textwidth]{figures/rf2.png}
+  \caption{Final model score}\label{rf2}
 \end{figure}
 
 \item \textbf{Summary Key Findings and Insights}
+In order to increase the performance, using deep neural network can be another way. Thus I thought about two neural-networks models such as deep neural network, and recurrent neural network for the advanced steps. But in the case of RNN, it seems not to be good to improve the performance because the model is trained based on the episodes which have the same comb\_rewards which is not so related to sequential events. So, I abandoned the RNN. Instead of it, I implemented the Deep Neural Network manually with two hidden layers with (5, 64), (64, 1) dimentions. In the figure \ref{nn}, y-axis shows the error rate. Even though the error rate decreases the total performance was much lower (Average step is 9). I think that this is because when the NN was trained the weights were modified based on individual episode's comb\_rewards which has the same value at the same episode. So, in order to improve the model, the comb\_rewards need to be changed. To be specific, within the same episode, according to the steps increase, the rewards also need to be increased. After I changed the rewards, I was able to check the improved result like represented in the figure \ref{nn_improve}.
 
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.9\textwidth]{figures/nn.png}
+  \caption{Error of Deep Neural Network model}\label{nn}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.9\textwidth]{figures/nn_improve.png}
+  \caption{Improved version of DNN}\label{nn_improve}
+\end{figure}
 
 \item \textbf{Suggestions for next steps}
-In order to increase the success rate, using deep neural network can be another way. Thus I will also make neural-networks models such as deep neural network, and recurrent neural network for the advanced steps.
+When I checked the final result, even though the prediction error was low, the performance was still bed (Average step is 10). I need to find the reason of the poor performance of the Deep Neural Network model.
 
 \end{itemize}
 
