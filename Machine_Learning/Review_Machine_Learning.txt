@@ -246,6 +246,18 @@
             3.6.5.3 Edited Nearest neighbors (Remove points that don't agree with neighbors' boundaries)
                  
 4. Unsupervised Machine Learning
+    4.1 Introduction to Unsupervised Learning and K-Means Clustering
+        4.1 Types of Unsupervised Learning
+            4.1.1 Clustering
+                - K-Means
+                - Hierarchical Agglomerative Clustering
+                - DBSCAN
+                - Mean Shift
+            4.1.2 Dimensionality Reduction
+                - Principal Components Analysis
+                - Non-negative Matrix Factorization
+    4.2 Selecting a clustering algorithm
+    4.3 Dimensionality Reduction
 
 5. Deep Learning and Reinforcement Learning
     5.1 Introduction to Neural Networks
