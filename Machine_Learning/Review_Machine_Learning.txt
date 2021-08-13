@@ -247,6 +247,7 @@
                  
 4. Unsupervised Machine Learning
     4.1 Introduction to Unsupervised Learning and K-Means Clustering
+        - Unsupervised algorithms are relevant when we don’t have an outcome or labeled variable we are trying to predict.
         4.1 Types of Unsupervised Learning
             4.1.1 Clustering
                 - K-Means
