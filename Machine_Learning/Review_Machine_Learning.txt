@@ -262,6 +262,7 @@
         4.2.1 Linkage Methods (Hierarchical Clustering)
             - Single linkage, Complete linkage, Average linkage, Ward linkage (Cluster merge is based on inertia)
     4.3 Dimensionality Reduction
+        4.3.1 Principal Components Analysis
 
 5. Deep Learning and Reinforcement Learning
     5.1 Introduction to Neural Networks
