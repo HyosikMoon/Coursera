@@ -263,6 +263,11 @@
             - Single linkage, Complete linkage, Average linkage, Ward linkage (Cluster merge is based on inertia)
     4.3 Dimensionality Reduction
         4.3.1 Principal Components Analysis
+            - Identify small number of transformed variables with different effects, preserving variance
+        4.3.2 KernalPCA
+            - Useful for situations with nonlinear relationships, but requires more computation than PCA
+        4.3.3 Non-negative Matrix Factorization
+            - Useful when you want to consider only positive values (word matrics, images)
 
 5. Deep Learning and Reinforcement Learning
     5.1 Introduction to Neural Networks
