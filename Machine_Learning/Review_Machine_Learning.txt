@@ -267,7 +267,10 @@
         4.3.2 KernalPCA
             - Useful for situations with nonlinear relationships, but requires more computation than PCA
         4.3.3 Non-negative Matrix Factorization
-            - Useful when you want to consider only positive values (word matrics, images)
+            - Non Negative Matrix Decomposition is another way of reducing the number of dimensions. 
+            - Similar to PCA, it is also a matrix decomposition method in the form V=WxH. 
+             , ex. W Matrix telling us how the terms relate to the different topics.
+             , ex. H Matrix telling us how to use those topics to reconstruct our original documents.
 
 5. Deep Learning and Reinforcement Learning
     5.1 Introduction to Neural Networks
