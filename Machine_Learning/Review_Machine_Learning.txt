@@ -390,4 +390,16 @@
             - Agent → Actions → Environment → Rewards → Agent
             - 1) Gather data, 2) Allocate rewards, 3) Fit the model, 4) Predict the optimal results with the maximal reward inputs
 
-6. Specialized Models: Time Series and Survival Analysis
+6. Specialized Models
+    6.1 Introduction to Time Series Analysis
+        6.1.1 Introduction to Forecasting and Time Series Analysis
+        6.1.2 Time Series Decomposition
+    6.2 Stationarity and Time Series Smoothing
+        6.2.1 Stationarity and Autocorrelation
+        6.2.2 Time Series Smoothing
+    6.3 ARMA and ARIMA Models
+        6.3.1 ARMA models
+        6.3.2 ARIMA and SARIMA models
+    6.4 Deep Learning and Survival Analysis Forecasts
+        6.4.1 Deep Learning for Forecasting
+        6.4.2 Survival Analysis 
