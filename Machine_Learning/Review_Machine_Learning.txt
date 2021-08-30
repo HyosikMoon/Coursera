@@ -393,6 +393,10 @@
 6. Specialized Models
     6.1 Introduction to Time Series Analysis
         6.1.1 Introduction to Forecasting and Time Series Analysis
+            - Time series data in python (Numpy datetime64, Pandas DatetimeIndex)
+            - Standardizing DatetimeIndex (Pandas pivot, unstacking)
+            - Resampling
+            - Visualization
         6.1.2 Time Series Decomposition
     6.2 Stationarity and Time Series Smoothing
         6.2.1 Stationarity and Autocorrelation
