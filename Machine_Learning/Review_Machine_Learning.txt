@@ -393,11 +393,20 @@
 6. Specialized Models
     6.1 Introduction to Time Series Analysis
         6.1.1 Introduction to Forecasting and Time Series Analysis
+            - Time Series is a sequence of data points organized in time order (equally spaced points in time).
             - Time series data in python (Numpy datetime64, Pandas DatetimeIndex)
             - Standardizing DatetimeIndex (Pandas pivot, unstacking)
             - Resampling
             - Visualization
         6.1.2 Time Series Decomposition
+            - Decomposition of time series allows us to remove deterministic components, which would otherwise complicate modeling.
+            - After removing these components, the main focus is to model the residual.
+            6.1.2.1 Components
+                - Trend (General direction), Sesonality (Specific frequency), Residual (Random fluctutation)
+            6.1.2.2 Models
+                - Additive models: The seasonal and residual magnitudes are independent of trend (Observation = Trend + Sesonality + Residual)
+                - Multiplicative models: The seasonal and residual magnitudes fluctuate with trend (Observation = Trend * Sesonality * Residual)
+                - Pseudo-Additive models: Pseudo-additive models combine elements of the additive and multiplicative models ( O = T + T(S - 1) + T(R - 1) = T(S + R - 1) )
     6.2 Stationarity and Time Series Smoothing
         6.2.1 Stationarity and Autocorrelation
         6.2.2 Time Series Smoothing
