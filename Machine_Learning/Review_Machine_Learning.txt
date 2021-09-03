@@ -429,6 +429,12 @@
                 - Remove autocorrelation with differencing (exploit constant structure)
                 - Remove seasonality (no periodic component)
         6.2.2 Time Series Smoothing
+            - Smoothing is a process that often improves our ability to forecast series by reducing the impact of noise.
+            - ex. Simple average smoothing, Equally weighted moving average, Exponentially weighted moving average
+            6.2.2.1 Exponential Smoothing
+                - Lack a trend -> Single Exponential Smoothing
+                - Have trend but no seasonality -> Double Exponential Smoothing
+                - Have trend and seasonality -> Triple Exponential Smoothing
 
     6.3 ARMA and ARIMA Models
         6.3.1 ARMA models
