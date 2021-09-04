@@ -435,9 +435,11 @@
                 - Lack a trend -> Single Exponential Smoothing
                 - Have trend but no seasonality -> Double Exponential Smoothing
                 - Have trend and seasonality -> Triple Exponential Smoothing
-
     6.3 ARMA and ARIMA Models
-        6.3.1 ARMA models
+         6.3.1 ARMA models (Auto-Regressive & Moving-Average)
+             - ARMA combnes two models.
+             - Autoregressive models anticipate series' dependence on its own past values.
+             - Moving average models anticipate series' dependence on past forecast errors.
         6.3.2 ARIMA and SARIMA models
     6.4 Deep Learning and Survival Analysis Forecasts
         6.4.1 Deep Learning for Forecasting
