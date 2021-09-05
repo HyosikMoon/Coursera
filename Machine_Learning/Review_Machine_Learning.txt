@@ -459,6 +459,7 @@
             6.3.2.2 SARIMA (Seasonal ARIMA)
                 - SARIMA is an extension of ARIMA models to address seasonality. This model is used to remove seasonal components.
                 - The SARIMA model is denoted SARIMA (p, d, q) (P, D, Q) and P, D, Q represent the same as p, d, q but they are applied across a season.
+        6.3.3 Predicting with Facebook Prophet (Refer to the notebook materials)
     6.4 Deep Learning and Survival Analysis Forecasts
         6.4.1 Deep Learning for Forecasting
         6.4.2 Survival Analysis 
