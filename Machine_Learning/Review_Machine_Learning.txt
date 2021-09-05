@@ -439,6 +439,8 @@
          6.3.1 ARMA models (Auto-Regressive & Moving-Average)
              - ARMA combnes two models.
              - If a process depends on previous values of itself, then it is an AR process. If it depends on previous errors, then it is an MA process.
+             - Combining the AR(p) and MA(q) models yields the ARMA(p, q) model. For p=2, q=2, the ARMA(2, 2) forecast has the form
+               , X_t = p1*X_t-1 + p2*X_t-2 + q1*e_t-1 + q2*e_t-2 + e_t​
              6.3.1.1 Autoregressive model
                  - Autoregressive models anticipate series' dependence on its own past values.
                  - ex. p=1, ar1_sample[t] = (0.7 * ar1_sample[t-1]) + np.random.normal(loc=0, scale=2.5, size=1)
@@ -448,6 +450,7 @@
                  - ex. q=1, ma1_sample[t] = (0.4 * error[t-1]) + error[t]
                  - ex. q=2, ma2_sample[t] = (0.4 * error[t-1]) + (-0.4 * error[t-2]) + error[t]
              6.3.1.3 Autocorrelation Function (ACF)
+                 - An Autocorrelation Plot is commonly used to detect dependence on prior observations. 
                  - ACF needs to choose the orders (p and q) for a time series
         6.3.2 ARIMA and SARIMA models
             6.3.2.1 ARIMA (Auto-Regressive Integreated Moving Average)
@@ -455,7 +458,7 @@
                 - ex. Stock prices (integrated) vs stock returns (rise), Product sales yert-to-date (integrated) vs product sales per day
             6.3.2.2 SARIMA (Seasonal ARIMA)
                 - SARIMA is an extension of ARIMA models to address seasonality. This model is used to remove seasonal components.
-
+                - The SARIMA model is denoted SARIMA (p, d, q) (P, D, Q) and P, D, Q represent the same as p, d, q but they are applied across a season.
     6.4 Deep Learning and Survival Analysis Forecasts
         6.4.1 Deep Learning for Forecasting
         6.4.2 Survival Analysis 
