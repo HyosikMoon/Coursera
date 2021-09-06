@@ -462,4 +462,11 @@
         6.3.3 Predicting with Facebook Prophet (Refer to the notebook materials)
     6.4 Deep Learning and Survival Analysis Forecasts
         6.4.1 Deep Learning for Forecasting
+            - Neural networks automatically learn how to incorporate series characteristics like trend, seasonality,  and autocorrelation into predictions.
+            6.4.1.1 RNN
+                - Most common format is “many-to-one”, that maps an input sequence to one output value.
+                - Input at each time step sequentially updates the RNN cell’s “hidden state” (“memory”).
+            6.4.1.2 LSTM
+                - LSTMs are better suited for handling long-term dependencies than RNNs. 
+                - LSTM cells are internally more complex, with gating mechanisms and two states: a hidden state and a cell state.
         6.4.2 Survival Analysis 
