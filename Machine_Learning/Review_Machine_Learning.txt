@@ -471,6 +471,10 @@
                 - LSTM cells are internally more complex, with gating mechanisms and two states: a hidden state and a cell state.
         6.4.2 Survival Analysis
             - Survival Analysis focuses on estimating the length of time until an event occurs. (ex. How long will a customer remain before churning)
-            - The Survival Function:  measures the probability that a subject will survive past time t. 
+            - Survival Function:  measures the probability that a subject will survive past time t. 
+            - Harzard Rate:  h(t) = f(t) / S(t), It represents the instantaneous rate at which events occur, given that it has not occurred already.
             6.4.2.1 Kaplan-Meier Curve
+                - The Kaplan-Meier Curve plots the cumulative probability of survival beyond each given time period.
             6.4.2.2 Cox Proportional Hazards Model
+                - It assumes features have a constant proportional impact on the hazard rate. 
+                - For a single non-time-varying feature X, the hazard rate h(t) is modeled as: h(t) = β_0(t)e^{β_1 * X)
