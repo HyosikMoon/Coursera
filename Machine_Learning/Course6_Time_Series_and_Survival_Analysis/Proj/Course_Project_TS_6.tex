@@ -32,10 +32,10 @@
 
 \begin{itemize}
 \item \textbf{Main objective of the analysis} \\
-I will analyze the Goldman Sachs's Stock Data from 1999-05-04 to 2021-07-01 with time series models such as RNN, LSTM, and Deep Nueral Networks.
+I will analyze the Goldman Sachs's Stock Data from 1999-05-04 to 2021-07-01 with time series models such as RNN and LSTM.
 
 \item \textbf{Brief description of the data set} \\
-In the data, there are seven features such as `Date, Open, High, Low, Close, Adj Close, and Volume' (Figure \ref{data}). We will use `Date' and `Close' features to predict stock price. To be specific, we will train models with for about past 20 years data and predict the upcoming 7 months Goldman Sachs's stock price. 
+In the data, there are seven features such as `Date, Open, High, Low, Close, Adj Close, and Volume' (Figure \ref{data}). We will use `Date' and `Close' features to predict stock price. To be specific, we will train models with for about past 20 years data and predict the upcoming 7 months' Goldman Sachs's stock price.
 
 \begin{figure}[H]
   \centering
@@ -44,59 +44,79 @@ In the data, there are seven features such as `Date, Open, High, Low, Close, Adj
 \end{figure}
 
 \item \textbf{Brief summary of data exploration}
-I 
+I remained only `Data', and `Close' features. In order to use for RNNs and LSTMs it needs a 3D numpy array of shape (n\_sample, time\_steps, n\_features). As I learned in the class I made a function to preprocess train\_test data sets. And I train the RNN models with `cell\_units = 30, epochs = 100, loss=mean\_squared\_error, optimizer=adam'.
 
-\item \textbf{Summary of training at least three models} I implemented the game with three different prediction models which are  `RandomForestRegressor, AdaBoostRegressor, and ExtraTreesRegressor'.
+\item \textbf{Summary of training at least three models} I implemented the data with `RNN, LSTM' models.
     \begin{enumerate}
-      \item RandomForestRegressor. It showed the relatively good result. The average step maintaining the pole was 157, with a perfect score of 30 out of 100 trials. (Figure \ref{random_forest})
+      \item Recurren Neural Networks. I trained RNNs with 5577 days' data and predicted following 420 days. As you expected the result was very poor. It was an obvious result becuase RNN's prediction accuracy is very bad for long-term period. (Figure \ref{rnn})
       \begin{figure}[H]
         \centering
-        \includegraphics[width=0.9\textwidth]{figures/random_forest.png}
-        \caption{RandomForestRegressor}\label{random_forest}
+        \includegraphics[width=0.9\textwidth]{figures/rnn.png}
+        \caption{Recurrent Neural Networks}\label{rnn}
       \end{figure}
 
-      \item AdaBoostRegressor. The result was terrable. Because in the case of AdaBoost it modifies the weights sequencially with the wrongly predicted data set. Since our data set consists of randomly chosen episodes, the AdaBoost model might be inappropriate to train the this data. (Figure \ref{AdaBoost})
+      \item LSTM. Unfortunately the result was also bad (Figure \ref{lstm}).
       \begin{figure}[H]
         \centering
-        \includegraphics[width=0.9\textwidth]{figures/AdaBoost.png}
-        \caption{AdaBoostRegressor}\label{AdaBoost}
-      \end{figure}
-
-      \item ExtraTreesRegressor. It showed the relatively good result. The average step maintaining the pole was 138, with a perfect score of 17 out of 100 trials. (Figure \ref{etr})
-      \begin{figure}[H]
-        \centering
-        \includegraphics[width=0.9\textwidth]{figures/random_forest.png}
-        \caption{ExtraTreesRegressor}\label{etr}
+        \includegraphics[width=0.9\textwidth]{figures/lstm.png}
+        \caption{Long Short Term Memory}\label{lstm}
       \end{figure}
     \end{enumerate}
-
 \item \textbf{Explanation of your final model}
-Overall, the RandomForestRegressor showed the best performance. I think that this is because we used closely related features to predict the result which are `Cart Position', `Cart Velocity', `Pole Angle', and `Pole Angular velocity'. Thus, the result of RandomForest is better than ExtraTreesRegressor (ETR) because ETR trains the model with randomly chosen features not with all features. In order to increase the performance, I trained the final model (RandomForestRegressor) with more data which have 20000 trials. And the final result shows that the average step maintaining the pole was 157, with a perfect score of 35 out of 100 trials. (Figure \ref{rf2})
+I needed to analyze the result. When I inspected the codes, it seemed not to have an error. Thus, I modified the length of data from (5577, 360, 1) to (1260, 210, 1) and epochs from 300 to 1200. Interestingly RNNs also showed much better result even I trained the model with fewer data (Figure \ref{rnn2}). However, for LSTM it showed still bad predction accuracy (Figure \ref{lstm2}). So, I trained more but with short date, i.e. from [data = (1260, 210, 1), nodes = 30, epochs = 1200] to [data = (1260, 210, 1), nodes = 70, epochs=1400] (Figure \ref{lstm3}). Because it still shows bad result, I added more nodes to 100 and trained again (Figure \ref{lstm4}). It looks a little bit better but still quite bad. When I see the trained result the prediction error was low, so I thought that the reason of low accuracy maybe is for the number of nodes not the epochs. So I inceased the number of nodes from 100 to 210 which is same number of the time\_steps and decrease the epochs from 1200 to 1000 to reduce the training time. It shows still bad result.. So I changed the length of training data from 1260 to 2000 and decrease the epochs to 350 (Figure \ref{lstm6}). As the result of 7 analysis, all models seem not to be appropriate to predict the stock price. However the last one (LSTM6) shows a liitle bit better predction result compared to the others. 
+
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=0.9\textwidth]{figures/rf2.png}
-  \caption{Final model score}\label{rf2}
+  \includegraphics[width=0.9\textwidth]{figures/rnn2.png}
+  \caption{RNN with data = (630, 210, 1), nodes = 30, epochs = 1200}\label{rnn2}
 \end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.9\textwidth]{figures/lstm2.png}
+  \caption{Long Short Term Memory2 = (1260, 210, 1), nodes = 30, epochs = 1200}\label{lstm2}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.9\textwidth]{figures/lstm3.png}
+  \caption{Long Short Term Memory3 = (1260, 210, 1), nodes = 70, epochs = 1400}\label{lstm3}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.9\textwidth]{figures/lstm4.png}
+  \caption{Long Short Term Memory4 = (1260, 210, 1), nodes = 100, epochs = 1200}\label{lstm4}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.9\textwidth]{figures/lstm5.png}
+  \caption{Long Short Term Memory5 = (1260, 210, 1), nodes = 210, epochs = 1000}\label{lstm5}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.9\textwidth]{figures/lstm6.png}
+  \caption{Long Short Term Memory6 = (2000, 210, 1), nodes = 210, epochs = 350}\label{lstm6}
+\end{figure}
+
+
 
 \item \textbf{Summary Key Findings and Insights}
-In order to increase the performance, using deep neural network can be another way. Thus I thought about two neural-networks models such as deep neural network, and recurrent neural network for the advanced steps. But in the case of RNN, it seems not to be good to improve the performance because the model is trained based on the episodes which have the same comb\_rewards which is not so related to sequential events. So, I abandoned the RNN. Instead of it, I implemented the Deep Neural Network manually with two hidden layers with (5, 64), (64, 1) dimentions. In the figure \ref{nn}, y-axis shows the error rate. Even though the error rate decreases the total performance was much lower (Average step is 9). I think that this is because when the NN was trained the weights were modified based on individual episode's comb\_rewards which has the same value at the same episode. So, in order to improve the model, the comb\_rewards need to be changed. To be specific, within the same episode, according to the steps increase, the rewards also need to be increased. After I changed the rewards, I was able to check the improved result like represented in the figure \ref{nn_improve}.
+In the real world, most of data are non-stationary data. So, we need to manipulate the data to stationary data by subtracting trends and seasonality. Then the data should show constant mean and variance, which is a very picky condition. Thus, it needs expertise to analyze and manipulate the data correctly. However, in the case of Deep Learning Models for time series analysis such as RNNs and LSTM, doesn't need to manipulate data to make stationary. It's really incredible fact because even if not an expert can predict the time series data if they have a little knowledge and skills about deep learning. I think it's the magic of the deep learning. But in order to gurantee the accuracy of the model and interpretation of the models we need deep theoroetical knowledge, high comuputing power, and huge amount of data. If not, as we've seen in this report, we can't gurantee the reliability of the model and the result.
 
-\begin{figure}[H]
-  \centering
-  \includegraphics[width=0.9\textwidth]{figures/nn.png}
-  \caption{Error of Deep Neural Network model}\label{nn}
-\end{figure}
-
-\begin{figure}[H]
-  \centering
-  \includegraphics[width=0.9\textwidth]{figures/nn_improve.png}
-  \caption{Improved version of DNN}\label{nn_improve}
-\end{figure}
 
 \item \textbf{Suggestions for next steps}
-When I checked the final result, even though the prediction error was low, the performance was still bed (Average step is 10). I need to find the reason of the poor performance of the Deep Neural Network model.
+In oder to predict the stock price more accurately, I think using the ground truth values seems to be more appropriate rather than predicting following values with previously predicted values (Figure \ref{lstm7}). In the figure (LSTM7) we can see that after 300 days the model seems to stop to predict. There seems to be an error in the model.. We need to analyze the reason of it. And I was sorry that I wasn't able to use Facebook Prophet models to predict the time series data. It had a problem to install, and I wasn't able to figure it out. If I can solve the installing issure, I'd like to use Facebook Prophet libraries for the time series analysis.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.9\textwidth]{figures/lstm7.png}
+  \caption{Long Short Term Memory7 = (2000, 210, 1), nodes = 210, epochs = 350}\label{lstm7}
+\end{figure}
 
 \end{itemize}
 
-\end {document}
+\end{document}
