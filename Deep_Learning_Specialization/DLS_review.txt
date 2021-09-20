@@ -5,7 +5,14 @@
         1.1.3 Why is deep learning taking off?
     1.2 Basics of Neural Network programming 
         1.2.1 Logistic Regression as a Neural Network
-            - Binary Classification
+            1.2.1.1 Binary Classification
+            1.2.1.2 Logistic Regression, Given x → y^ = P(y = 1 | x)
+            1.2.1.3 Logistic Regression cost function, 
+                - The loss function, a single training error
+                - The cost function, the average of the loss functions of the entire training set.
+            1.2.1.4 Gradient Descent
+                - Minimize the cost function J(w, b) by updating w, b
+                - w := w - α * δJ(w, b)/δw, b := b - δJ(w, b)/δb (δ for more than one variables' derivative)
         1.2.2 Python and Vectorization
     1.3 One hidden layer Neural Networks 
     1.4 Deep Neural Networks
