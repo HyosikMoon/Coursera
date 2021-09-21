@@ -13,6 +13,8 @@
             1.2.1.4 Gradient Descent
                 - Minimize the cost function J(w, b) by updating w, b
                 - w := w - α * δJ(w, b)/δw, b := b - δJ(w, b)/δb (δ for more than one variables' derivative)
+            1.2.1.5 Computation Graph, forward propagation, backward propagation
+            1.2.1.6 Logistic Regression Gradient Descent
         1.2.2 Python and Vectorization
     1.3 One hidden layer Neural Networks 
     1.4 Deep Neural Networks
