@@ -16,6 +16,7 @@
             1.2.1.5 Computation Graph, forward propagation, backward propagation
             1.2.1.6 Logistic Regression Gradient Descent
         1.2.2 Python and Vectorization
+            - Vectorization is used for making efficient code for training deep learning by minimizing for loop.
     1.3 One hidden layer Neural Networks 
     1.4 Deep Neural Networks
 
